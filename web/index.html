@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+  
+  <!-- Cache Busting to ensure new web builds load instantly -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="fastway">
+
+  <!-- Favicon and Apple Touch Icon -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <title>fastway</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Apple Pay on the Web (Telr Configuration 1). Defines window.fastwayApplePay,
+       driven by the checkout cubit on iOS/macOS Safari. No-op elsewhere. -->
+  <script src="apple_pay.js"></script>
+
+  <!-- Preconnect: warm up DNS + TLS to the cross-origin hosts we always hit,
+       so the first request to each doesn't pay the handshake cost serially.
+
+       - The API/image host serves every product, category and banner image.
+         Which one is live depends on the BASE_URL build arg, so both are
+         listed; a preconnect to an unused host is harmless (browsers simply
+         drop it after a few seconds).
+       - gstatic serves Flutter's CanvasKit/skwasm engine and the Firebase SDK.
+       - fonts.gstatic serves the Google Fonts woff2 files.
+
+       crossorigin is REQUIRED on these: the resources are fetched in CORS
+       mode, and a preconnect without it opens a *separate*, unusable
+       connection (the handshake gets done twice, defeating the point). -->
+  <link rel="preconnect" href="https://admin.fastwayprotein.com" crossorigin>
+  <link rel="preconnect" href="https://fastway.atwdemo.com" crossorigin>
+  <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Maps SDK -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDg3ZMTizoSwd52bmeUzc1QdE_mCWlO2Lk"></script>
+
+  <style>
+    /* Show the I-beam over selectable text.
+     *
+     * Flutter's SelectionArea injects a transparent HTML overlay above the canvas
+     * (this class) so the browser's native right-click menu can offer "Copy".
+     * Being a real DOM element on top, IT decides the cursor — and it computes to
+     * `cursor: default`, which masks the `cursor: text` Flutter writes to <body>.
+     * That is why selectable text showed no I-beam.
+     *
+     * We keep the overlay (removing it would disable the native context menu app
+     * wide) and just give it the text cursor. This is only correct because every
+     * SelectionArea in this app wraps TEXT ONLY — the product name and the
+     * description. If a SelectionArea is ever put around a button or a card, the
+     * button will inherit the I-beam from here and this rule must be revisited. */
+    .web-selectable-region-context-menu { cursor: text !important; }
+  </style>
+</head>
+<body>
+  <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
+
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <style>
+    body {
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    /* Flutter web: show pointer cursor when engine sets it via AnnotatedRegion */
+    flt-glass-pane {
+      cursor: default;
+    }
+    /* ── Native loading overlay — shown during WASM download, hidden on first frame ── */
+    #flutter-loading {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      z-index: 9999;
+      gap: 32px;
+    }
+    #flutter-loading img {
+      width: 140px;
+      animation: fl-pulse 1.8s ease-in-out infinite;
+    }
+    #flutter-loading .fl-spinner {
+      width: 36px;
+      height: 36px;
+      border: 3px solid #f0f0f0;
+      border-top-color: #1E4DB7;
+      border-radius: 50%;
+      animation: fl-spin 0.8s linear infinite;
+    }
+    @keyframes fl-spin  { to { transform: rotate(360deg); } }
+    @keyframes fl-pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.6; } }
+  </style>
+
+  <!-- Native loading overlay: visible immediately, removed on first Flutter frame -->
+  <div id="flutter-loading">
+    <img src="/logo.png" alt="Fastway">
+    <div class="fl-spinner"></div>
+  </div>
+
+  <script>
+    // Remove the native loader the instant Flutter paints its first frame.
+    window.addEventListener('flutter-first-frame', function () {
+      var el = document.getElementById('flutter-loading');
+      if (el) el.remove();
+    });
+
+    // Force update: if a new service worker is waiting, activate it and reload.
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.ready.then(function(reg) {
+        reg.addEventListener('updatefound', function() {
+          var newWorker = reg.installing;
+          newWorker.addEventListener('statechange', function() {
+            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              newWorker.postMessage({ type: 'SKIP_WAITING' });
+            }
+          });
+        });
+      });
+
+      // Reload page when a new SW takes control
+      var refreshing = false;
+      navigator.serviceWorker.addEventListener('controllerchange', function() {
+        if (!refreshing) {
+          refreshing = true;
+          window.location.reload();
+        }
+      });
+    }
+  </script>
+
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

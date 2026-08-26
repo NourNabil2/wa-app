@@ -1,0 +1,881 @@
+﻿diff --git a/lib/features/cart/presentation/view/cart_screen.dart b/lib/features/cart/presentation/view/cart_screen.dart
+index 04c459e..c42555e 100644
+--- a/lib/features/cart/presentation/view/cart_screen.dart
++++ b/lib/features/cart/presentation/view/cart_screen.dart
+@@ -1,8 +1,4 @@
+-import 'package:fastway/core/layout/simple_web_shell.dart';
+ import 'package:fastway/core/theme/colors.dart';
+-import 'package:flutter_slidable/flutter_slidable.dart';
+-import 'package:shimmer/shimmer.dart';
+-import 'package:fastway/features/cart/presentation/widgets/shake_animation.dart';
+ import 'package:fastway/core/utils/slug_utils.dart';
+ // lib/features/cart/presentation/view/cart_screen.dart
+ import 'package:fastway/core/cubit/delivery_location/delivery_location_cubit.dart';
+@@ -10,7 +6,7 @@ import 'package:fastway/core/cubit/delivery_location/delivery_location_state.dar
+ 
+ import 'package:fastway/core/routes/app_navigator.dart';
+ import 'package:easy_localization/easy_localization.dart';
+-import 'package:fastway/core/layout/web_nav_controller.dart';
++import 'package:fastway/core/layout/simple_web_shell.dart';
+ import 'package:fastway/core/responsive/responsive_layout.dart';
+ import 'package:fastway/core/utils/assets.dart';
+ import 'package:fastway/core/widgets/custom_lottie_icon.dart';
+@@ -66,13 +62,6 @@ class _CartScreenState extends State<CartScreen> with AutomaticKeepAliveClientMi
+   @override
+   Widget build(BuildContext context) {
+     super.build(context);
+-    
+-    int currentIndex = -1;
+-    try {
+-      currentIndex = context.watch<WebNavController>().currentIndex;
+-    } catch (_) {}
+-    final bool animateShake = widget.isTab ? currentIndex == 2 : true;
+-
+     // Reload cart whenever the selected delivery address changes.
+     // Express eligibility per item depends on which warehouse covers the address.
+     return BlocListener<DeliveryLocationCubit, DeliveryLocationState>(
+@@ -156,9 +145,9 @@ class _CartScreenState extends State<CartScreen> with AutomaticKeepAliveClientMi
+                 (state is CartLoading && _lastKnownCart != null);
+ 
+             if (isWebLayout(context)) {
+-              return _WebCartContent(cart: cart, isProcessing: isProcessing, animateShake: animateShake);
++              return _WebCartContent(cart: cart, isProcessing: isProcessing);
+             }
+-            return _MobileCartContent(cart: cart, isProcessing: isProcessing, animateShake: animateShake);
++            return _MobileCartContent(cart: cart, isProcessing: isProcessing);
+           },
+         ),
+       ),
+@@ -172,18 +161,20 @@ class _CartScreenState extends State<CartScreen> with AutomaticKeepAliveClientMi
+ class _MobileCartContent extends StatelessWidget {
+   final CartEntity cart;
+   final bool isProcessing;
+-  final bool animateShake;
+ 
+   const _MobileCartContent(
+-      {required this.cart, this.isProcessing = false, this.animateShake = true});
++      {required this.cart, this.isProcessing = false});
+ 
+   @override
+   Widget build(BuildContext context) {
+-    return CustomScrollView(
+-      slivers: [
+-        SliverToBoxAdapter(
+-          child: Padding(
+-            padding: EdgeInsets.symmetric(horizontal: 16.w),
++    return Column(
++      children: [
++        Expanded(
++          child: CustomScrollView(
++            slivers: [
++              SliverToBoxAdapter(
++                child: Padding(
++                  padding: EdgeInsets.symmetric(horizontal: 16.w),
+                   child: _FreeShippingBar(subtotal: cart.subtotal),
+                 ),
+               ),
+@@ -195,55 +186,56 @@ class _MobileCartContent extends StatelessWidget {
+                       final item = cart.items[index];
+                       return Padding(
+                         padding: EdgeInsets.only(bottom: 12.h),
+-                        child: Slidable(
++                        child: Dismissible(
+                           key: ValueKey('cart_item_${item.id}'),
+-                          startActionPane: ActionPane(
+-                            motion: const ScrollMotion(),
+-                            extentRatio: 0.45,
+-                            children: [
+-                              SlidableAction(
+-                                onPressed: (context) {
+-                                  context.read<WishlistCubit>().toggleProduct(item.productId);
+-                                  context.read<CartCubit>().removeItem(item.id);
+-                                  ScaffoldMessenger.of(context).showSnackBar(
+-                                    SnackBar(
+-                                      content: Text('cart.saved_for_later'.tr()),
+-                                      backgroundColor: ColorsManager.primaryColor,
+-                                      duration: const Duration(seconds: 2),
+-                                      behavior: SnackBarBehavior.floating,
+-                                    ),
+-                                  );
+-                                },
+-                                backgroundColor: const Color(0xFFFDE8F1),
+-                                foregroundColor: Colors.red,
+-                                icon: Icons.favorite,
+-                              ),
+-                              SlidableAction(
+-                                onPressed: (context) {
+-                                  context.read<CartCubit>().removeItem(item.id);
+-                                },
+-                                backgroundColor: const Color(0xFFEBEBEB),
+-                                foregroundColor: Colors.grey[700],
+-                                icon: Icons.delete_outline,
+-                              ),
+-                            ],
++                          direction: DismissDirection.horizontal,
++                          // ΓöÇΓöÇ Swipe LEFT ΓåÆ Save for Later ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
++                          background: _buildDismissBackground(
++                            context,
++                            alignment: AlignmentDirectional.centerStart,
++                            color: ColorsManager.primaryColor,
++                            icon: Icons.favorite_rounded,
++                            label: 'cart.save_for_later'.tr(),
+                           ),
+-                          child: ShakeAnimation(
+-                            animate: index == 0 && animateShake,
+-                            child: CartItemCard(
+-                              isProcessing: isProcessing,
+-                              item: item,
+-                              onIncrement: () =>
+-                                  context.read<CartCubit>().incrementQuantity(item.id),
+-                              onDecrement: () =>
+-                                  item.quantity == 1 
+-                                      ? context.read<CartCubit>().removeItem(item.id) 
+-                                      : context.read<CartCubit>().decrementQuantity(item.id),
+-                              onRemove: () =>
+-                                  context.read<CartCubit>().removeItem(item.id),
+-                              onUpdateQuantity: (q) =>
+-                                  context.read<CartCubit>().updateQuantity(item.id, q),
+-                            ),
++                          // ΓöÇΓöÇ Swipe RIGHT ΓåÆ Delete ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
++                          secondaryBackground: _buildDismissBackground(
++                            context,
++                            alignment: AlignmentDirectional.centerEnd,
++                            color: ColorsManager.errorFill,
++                            icon: Icons.delete_outline_rounded,
++                            label: 'cart.remove'.tr(),
++                          ),
++                          confirmDismiss: (direction) async {
++                            if (direction == DismissDirection.startToEnd) {
++                              // Save for Later
++                              context.read<WishlistCubit>().toggleProduct(item.productId);
++                              context.read<CartCubit>().removeItem(item.id);
++                              ScaffoldMessenger.of(context).showSnackBar(
++                                SnackBar(
++                                  content: Text('cart.saved_for_later'.tr()),
++                                  backgroundColor: ColorsManager.primaryColor,
++                                  duration: const Duration(seconds: 2),
++                                  behavior: SnackBarBehavior.floating,
++                                ),
++                              );
++                              return false; // Cubit handles the removal
++                            } else {
++                              // Delete
++                              context.read<CartCubit>().removeItem(item.id);
++                              return false;
++                            }
++                          },
++                          child: CartItemCard(
++                            isProcessing: isProcessing,
++                            item: item,
++                            onIncrement: () =>
++                                context.read<CartCubit>().incrementQuantity(item.id),
++                            onDecrement: () =>
++                                context.read<CartCubit>().decrementQuantity(item.id),
++                            onRemove: () =>
++                                context.read<CartCubit>().removeItem(item.id),
++                            onUpdateQuantity: (q) =>
++                                context.read<CartCubit>().updateQuantity(item.id, q),
+                           ),
+                         ),
+                       );
+@@ -257,15 +249,9 @@ class _MobileCartContent extends StatelessWidget {
+               SliverToBoxAdapter(
+                 child: Padding(
+                   padding: EdgeInsets.symmetric(horizontal: 16.w),
+-                  child: BlocBuilder<CartCubit, CartState>(
+-                    builder: (context, state) {
+-                      return CouponSection(
+-                        onApply: (code) => context.read<CartCubit>().applyCoupon(code),
+-                        onRemove: () => context.read<CartCubit>().removeCoupon(),
+-                        appliedCoupon: cart.couponCode,
+-                        isLoading: state is ApplyingCoupon,
+-                      );
+-                    },
++                  child: CouponSection(
++                    onApply: (code) => context.read<CartCubit>().applyCoupon(code),
++                    appliedCoupon: cart.couponCode,
+                   ),
+                 ),
+               ),
+@@ -291,17 +277,13 @@ class _MobileCartContent extends StatelessWidget {
+                     child: _SuggestionsRow(suggestions: cart.suggestions!),
+                   ),
+                 ),
+-              SliverToBoxAdapter(
+-                child: SafeArea(
+-                  top: false,
+-                  child: Padding(
+-                    padding: EdgeInsets.only(top: 24.h, bottom: 48.h),
+-                    child: _CheckoutButton(cart: cart, isProcessing: isProcessing),
+-                  ),
+-                ),
+-              ),
++              SliverToBoxAdapter(child: SizedBox(height: 100.h)),
+             ],
+-          );
++          ),
++        ),
++        _CheckoutButton(cart: cart, isProcessing: isProcessing),
++      ],
++    );
+   }
+ 
+   Widget _buildDismissBackground(
+@@ -314,7 +296,7 @@ class _MobileCartContent extends StatelessWidget {
+     return Container(
+       decoration: BoxDecoration(
+         color: color,
+-        borderRadius: BorderRadius.circular(12),
++        borderRadius: BorderRadius.zero,
+       ),
+       alignment: alignment,
+       padding: EdgeInsets.symmetric(horizontal: 20.w),
+@@ -343,13 +325,8 @@ class _MobileCartContent extends StatelessWidget {
+ class _WebCartContent extends StatelessWidget {
+   final CartEntity cart;
+   final bool isProcessing;
+-  final bool animateShake;
+ 
+-  const _WebCartContent({
+-    required this.cart,
+-    this.isProcessing = false,
+-    this.animateShake = true,
+-  });
++  const _WebCartContent({required this.cart, this.isProcessing = false});
+ 
+   @override
+   Widget build(BuildContext context) {
+@@ -376,7 +353,7 @@ class _WebCartContent extends StatelessWidget {
+                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                 decoration: BoxDecoration(
+                     color: ColorsManager.primaryColor.withValues(alpha: 0.1),
+-                    borderRadius: BorderRadius.circular(12)),
++                    borderRadius: BorderRadius.zero),
+                 child: Text(
+                   '${cart.items.length} ${'items'.tr(gender: 'Items')}',
+                   style: const TextStyle(
+@@ -392,24 +369,17 @@ class _WebCartContent extends StatelessWidget {
+           final itemsList = Column(
+             crossAxisAlignment: CrossAxisAlignment.start,
+             children: [
+-              ...cart.items.asMap().entries.map<Widget>((entry) {
+-                final index = entry.key;
+-                final item = entry.value;
+-                return Padding(
++              ...cart.items.map<Widget>((item) => Padding(
+                     padding: const EdgeInsets.only(bottom: 12),
+-                    child: ShakeAnimation(
+-                      animate: index == 0 && animateShake,
+-                      child: CartItemCard(
+-                        isProcessing: isProcessing,
+-                        item: item,
+-                        onIncrement: () => context.read<CartCubit>().incrementQuantity(item.id),
+-                        onDecrement: () => item.quantity == 1 ? context.read<CartCubit>().removeItem(item.id) : context.read<CartCubit>().decrementQuantity(item.id),
+-                        onRemove: () => context.read<CartCubit>().removeItem(item.id),
+-                        onUpdateQuantity: (qty) => context.read<CartCubit>().updateQuantity(item.id, qty),
+-                      ),
++                    child: CartItemCard(
++                      isProcessing: isProcessing,
++                      item: item,
++                      onIncrement: () => context.read<CartCubit>().incrementQuantity(item.id),
++                      onDecrement: () => context.read<CartCubit>().decrementQuantity(item.id),
++                      onRemove: () => context.read<CartCubit>().removeItem(item.id),
++                      onUpdateQuantity: (qty) => context.read<CartCubit>().updateQuantity(item.id, qty),
+                     ),
+-                  );
+-              }),
++                  )),
+               const SizedBox(height: 24),
+               const CartWishlistReminder(),
+               if (cart.suggestions != null && cart.suggestions!.isNotEmpty) ...[
+@@ -528,7 +498,7 @@ class _WebOrderSummaryCardState extends State<_WebOrderSummaryCard> {
+     return Container(
+       decoration: BoxDecoration(
+         color: isDark ? const Color(0xFF1A1A1A) : Colors.white,
+-        borderRadius: BorderRadius.circular(12),
++        borderRadius: BorderRadius.zero,
+         boxShadow: [
+           BoxShadow(
+             color: Colors.black.withValues(alpha: 0.06),
+@@ -571,30 +541,6 @@ class _WebOrderSummaryCardState extends State<_WebOrderSummaryCard> {
+               ],
+             ),
+ 
+-            // ΓöÇΓöÇ Total Savings ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+-            if (cart.totalSavings > 0) ...[
+-              const SizedBox(height: 10),
+-              Row(
+-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+-                children: [
+-                  Text('${'cart.savings_banner_prefix'.tr()} ${'cart.savings_banner_suffix'.tr()}', style: labelStyle),
+-                  Row(
+-                    mainAxisSize: MainAxisSize.min,
+-                    children: [
+-                      Text('- ', style: Theme.of(context).textTheme.labelSmall?.copyWith(fontWeight: FontWeight.w700, color: ColorsManager.errorFill)),
+-                      SarText(
+-                        price: cart.totalSavings.toStringAsFixed(2),
+-                        style: Theme.of(context).textTheme.labelSmall?.copyWith(
+-                          fontWeight: FontWeight.w700,
+-                          color: ColorsManager.errorFill,
+-                        ),
+-                      ),
+-                    ],
+-                  ),
+-                ],
+-              ),
+-            ],
+-
+             // ΓöÇΓöÇ Coupon discount ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+             if (cart.couponDiscount != null && cart.couponDiscount! > 0) ...[
+               const SizedBox(height: 10),
+@@ -664,12 +610,12 @@ class _WebOrderSummaryCardState extends State<_WebOrderSummaryCard> {
+                 builder: (context, state) {
+                   final isLoading = state is ApplyingCoupon;
+                   return ClipRRect(
+-                    borderRadius: BorderRadius.circular(12),
++                    borderRadius: BorderRadius.zero,
+                     child: Container(
+                       height: 48,
+                       decoration: BoxDecoration(
+                         border: Border.all(color: isDark ? Colors.white12 : Colors.grey.shade300),
+-                        borderRadius: BorderRadius.circular(12),
++                        borderRadius: BorderRadius.zero,
+                       ),
+                       child: Row(
+                         children: [
+@@ -861,7 +807,7 @@ class _WebCouponField extends StatelessWidget {
+               return Container(
+                 decoration: BoxDecoration(
+                   color: isDark ? const Color(0xFF2A2A2A) : const Color(0xFFF5F5F5),
+-                  borderRadius: BorderRadius.circular(12),
++                  borderRadius: BorderRadius.zero,
+                   border: Border.all(
+                     color: isDark ? Colors.white10 : Colors.grey.shade200,
+                   ),
+@@ -907,7 +853,7 @@ class _WebCouponField extends StatelessWidget {
+                                 height: 40,
+                                 decoration: BoxDecoration(
+                                   color: Colors.grey.withValues(alpha: 0.15),
+-                                  borderRadius: BorderRadius.circular(12),
++                                  borderRadius: BorderRadius.zero,
+                                 ),
+                                 child: const Center(
+                                   child: SizedBox(
+@@ -926,9 +872,9 @@ class _WebCouponField extends StatelessWidget {
+                                 child: Container(
+                                   width: 80,
+                                   height: 40,
+-                                  decoration: BoxDecoration(
++                                  decoration: const BoxDecoration(
+                                     color: ColorsManager.primaryColor,
+-                                    borderRadius: BorderRadius.circular(12),
++                                    borderRadius: BorderRadius.zero,
+                                   ),
+                                   child: Center(
+                                     child: Text(
+@@ -971,7 +917,7 @@ class _AppliedCouponBadgeWeb extends StatelessWidget {
+       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+       decoration: BoxDecoration(
+         color: ColorsManager.primaryColor.withValues(alpha: 0.07),
+-        borderRadius: BorderRadius.circular(12),
++        borderRadius: BorderRadius.zero,
+         border: Border.all(
+             color: ColorsManager.primaryColor.withValues(alpha: 0.25)),
+       ),
+@@ -1011,7 +957,7 @@ class _AppliedCouponBadgeWeb extends StatelessWidget {
+               padding: const EdgeInsets.all(5),
+               decoration: BoxDecoration(
+                   color: Colors.grey.withValues(alpha: 0.1),
+-                  borderRadius: BorderRadius.circular(12)),
++                  borderRadius: BorderRadius.zero),
+               child:
+               Icon(Icons.close, size: 14, color: Colors.grey[500]),
+             ),
+@@ -1030,11 +976,11 @@ class _ProcessingButton extends StatelessWidget {
+   Widget build(BuildContext context) {
+     return Container(
+       width: double.infinity,
++      height: 54,
+       decoration: BoxDecoration(
+-        color: Colors.grey.shade400,
+-        borderRadius: BorderRadius.circular(12),
++        color: ColorsManager.primaryColor.withValues(alpha: 0.7),
++        borderRadius: BorderRadius.zero,
+       ),
+-      padding: const EdgeInsets.symmetric(vertical: 16),
+       child: const Center(
+         child: SizedBox(
+           width: 22,
+@@ -1058,9 +1004,31 @@ class _CheckoutButton extends StatelessWidget {
+ 
+   @override
+   Widget build(BuildContext context) {
+-    return Padding(
+-      padding: EdgeInsets.symmetric(horizontal: 16.w),
+-      child: isProcessing ? _ProcessingButton() : _CheckoutInkButton(cart: cart),
++
++    return SafeArea(
++      top: false,
++      child: Column(
++        mainAxisSize: MainAxisSize.min,
++        children: [
++          if (isProcessing)
++            _ProcessingButton()
++          else
++            Container(
++              padding: EdgeInsets.fromLTRB(16.w, 8.h, 16.w, 24.h), // ≡ƒæê ╪º┘ä┘Ç padding ┘ç┘å╪º ╪╣╪┤╪º┘å ╪º┘ä╪▓╪▒╪º╪▒ ┘à╪º ┘è╪¿┘é╪º╪┤ ┘ä╪º╪▓┘é ╪ú┘ê┘è
++              decoration: BoxDecoration(
++                color: Theme.of(context).brightness == Brightness.dark ? const Color(0xFF1A1A1A) : Colors.white,
++                boxShadow: [
++                  BoxShadow(
++                    color: Colors.black.withValues(alpha: 0.06),
++                    blurRadius: 20,
++                    offset: const Offset(0, -4),
++                  ),
++                ],
++              ),
++              child: _CheckoutInkButton(cart: cart),
++            ),
++        ],
++      ),
+     );
+   }
+ }
+@@ -1072,9 +1040,11 @@ class _CheckoutInkButton extends StatelessWidget {
+ 
+   @override
+   Widget build(BuildContext context) {
++    final hasSavings = cart.totalSavings > 0;
++
+     return Material(
+       color: Colors.transparent,
+-      borderRadius: BorderRadius.circular(12),
++      borderRadius: BorderRadius.zero,
+       child: InkWell(
+         onTap: () {
+           if (AuthGuard.isGuest(context)) {
+@@ -1082,7 +1052,7 @@ class _CheckoutInkButton extends StatelessWidget {
+             showDialog(
+               context: context,
+               builder: (ctx) => AlertDialog(
+-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
++                shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+                 title: Text(
+                   'auth.loginRequired'.tr(),
+                   style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 17),
+@@ -1104,7 +1074,7 @@ class _CheckoutInkButton extends StatelessWidget {
+                     style: ElevatedButton.styleFrom(
+                       backgroundColor: ColorsManager.primaryColor,
+                       foregroundColor: Colors.white,
+-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
++                      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+                     ),
+                     onPressed: () {
+                       Navigator.pop(ctx);
+@@ -1119,16 +1089,18 @@ class _CheckoutInkButton extends StatelessWidget {
+           }
+           AppNavigator.pushNamed(context, Routes.checkout);
+         },
+-        borderRadius: BorderRadius.circular(12),
++        borderRadius: BorderRadius.zero,
+         child: Ink(
+-          decoration: BoxDecoration(
+-            color: ColorsManager.primary2Color,
+-            borderRadius: BorderRadius.circular(12),
++          decoration: const BoxDecoration(
++            color: ColorsManager.primaryColor,
++            borderRadius: BorderRadius.zero,
+           ),
+           child: Column(
+             mainAxisSize: MainAxisSize.min,
+-            children: const [
+-              _ButtonBody(),
++            children: [
++              if (hasSavings)
++                _SavingsStrip(savings: cart.totalSavings),
++              _ButtonBody(total: cart.total, hasStrip: hasSavings),
+             ],
+           ),
+         ),
+@@ -1137,22 +1109,95 @@ class _CheckoutInkButton extends StatelessWidget {
+   }
+ }
+ 
++class _SavingsStrip extends StatelessWidget {
++  final double savings;
++
++  const _SavingsStrip({required this.savings});
++
++  @override
++  Widget build(BuildContext context) {
++    return Container(
++      width: double.infinity,
++      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 7),
++      decoration: const BoxDecoration(
++        color: ColorsManager.primary2Color,
++        borderRadius: BorderRadius.only(
++          topLeft: Radius.zero,
++          topRight: Radius.zero,
++        ),
++      ),
++      child: Row(
++        mainAxisAlignment: MainAxisAlignment.center,
++        children: [
++          const CustomLottieIcon(assetPath: Assets.savingIcon, width: 18, height: 18),
++          const SizedBox(width: 6),
++          Text(
++            'cart.savings_banner_prefix'.tr(),
++            style: const TextStyle(
++              color: Colors.white,
++              fontSize: 13,
++              fontWeight: FontWeight.w700,
++            ),
++          ),
++          SarText(
++            price: savings.toStringAsFixed(2),
++            style: const TextStyle(
++              color: Colors.white,
++              fontSize: 13,
++              fontWeight: FontWeight.w700,
++            ),
++          ),
++          Text(
++            'cart.savings_banner_suffix'.tr(),
++            style: const TextStyle(
++              color: Colors.white,
++              fontSize: 13,
++              fontWeight: FontWeight.w700,
++            ),
++          ),
++        ],
++      ),
++    );
++  }
++}
++
+ class _ButtonBody extends StatelessWidget {
+-  const _ButtonBody();
++  final double total;
++  final bool hasStrip;
++
++  const _ButtonBody({required this.total, required this.hasStrip});
+ 
+   @override
+   Widget build(BuildContext context) {
+-    return const Padding(
+-      padding: EdgeInsets.symmetric(vertical: 16),
+-      child: Center(
+-        child: Text(
+-          '╪º┘ä╪»┘ü╪╣',
+-          style: TextStyle(
+-            color: Colors.white,
+-            fontSize: 16,
+-            fontWeight: FontWeight.w700,
++    return Padding(
++      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
++      child: Row(
++        mainAxisAlignment: MainAxisAlignment.spaceBetween,
++        children: [
++          Text(
++            'cart.checkout'.tr(),
++            style: const TextStyle(
++              color: Colors.white,
++              fontSize: 16,
++              fontWeight: FontWeight.w700,
++            ),
+           ),
+-        ),
++          Container(
++            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
++            decoration: BoxDecoration(
++              color: Colors.white.withValues(alpha: 0.12),
++              borderRadius: BorderRadius.zero,
++            ),
++            child: SarText(
++              price: total.toStringAsFixed(2),
++              style: const TextStyle(
++                color: Colors.white,
++                fontSize: 15,
++                fontWeight: FontWeight.w700,
++              ),
++            ),
++          ),
++        ],
+       ),
+     );
+   }
+@@ -1170,22 +1215,18 @@ class _CartCountBadge extends StatelessWidget {
+       builder: (context, state) {
+         if (state is CartLoaded && state.cart.items.isNotEmpty) {
+           return Container(
+-            margin: EdgeInsetsDirectional.only(end: 16.w),
+-            width: 24.w,
+-            height: 24.w,
+-            alignment: Alignment.center,
++            margin: EdgeInsets.only(right: 16.w),
++            padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 4.h),
+             decoration: const BoxDecoration(
+               color: ColorsManager.primaryColor,
+-              shape: BoxShape.circle,
++              borderRadius: BorderRadius.zero,
+             ),
+             child: Text(
+               '${state.cart.items.length}',
+               style: const TextStyle(
+                   fontSize: 12,
+                   fontWeight: FontWeight.bold,
+-                  color: Colors.white,
+-                  height: 1.0, // Ensures perfect vertical centering
+-              ),
++                  color: Colors.white),
+             ),
+           );
+         }
+@@ -1213,34 +1254,34 @@ class _SuggestionsRow extends StatelessWidget {
+           style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+         ),
+         const SizedBox(height: 12),
+-        LayoutBuilder(
+-          builder: (context, constraints) {
+-            final cardWidth = (constraints.maxWidth - 12) / 2;
+-            return Wrap(
+-              spacing: 12,
+-              runSpacing: 12,
+-              children: suggestions.map((product) {
+-                return SizedBox(
+-                  width: cardWidth,
+-                  child: ProductCard(
+-                    productId: product.id,
+-                    name: product.name,
+-                    imageUrl: product.imageUrl,
+-                    price: product.price,
+-                    originalPrice: product.originalPrice,
+-                    rating: product.rating,
+-                    reviewCount: product.reviewCount,
+-                    isNew: product.isNew,
+-                    isAvailable: product.isAvailable,
+-                    isExpressEligible: product.isExpressEligible,
+-                    isFeatured: product.isFeatured,
+-                    stockWarning: product.stockWarning,
+-                    pointsToEarn: product.pointsToEarn,
+-                    onTap: () => AppNavigator.pushNamed(
+-                        context, '${Routes.productDetails}/${SlugUtils.slugify(product.name, product.id)}'),
+-                  ),
+-                );
+-              }).toList(),
++        GridView.builder(
++          shrinkWrap: true,
++          physics: const NeverScrollableScrollPhysics(),
++          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
++            maxCrossAxisExtent: 220,
++            crossAxisSpacing: 12,
++            mainAxisSpacing: 12,
++            childAspectRatio: 0.72,
++          ),
++          itemCount: suggestions.length,
++          itemBuilder: (context, index) {
++            final product = suggestions[index];
++            return ProductCard(
++              productId: product.id,
++              name: product.name,
++              imageUrl: product.imageUrl,
++              price: product.price,
++              originalPrice: product.originalPrice,
++              rating: product.rating,
++              reviewCount: product.reviewCount,
++              isNew: product.isNew,
++              isAvailable: product.isAvailable,
++              isExpressEligible: product.isExpressEligible,
++              isFeatured: product.isFeatured,
++              stockWarning: product.stockWarning,
++              pointsToEarn: product.pointsToEarn,
++              onTap: () => AppNavigator.pushNamed(
++                  context, '${Routes.productDetails}/${SlugUtils.slugify(product.name, product.id)}'),
+             );
+           },
+         ),
+@@ -1262,7 +1303,7 @@ class _ColdItemsWarningBar extends StatelessWidget {
+       padding: EdgeInsets.symmetric(horizontal: 14.w, vertical: 11.h),
+       decoration: BoxDecoration(
+         color: isDark ? const Color(0xFF0A2236) : const Color(0xFFE0F4FF),
+-        borderRadius: BorderRadius.circular(12),
++        borderRadius: BorderRadius.zero,
+         border: Border.all(
+             color: const Color(0xFF0EA5E9).withValues(alpha: isDark ? 0.4 : 0.3)),
+       ),
+@@ -1303,91 +1344,104 @@ class _FreeShippingBar extends StatelessWidget {
+     final isFree = remaining <= 0;
+ 
+     return Container(
+-      margin: const EdgeInsets.symmetric(vertical: 12),
+-      padding: const EdgeInsets.symmetric(horizontal: 16),
++      margin: const EdgeInsets.symmetric(vertical: 4),
++      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
++      decoration: BoxDecoration(
++        color: isDark ? ColorsManager.surfaceDarkCard : Colors.white,
++        borderRadius: BorderRadius.zero,
++        border: Border.all(
++          color: isFree
++              ? Colors.green.withValues(alpha: 0.3)
++              : (isDark ? Colors.white12 : Colors.grey.shade200),
++        ),
++        boxShadow: [
++          BoxShadow(
++            color: Colors.black.withValues(alpha: 0.04),
++            blurRadius: 10,
++            offset: const Offset(0, 4),
++          )
++        ],
++      ),
+       child: Column(
+-        crossAxisAlignment: CrossAxisAlignment.stretch,
++        crossAxisAlignment: CrossAxisAlignment.start,
+         children: [
+-          Row(
+-            mainAxisAlignment: MainAxisAlignment.center,
+-            children: [
+-              Text(
+-                isFree ? 'cart.shipping.free_shipping_congrats'.tr() : 'cart.shipping.remaining_prefix'.tr(),
+-                style: TextStyle(
+-                  fontSize: 14.sp,
+-                  fontWeight: FontWeight.w600,
+-                  color: isDark ? Colors.grey[300] : Colors.grey[800],
+-                ),
+-              ),
+-              if (!isFree) ...[
+-                const SizedBox(width: 4),
+-                SarText(
+-                  price: remaining.toStringAsFixed(0),
+-                  style: TextStyle(
+-                    fontSize: 14.sp,
+-                    fontWeight: FontWeight.w700,
+-                    color: isDark ? Colors.grey[300] : Colors.grey[800],
+-                  ),
+-                ),
+-                const SizedBox(width: 4),
+-                Text(
+-                  'cart.shipping.remaining_suffix'.tr(),
+-                  style: TextStyle(
+-                    fontSize: 14.sp,
+-                    fontWeight: FontWeight.w600,
+-                    color: isDark ? Colors.grey[300] : Colors.grey[800],
+-                  ),
+-                ),
+-              ],
+-            ],
+-          ),
+-          const SizedBox(height: 8),
+           Row(
+             children: [
+               Expanded(
+-                child: ClipRRect(
+-                  borderRadius: BorderRadius.circular(10),
+-                  child: Stack(
+-                    children: [
+-                      Container(
+-                        height: 8,
+-                        width: double.infinity,
+-                        color: isDark ? Colors.white12 : Colors.grey.shade300,
++                child: Column(
++                  crossAxisAlignment: CrossAxisAlignment.start,
++                  children: [
++                    Text(
++                      isFree ? 'cart.shipping.free_shipping_title'.tr() : 'cart.shipping.remaining_prefix'.tr(),
++                      style: TextStyle(
++                        fontSize: 14,
++                        fontWeight: FontWeight.bold,
++                        color: isFree
++                            ? (isDark ? Colors.green[300] : Colors.green[700])
++                            : (isDark ? Colors.white : Colors.black87),
+                       ),
+-                      Positioned.fill(
+-                        child: Shimmer.fromColors(
+-                          baseColor: isFree 
+-                              ? ColorsManager.successFill 
+-                              : ColorsManager.primaryColor,
+-                          highlightColor: isFree 
+-                              ? ColorsManager.successFill.withValues(alpha: 0.5) 
+-                              : ColorsManager.primaryColor.withValues(alpha: 0.4),
+-                          period: const Duration(seconds: 2),
+-                          child: LinearProgressIndicator(
+-                            value: isFree ? 1.0 : progress,
+-                            minHeight: 8,
+-                            backgroundColor: Colors.transparent,
+-                            valueColor: AlwaysStoppedAnimation<Color>(
+-                              isFree ? ColorsManager.successFill : ColorsManager.primaryColor,
++                    ),
++                    const SizedBox(height: 3),
++                    isFree
++                        ? Text(
++                            'cart.shipping.free_shipping_congrats'.tr(),
++                            style: TextStyle(
++                              fontSize: 12.5,
++                              color: isDark ? Colors.green[400] : Colors.green[600],
+                             ),
++                          )
++                        : Wrap(
++                            crossAxisAlignment: WrapCrossAlignment.center,
++                            children: [
++                              SarText(
++                                price: remaining.toStringAsFixed(2),
++                                style: const TextStyle(
++                                  fontSize: 14,
++                                  fontWeight: FontWeight.w700,
++                                  color: ColorsManager.primaryColor,
++                                ),
++                              ),
++                              Text(
++                                ' ${'cart.shipping.remaining_suffix'.tr()}',
++                                style: TextStyle(
++                                  fontSize: 12.5,
++                                  fontWeight: FontWeight.w500,
++                                  color: isDark ? Colors.grey[400] : Colors.grey[600],
++                                ),
++                              ),
++                            ],
+                           ),
+-                        ),
+-                      ),
+-                    ],
+-                  ),
++                  ],
+                 ),
+               ),
+-              const SizedBox(width: 12),
+-              SarText(
+-                price: threshold.toStringAsFixed(0),
+-                style: TextStyle(
+-                  fontSize: 14.sp,
+-                  fontWeight: FontWeight.w600,
+-                  color: isDark ? Colors.grey[300] : Colors.grey[800],
++              Container(
++                padding: const EdgeInsets.all(10),
++                decoration: BoxDecoration(
++                  color: isFree
++                      ? Colors.green.withValues(alpha: 0.2)
++                      : ColorsManager.primaryColor.withValues(alpha: 0.12),
++                  shape: BoxShape.circle,
++                ),
++                child: Icon(
++                  isFree ? Icons.check_circle_outline_rounded : Icons.local_shipping_outlined,
++                  color: isFree ? Colors.green[600] : ColorsManager.primaryColor,
++                  size: 22,
+                 ),
+               ),
+             ],
+           ),
++          if (!isFree) ...[
++            const SizedBox(height: 10),
++            ClipRRect(
++              borderRadius: BorderRadius.zero,
++              child: LinearProgressIndicator(
++                value: progress,
++                minHeight: 6,
++                backgroundColor: isDark ? Colors.white12 : ColorsManager.primaryColor.withValues(alpha: 0.12),
++                valueColor: const AlwaysStoppedAnimation<Color>(ColorsManager.primaryColor),
++              ),
++            ),
++          ]
+         ],
+       ),
+     );

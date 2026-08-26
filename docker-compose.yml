@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: .
+      args:
+        BASE_URL: https://fastway.atwdemo.com/api/v1
+    image: fastway-mobile:latest
+    container_name: fastway-mobile
+    restart: unless-stopped
+    ports:
+      - "8079:80"

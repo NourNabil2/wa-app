@@ -1,0 +1,10 @@
+diff a/lib/core/theme/dark_theme.dart b/lib/core/theme/dark_theme.dart	(rejected hunks)
+@@ -94,7 +94,7 @@
+     ),
+ 
+     // Bottom App Bar Theme
+-    bottomAppBarTheme: const BottomAppBarThemeData(
++    bottomAppBarTheme: const BottomAppBarTheme(
+       elevation: 0,
+       color: ColorsManager.secondaryDarkColor,
+       surfaceTintColor: ColorsManager.secondaryDarkColor,

@@ -1,0 +1,3539 @@
+﻿04a44d50f2909060bccdcdd5e6558fc279fe1a27|2026-05-29 16:06|Yossef Zaki|Merge branch 'main' of https://github.com/ATWltd/fastWay-mobile
+1203f4a81ad2a8c3c5b26c8dbca9ec006e92e14f|2026-05-29 16:06|Yossef Zaki|fix(gpu): eliminate all GPU-heavy animations across all pages
+M	lib/features/blog/presentation/screens/blog_screen.dart
+M	lib/features/home/presentation/widget/card/web_category_card.dart
+M	lib/features/home/presentation/widget/categories_row.dart
+M	lib/features/orders/presentation/screens/order_tracking_screen.dart
+M	lib/features/orders/presentation/screens/orders_list_screen.dart
+M	lib/features/points/presentation/view/points_screen.dart
+M	lib/features/product_details/presentation/widgets/product_bundle_widget.dart
+M	lib/features/profile/presentation/widgets/profile_header.dart
+M	lib/features/profile/presentation/widgets/profile_stats_row.dart
+M	lib/features/search/presentation/widgets/animated_search_hint.dart
+
+c58503e14c0518dbf7bcb7185e11f70e7c1d2712|2026-05-29 16:01|Nour Nabil|Merge remote-tracking branch 'origin/main'
+79cd4d47cfdbe289166580185c732b24e19be3c5|2026-05-29 16:01|Nour Nabil|enhance ui checkout
+M	lib/features/checkout/presentation/widgets/points_redemption_card.dart
+
+2214847631e9a9b93cc4820c203605b4c8a506c9|2026-05-29 15:59|Nour Nabil|fix profile screen routes header - WEB
+M	lib/features/profile/presentation/cubit/profile_cubit.dart
+M	lib/features/profile/presentation/cubit/profile_state.dart
+M	lib/features/profile/presentation/view/map_address_picker_screen.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+M	lib/features/profile/presentation/widgets/profile_field_tile.dart
+M	lib/features/profile/presentation/widgets/profile_stats_row.dart
+M	lib/features/profile/presentation/widgets/profile_theme_tile.dart
+
+80da1c3d0833519f8ced45e6943396ecfca05dc7|2026-05-29 15:58|Nour Nabil|fix profile screen layout - WEB
+M	lib/features/profile/presentation/view/edit_profile_screen.dart
+M	lib/features/profile/presentation/view/edit_profile_sheet.dart
+M	lib/features/profile/presentation/widgets/profile_header.dart
+M	lib/features/profile/presentation/widgets/profile_logout_button.dart
+M	lib/features/profile/presentation/widgets/profile_menu_section.dart
+
+1036959e164e0304d5d286d360b6594f9dfaf473|2026-05-29 15:58|Nour Nabil|fix change password - WEB
+M	lib/features/profile/presentation/view/change_password_screen.dart
+M	lib/features/profile/presentation/view/change_password_sheet.dart
+
+c5feb6afae59bfb847a2c6d77e0b98dd5baa3801|2026-05-29 15:57|Nour Nabil|fix address screen - WEB
+M	lib/features/profile/presentation/cubit/addresses_cubit.dart
+M	lib/features/profile/presentation/cubit/addresses_state.dart
+M	lib/features/profile/presentation/view/add_edit_address_screen.dart
+M	lib/features/profile/presentation/view/addresses_screen.dart
+
+8090c6551d513da682175f868615c2c9ef48bc14|2026-05-29 15:56|Yossef Zaki|fix(product-details): remove all GPU-heavy animations causing blink
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/widgets/product_details_shared.dart
+
+698854fd4be36cec4335304bf0830212bfcf7daf|2026-05-29 15:51|Yossef Zaki|fix(home): remove AnimatedScale + BoxShadow from CampaignCategoriesPair tiles
+M	lib/features/home/presentation/widget/campaign_categories_row.dart
+
+e1f08979b293c247b198d3b5cfca2afc9a955886|2026-05-29 15:36|Yossef Zaki|fix(home): remove BoxShadow and all hover animations from product cards
+M	lib/core/responsive/hoverable_card.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+
+ab796eabe301f85abeddb82a9121dd062ebe38f4|2026-05-29 15:18|Nour Nabil|fix pointreadption
+M	assets/translations/ar.json
+M	lib/features/checkout/presentation/widgets/points_redemption_card.dart
+
+42dcd42bdca4b1821b57334ba0f67921624f07a1|2026-05-29 15:11|Nour Nabil|toggleInputMode wallet Section in checkOut
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/checkout/presentation/widgets/points_redemption_card.dart
+
+664654a2ff25a76e48dd62e167180bd37ef1d844|2026-05-29 09:41|Yossef Zaki|fix: massive image optimization across all pages
+M	lib/core/layout/web_category_drawer.dart
+M	lib/core/widgets/custom_network_image.dart
+M	lib/features/brand/presentation/screens/brand_screen.dart
+M	lib/features/category/presentation/screens/sub_categories_screen.dart
+M	lib/features/home/presentation/view/categories_screen.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/widget/brands_rail.dart
+M	lib/features/home/presentation/widget/campaign_categories_row.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/home/presentation/widget/card/web_category_card.dart
+M	lib/features/home/presentation/widget/categories_row.dart
+M	lib/features/home/presentation/widget/promo_banner.dart
+
+b14abd549742cc705db7b7b25d36a261fd24c8be|2026-05-29 09:30|Yossef Zaki|fix: remove Matrix4 hover transform from web_category_card (GPU layer thrashing)
+M	lib/features/home/presentation/widget/card/web_category_card.dart
+
+9a4be6d40f74517366cde2f7f1f05c6130b1e1a9|2026-05-29 09:27|Yossef Zaki|fix: eliminate remaining sparkling sources across all pages
+M	lib/core/widgets/custom_network_image.dart
+M	lib/core/widgets/wishlist_heart_button.dart
+M	lib/features/home/presentation/widget/promo_banner.dart
+
+5676fb4f5def149435066279a5338961701011da|2026-05-29 09:08|Yossef Zaki|fix: eliminate all remaining sparkling sources
+M	lib/core/responsive/hoverable_card.dart
+M	lib/core/widgets/loading_widget.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/home/presentation/widget/card/product_countdown_timer.dart
+
+038706664ffd143de0118bc39252c5a7697f71d0|2026-05-29 08:58|Yossef Zaki|fix: restore dart:ui show lerpDouble/PointerDeviceKind ΓÇö compile errors after import cleanup
+M	lib/features/home/presentation/widget/promo_banner.dart
+M	lib/features/points/presentation/view/points_screen.dart
+
+efa5179e0dcf8f0c8636d3b1aa41373e6b96cc7f|2026-05-29 08:53|Yossef Zaki|fix: remove BackdropFilter and Lottie infinite animations causing CanvasKit sparkling
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/widget/promo_banner.dart
+M	lib/features/points/presentation/view/points_screen.dart
+
+cc30ada0cc452918a731d0fed81f287e84556ee4|2026-05-29 08:33|Yossef Zaki|fix: remove --web-renderer html ΓÇö removed in Flutter 3.29+, not supported in 3.41.4
+M	Dockerfile
+
+d939ff22b458dc9e81b91478df7cb5797e05da79|2026-05-29 08:31|Yossef Zaki|fix: use --web-renderer html flag for Flutter 3.22+ (old dart-define was silently ignored, causing CanvasKit sparkling on AWS)
+M	Dockerfile
+
+e0d09847324f2bcd2902415d1eb1a43f6c584f5f|2026-05-29 08:22|Yossef Zaki|Animation fix
+M	lib/features/orders/presentation/screens/order_tracking_screen.dart
+M	lib/features/points/presentation/view/points_screen.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/product_details/presentation/widgets/product_details_shared.dart
+M	lib/features/product_details/presentation/widgets/product_info_section.dart
+
+9c9912226159ebac827a6585504289bcc485ccb4|2026-05-29 08:05|Yossef Zaki|Fix Docker
+M	Dockerfile
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/home/presentation/widget/card/animated_cart_button.dart
+M	lib/features/wishlist/presentation/widgets/cart_wishlist_reminder.dart
+
+a073c5c80f9e8020fb54f62b90725a9a766fc9e3|2026-05-29 07:27|Yossef Zaki|Final Fix before go to sleep
+A	assets/icons/footericons/Mastercard.png
+A	assets/icons/footericons/applepay.png
+A	assets/icons/footericons/appstore.png
+A	assets/icons/footericons/googleplay.png
+A	assets/icons/footericons/mada.png
+A	assets/icons/footericons/tabby.png
+A	assets/icons/footericons/tamara.png
+D	assets/icons/footericons/tax.avif
+A	assets/icons/footericons/tax.png
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/layout/web_footer.dart
+
+1b43f87ffc2eb57fdce843d90b5adae91c6a80f3|2026-05-29 06:56|Yossef Zaki|Logos
+A	assets/icons/footericons/Mastercard.avif
+A	assets/icons/footericons/applepay.avif
+A	assets/icons/footericons/mada.avif
+A	assets/icons/footericons/tabby.avif
+A	assets/icons/footericons/tamara.avif
+A	assets/icons/footericons/tax.avif
+M	lib/core/layout/web_footer.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	pubspec.yaml
+
+a124cef8f589880e87b5c7393d956e2669573d17|2026-05-29 06:47|Yossef Zaki|Fix Screens
+M	lib/core/layout/web_footer.dart
+M	lib/core/widgets/static_content_page.dart
+M	lib/features/auth/presentation/view/auth_screen.dart
+M	lib/features/auth/presentation/widget/taps/signup_tab.dart
+M	lib/features/cart/presentation/widgets/cart_item_card.dart
+M	lib/features/checkout/data/models/checkout_model.dart
+M	lib/features/checkout/domain/entities/checkout_entity.dart
+M	lib/features/checkout/presentation/view/order_success_screen.dart
+M	lib/features/checkout/presentation/widgets/shipping_method_picker.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/widget/card/animated_cart_button.dart
+M	lib/features/legal/contact_screen.dart
+M	lib/features/notifications/presentation/screens/notifications_screen.dart
+M	lib/features/orders/presentation/screens/order_tracking_screen.dart
+M	lib/features/orders/presentation/screens/return_status_screen.dart
+M	lib/features/orders/presentation/widgets/order_product_item.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/product_details/presentation/widgets/product_bundle_widget.dart
+M	lib/features/profile/presentation/view/add_edit_address_screen.dart
+M	lib/features/profile/presentation/view/addresses_screen.dart
+M	lib/features/profile/presentation/view/change_password_screen.dart
+M	lib/features/profile/presentation/view/edit_profile_screen.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+M	lib/features/wishlist/presentation/view/wishlist_screen.dart
+
+2dd9138538fad48418099cc4dd710f41022d2e84|2026-05-29 05:12|Yossef Zaki|MOK
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/widget/brands_rail.dart
+M	lib/features/home/presentation/widget/campaign_categories_row.dart
+M	lib/features/profile/presentation/view/add_edit_address_screen.dart
+
+64a93670d7a9c51efe4f544e8157770c7d444196|2026-05-29 03:32|Yossef Zaki|fix(SarText): rebuild SaudiRiyalSAR.ttf with complete SVG path parser
+M	assets/font/SaudiRiyalSAR.ttf
+
+e17320dc922c813a1eaf7ab6ac96c44854e6459c|2026-05-29 03:24|Yossef Zaki|feat(SarText): use official Saudi Riyal symbol U+20C1 via custom font
+A	assets/font/SaudiRiyalSAR.ttf
+M	lib/core/widgets/sar_symbol.dart
+M	pubspec.yaml
+
+b87c5cbcba09122c2e493f7e10490f8ffcbf1c5a|2026-05-29 03:13|Yossef Zaki|feat(SarText): render SAR symbol as text glyph using AmiriSAR font
+A	assets/font/Amiri-Regular.ttf
+A	assets/font/AmiriSAR.ttf
+M	lib/core/widgets/sar_symbol.dart
+M	pubspec.yaml
+
+0b219d69e080e458a13703d06bb11b8bd3aeb9c5|2026-05-29 03:05|Yossef Zaki|fix(SarText): use Text.rich+WidgetSpan for true inline SVG alignment
+M	lib/core/widgets/sar_symbol.dart
+
+d037f7e8de28264b4101f2dc41502bea0a521e49|2026-05-29 02:59|Yossef Zaki|fix(price): consistent SAR symbol across entire app
+M	lib/core/widgets/sar_symbol.dart
+M	lib/features/checkout/presentation/widgets/shipping_method_picker.dart
+M	lib/features/orders/presentation/screens/order_tracking_screen.dart
+M	lib/features/orders/presentation/screens/orders_list_screen.dart
+M	lib/features/orders/presentation/widgets/order_card.dart
+M	lib/features/orders/presentation/widgets/order_product_item.dart
+M	lib/features/orders/presentation/widgets/return_status_modal.dart
+M	lib/features/points/presentation/view/points_screen.dart
+
+ccacd2841dc973c9fe96a98530a5a71b028ffd35|2026-05-29 01:36|Yossef Zaki|feat(responsive): percentage-based padding on desktop
+M	lib/core/responsive/responsive_layout.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+
+b6474c063108b1919d35fd08322561aab7f8e454|2026-05-29 01:24|Yossef Zaki|fix(responsive): fill full screen width on large displays
+M	lib/core/layout/web_shell.dart
+
+3d49e28140cf3e31c7db9c035c428644849c04fa|2026-05-29 01:14|Yossef Zaki|fix(responsive): proper 1440px cap on wide/27-inch screens
+M	lib/core/layout/web_shell.dart
+M	lib/core/responsive/max_width_container.dart
+
+b18f7f9998a82136605fc0ed1fda3f3868d7dc90|2026-05-29 00:54|Yossef Zaki|fix(web): constrain WebShell content to 1440px maxWidth ΓÇö fixes 27-inch screen dead whitespace on sides
+M	lib/core/layout/web_shell.dart
+
+d9e35d38349974addce6596fc11430cd9e70efbf|2026-05-28 23:23|Yossef Zaki|fix: remove orphaned closing brace at end of animated_cart_button.dart
+M	lib/features/home/presentation/widget/card/animated_cart_button.dart
+
+448ab6725d4cf5867308be68d07b8ed9249cf294|2026-05-28 23:21|Yossef Zaki|feat(product): editable quantity field in full cart button ΓÇö validates against maxQuantity on keyboard dismiss, disables + at max, centers controls
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/home/presentation/widget/card/animated_cart_button.dart
+
+e2e7291316b6c07ee46ef54d63ded6cc4332ec9c|2026-05-28 23:14|Yossef Zaki|Fix
+M	lib/features/announcements/data/datasources/announcements_remote_data_source.dart
+M	lib/features/auth/data/datasources/auth_remote_data_source.dart
+M	lib/features/blog/data/datasources/blog_remote_datasource.dart
+M	lib/features/checkout/data/datasources/checkout_remote_datasource.dart
+M	lib/features/notifications/data/datasources/notifications_remote_datasource.dart
+
+0b225bc81a6e7f0639879e1572be3690acc1831b|2026-05-28 23:10|Yossef Zaki|fix(api): use AppRouter.navigatorKey in ApiErrorHandler to resolve DioClient circular import
+M	lib/core/api/api_error_handler.dart
+
+ff7288f377a0662f145a7dacc223e7f2c778c694|2026-05-28 23:07|Yossef Zaki|fix(i18n): ApiErrorHandler ΓÇö locale-aware error messages (message_ar/en ΓåÆ backend msg ΓåÆ .tr() fallback); add too_many_requests key
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/api/api_error_handler.dart
+
+2a96ba5d8cf2c0ee92ddd38fe8fd3ad0b248c9cc|2026-05-28 23:00|Yossef Zaki|fix(api): on DioException ΓåÆ ApiErrorHandler.getMessage() for readable error messages; 36 handlers fixed
+M	lib/features/cart/data/datasources/cart_remote_datasource.dart
+M	lib/features/home/data/datasources/products_remote_datasource.dart
+M	lib/features/orders/data/datasources/orders_remote_datasource.dart
+M	lib/features/points/data/datasources/points_remote_datasource.dart
+M	lib/features/product_details/data/datasources/product_details_remote_datasource.dart
+M	lib/features/profile/data/datasources/profile_remote_datasource.dart
+M	lib/features/wishlist/data/datasources/wishlist_remote_datasource.dart
+
+250fd1525c319659f5aea048185bf657264923f0|2026-05-28 22:59|Yossef Zaki|Revert "fix(api): replace raw e.toString() with _dioMsg() in 53 error handlers across all datasources ΓÇö extract readable backend messages from DioException responses"
+M	lib/features/cart/data/datasources/cart_remote_datasource.dart
+M	lib/features/home/data/datasources/products_remote_datasource.dart
+M	lib/features/orders/data/datasources/orders_remote_datasource.dart
+M	lib/features/points/data/datasources/points_remote_datasource.dart
+M	lib/features/product_details/data/datasources/product_details_remote_datasource.dart
+M	lib/features/profile/data/datasources/profile_remote_datasource.dart
+M	lib/features/wishlist/data/datasources/wishlist_remote_datasource.dart
+
+ab51c198008772e09c7a6bb1756006935e93f3e7|2026-05-28 22:42|Yossef Zaki|fix(api): replace raw e.toString() with _dioMsg() in 53 error handlers across all datasources ΓÇö extract readable backend messages from DioException responses
+M	lib/features/cart/data/datasources/cart_remote_datasource.dart
+M	lib/features/home/data/datasources/products_remote_datasource.dart
+M	lib/features/orders/data/datasources/orders_remote_datasource.dart
+M	lib/features/points/data/datasources/points_remote_datasource.dart
+M	lib/features/product_details/data/datasources/product_details_remote_datasource.dart
+M	lib/features/profile/data/datasources/profile_remote_datasource.dart
+M	lib/features/wishlist/data/datasources/wishlist_remote_datasource.dart
+
+d431dd49dc79a1ea64304bfa64670cce592734d2|2026-05-28 22:38|Yossef Zaki|fix(i18n): cold hint ΓÇö text only in translation, Γ¥ä∩╕Å rendered by widget; no X emoji
+M	assets/translations/ar.json
+M	assets/translations/en.json
+
+74315da36693ef33e8eea16457aae42ed231c76a|2026-05-28 22:25|Yossef Zaki|feat(flutter): cart ΓÇö express SVG badge toggle + inline cold hint per item; remove global cold banner
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/cart/presentation/widgets/cart_item_card.dart
+
+8817049acf1df34c695e9db3fdaa5fc20bb576b4|2026-05-28 22:18|Yossef Zaki|fix(flutter): all product page accordions start collapsed by default
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+
+fd209356231f0f5ccf0d6012efb2c5ff95a28e18|2026-05-28 22:17|Yossef Zaki|fix(i18n): BNPL header ΓÇö '╪Ñ╪»┘ü╪╣ ┘ä╪º╪¡┘é╪º┘ï ╪¿╪»┘ê┘å ╪▒╪│┘ê┘à' / 'Pay later, no fees'
+M	assets/translations/ar.json
+M	assets/translations/en.json
+
+06db1704a6d6b9cb7c3d4fccc52698711f3dc02e|2026-05-28 22:14|Yossef Zaki|feat(flutter): add verified badge beside brand name in web product details BrandCard
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+
+22ffbf8bbb8313317442cd6be437c54cef26af40|2026-05-28 22:12|Yossef Zaki|fix(flutter): remove arrow icon from category accordion sub-items ΓÇö plain text only
+M	lib/core/layout/web_header.dart
+
+c18e2f0dc2e2e50f896d888c28d7ce48b65641ec|2026-05-28 22:06|Yossef Zaki|feat(flutter): categories dropdown ΓåÆ accordion piano-style (no flyout submenu)
+M	lib/core/layout/web_header.dart
+
+fbee9efddae42282d505d2455082fcafcd83113f|2026-05-28 22:03|Yossef Zaki|fix(flutter): revert top-bar action buttons to original expand-on-hover; green hover only on sub-bar category items
+M	lib/core/layout/web_header.dart
+
+570ee9bd960c705ae05264bdf14a3b1d3d23c1aa|2026-05-28 22:00|Yossef Zaki|feat(flutter): navbar hover = green text/icon only; accordion category dropdown; Tajawal global font
+M	lib/core/layout/web_header.dart
+
+416c634aea70642bdaeeb1491f67e542dd200712|2026-05-28 21:48|Yossef Zaki|fix(flutter): enforce Tajawal font globally ΓÇö top-level ThemeData.fontFamily + remove Cairo overrides in web header
+M	lib/core/layout/web_header.dart
+M	lib/core/theme/dark_theme.dart
+M	lib/core/theme/light_theme.dart
+
+290f111e97e1ec10830ba524f9b2f40767c78e9c|2026-05-28 21:42|Yossef Zaki|feat(flutter): verified blue checkmark beside brand name on product page
+M	lib/features/product_details/presentation/widgets/product_info_section.dart
+
+2e06928c8f3211d931a843ade00f9436d768dcb5|2026-05-28 21:41|Yossef Zaki|feat(flutter): brands as circle avatars ΓÇö logo in circle or 2-char gradient initials fallback
+M	lib/features/home/presentation/widget/brands_rail.dart
+
+bfa8f7813ed6ee671b86733f2f2ca41900d2eac3|2026-05-28 21:25|Yossef Zaki|fix(flutter): blog section skeleton stuck forever ΓÇö hide on error/empty, add _loaded flag
+M	lib/features/home/presentation/view/home_tab_screen.dart
+
+355c457ba9f4dc0e78a5ae6113de5f0cc31ee0de|2026-05-28 21:01|Yossef Zaki|fix(flutter): NoTransitionBuilder inline, fix toggleProduct+bool? in WishlistFullButton
+M	lib/core/theme/dark_theme.dart
+M	lib/core/theme/light_theme.dart
+M	lib/core/widgets/wishlist_full_button.dart
+
+e50dc0a46e3afca9616157798e14f787f0593f8e|2026-05-28 20:22|Yossef Zaki|feat(flutter): hide empty home sections, wishlist on OOS, no-slide transitions, logo first-launch-only
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/theme/dark_theme.dart
+M	lib/core/theme/light_theme.dart
+M	lib/core/widgets/loading_widget.dart
+A	lib/core/widgets/wishlist_full_button.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	pubspec.lock
+M	pubspec.yaml
+
+5a072ee730375f9449f3b3127dd8a6ba80a3b676|2026-05-28 19:15|Yossef Zaki|Merge branch 'main' of https://github.com/ATWltd/fastWay-mobile
+78e8e86cf87f647b2fe6bb1b6332509406402791|2026-05-28 18:09|Yossef Zaki|Fix
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+
+47f5801985d4ce21e414c7e5926aaab1f0e57682|2026-05-28 16:43|Yossef Zaki|Fix
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/api/model/endpoints.dart
+M	lib/core/di/injection_container.dart
+M	lib/features/auth/presentation/view/auth_screen.dart
+M	lib/features/auth/presentation/widget/taps/login_tab.dart
+M	lib/features/auth/presentation/widget/taps/signup_tab.dart
+M	lib/features/cart/data/datasources/cart_remote_datasource.dart
+M	lib/features/cart/data/repositories/cart_repository_impl.dart
+M	lib/features/cart/domain/repositories/cart_repository.dart
+A	lib/features/cart/domain/usecases/merge_guest_cart_usecase.dart
+M	lib/features/cart/presentation/cubit/cart_cubit.dart
+M	lib/features/cart/presentation/view/cart_screen.dart
+
+7337b086fddc7b612c90bc00e01bd23b89929ae0|2026-05-28 16:11|Yossef Zaki|Fix
+M	lib/features/cart/data/models/cart_model.dart
+M	lib/features/cart/presentation/cubit/cart_cubit.dart
+M	lib/features/dashboard/dashboard.dart
+M	lib/features/home/data/model/product_model.dart
+M	lib/features/home/presentation/widget/card/animated_cart_button.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/product_details/data/models/product_details_model.dart
+M	lib/features/product_details/presentation/view/product_details_screen.dart
+
+1c14c482aabe82cabcdb6eb47bf07976682dac56|2026-05-28 15:29|Nour Nabil|fix wide screen
+M	lib/core/layout/web_footer.dart
+M	lib/core/layout/web_header.dart
+M	lib/core/responsive/max_width_container.dart
+M	lib/core/widgets/custom_snack_bar.dart
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/view/external_payment_page_mobile.dart
+M	lib/features/home/presentation/view/categories_screen.dart
+M	lib/features/home/presentation/view/products_list_screen.dart
+M	lib/features/orders/presentation/screens/order_details_screen.dart
+M	lib/features/points/presentation/widgets/points_header_card.dart
+M	lib/features/profile/presentation/view/map_address_picker_screen.dart
+M	lib/features/wishlist/presentation/view/wishlist_screen.dart
+
+328bfca750e51fc9ca559eb04de3e24316fd9b32|2026-05-27 19:25|Yossef Zaki|Fix decimal
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/product_details/presentation/widgets/product_info_section.dart
+
+ecb89b75fe98f8d01f4ba73a92da4496192d82da|2026-05-26 18:27|Yossef Zaki|fix(cors): point production Flutter web to http://admin.fastwayprotein.com/api/v1
+M	Dockerfile
+M	lib/core/api/model/endpoints.dart
+
+5748669910c5f12a2bdaae823a9faeaebdd185ee|2026-05-26 18:14|Yossef Zaki|Fix: aws ecs wait services-stable (not service-stable)
+M	deploy.sh
+
+ba368b7a0c848400e373a8fa604c4f9ec46d27fb|2026-05-26 18:13|Yossef Zaki|Add ECS deploy script for Flutter Web
+A	deploy.sh
+
+8e16ab8f33db1ff6d9f32b6989efedc8a4ee8bdd|2026-05-26 17:11|Yossef Zaki|Fix
+M	lib/features/orders/presentation/screens/return_status_screen.dart
+M	lib/features/profile/presentation/cubit/addresses_cubit.dart
+M	lib/features/profile/presentation/view/addresses_screen.dart
+M	lib/features/profile/presentation/view/change_password_screen.dart
+M	lib/features/profile/presentation/view/edit_profile_screen.dart
+
+c9ebf5ea2f4e4b7fc12d49076a88c71f778572df|2026-05-26 16:53|Yossef Zaki|Fix order tracking
+M	lib/features/checkout/presentation/view/order_success_screen.dart
+M	lib/features/orders/presentation/screens/order_details_screen.dart
+M	lib/features/orders/presentation/screens/order_tracking_screen.dart
+
+cdcd5f3477d2a0c80de643094a68650aee6b4cd8|2026-05-26 15:28|Yossef Zaki|Fix
+M	assets/translations/ar.json
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/view/order_success_screen.dart
+M	lib/features/checkout/presentation/widgets/order_summary_card.dart
+
+eb987cc4b2e7aa3b7bc39491da35ed6ab951bd05|2026-05-26 14:56|Yossef Zaki|Fix Strings in check out
+M	lib/core/widgets/custom_snack_bar.dart
+M	lib/features/brand/data/models/brand_model.dart
+M	lib/features/cart/data/models/cart_model.dart
+M	lib/features/checkout/data/models/checkout_model.dart
+M	lib/features/checkout/data/models/city_model.dart
+M	lib/features/checkout/data/models/place_order_result_model.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/widgets/points_redemption_card.dart
+M	lib/features/home/data/model/category_model.dart
+M	lib/features/home/data/model/product_model.dart
+M	lib/features/orders/data/models/order_model.dart
+M	lib/features/points/data/models/points_model.dart
+M	lib/features/product_details/data/models/product_details_model.dart
+M	lib/features/wishlist/data/models/wishlist_item_model.dart
+
+6fec25967fedfe1eeb9f26ca510f7e1c5195fe98|2026-05-26 06:42|Yossef Zaki|Fix
+M	lib/core/services/geocoding_service.dart
+M	lib/core/widgets/custom_snack_bar.dart
+M	lib/features/cart/data/models/cart_model.dart
+M	lib/features/checkout/data/models/checkout_model.dart
+M	lib/features/wishlist/presentation/widgets/cart_wishlist_reminder.dart
+
+d3e1360c7d015b40b7cb746b3b7aa924d14e0072|2026-05-26 05:58|Yossef Zaki|Fix wish list design
+M	lib/features/wishlist/presentation/view/wishlist_screen.dart
+
+c0221acca33fcb3390b9989c6d792e5bc747e766|2026-05-26 05:35|Yossef Zaki|Drop down in nav for address pickup
+M	lib/core/layout/web_header.dart
+M	lib/features/home/presentation/widget/location_picker_sheet.dart
+
+78ff674086a16fa9b2f3c2c6a1bbfdf694f5b1ef|2026-05-26 05:31|Yossef Zaki|Fix
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/layout/web_header.dart
+M	lib/core/widgets/empty_modal.dart
+M	lib/features/search/presentation/view/search_sheet.dart
+
+529e4208778a639bea70a4962f42d67e8f094413|2026-05-26 04:55|Yossef Zaki|Category and sub category enahnce and brand page
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/di/injection_container.dart
+M	lib/core/routes/app_routes.dart
+M	lib/core/routes/routes.dart
+M	lib/core/utils/assets.dart
+A	lib/features/brand/data/models/brand_model.dart
+A	lib/features/brand/domain/entities/brand_entity.dart
+A	lib/features/brand/presentation/cubit/brand_cubit.dart
+A	lib/features/brand/presentation/screens/brand_screen.dart
+M	lib/features/category/presentation/screens/sub_categories_screen.dart
+M	lib/features/home/presentation/view/categories_screen.dart
+M	lib/features/home/presentation/view/products_list_screen.dart
+M	lib/features/product_details/data/models/product_details_model.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/product_details/presentation/widgets/product_info_section.dart
+
+650a044fc1937136b63211c79200dac9428d27cd|2026-05-26 03:03|Yossef Zaki|Product details translate
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/product_details/data/models/product_details_model.dart
+M	lib/features/product_details/domain/entities/product_details_entity.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+
+4215f6d4e30261173aa79cc16fa36ccda2dffdd0|2026-05-25 23:49|Yossef Zaki|Language Switcher
+M	lib/core/layout/web_header.dart
+A	lib/core/utils/platform_reload.dart
+A	lib/core/utils/platform_reload_stub.dart
+A	lib/core/utils/platform_reload_web.dart
+M	lib/features/dashboard/dashboard.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+
+f17fde4f633d1bee3dac95132452f7246af0200a|2026-05-25 23:24|Yossef Zaki|Final Fix
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/orders/presentation/widgets/return_status_modal.dart
+M	lib/main.dart
+
+33484316378fb10956aeddf825519fef6e82ef98|2026-05-25 22:56|Yossef Zaki|Fix Po
+M	assets/translations/ar.json
+M	lib/features/notifications/presentation/cubit/notifications_cubit.dart
+M	lib/features/orders/presentation/cubit/orders_cubit.dart
+M	lib/features/points/presentation/cubit/points_cubit.dart
+M	lib/features/product_details/presentation/cubit/product_details_cubit.dart
+M	lib/features/profile/presentation/cubit/profile_cubit.dart
+
+a230e852c74d5d86e76519ed12bc7bb18f42adbd|2026-05-25 22:46|Yossef Zaki|Fix Language Fixes
+M	lib/features/announcements/presentation/cubit/announcements_cubit.dart
+M	lib/features/auth/presentation/cubit/auth_cubit.dart
+M	lib/features/cart/presentation/cubit/cart_cubit.dart
+M	lib/features/home/presentation/widget/card/animated_cart_button.dart
+M	lib/features/orders/presentation/screens/order_tracking_screen.dart
+M	lib/features/orders/presentation/screens/orders_list_screen.dart
+M	lib/features/orders/presentation/widgets/order_product_item.dart
+M	lib/features/points/presentation/view/points_screen.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/widgets/add_to_cart_button.dart
+M	lib/features/product_details/presentation/widgets/product_details_shared.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+M	lib/features/search/presentation/view/search_sheet.dart
+
+02906add6ae16bcaa5d9df2fdc8a70b1fc1509bb|2026-05-25 22:30|Yossef Zaki|Merge branch 'main' of https://github.com/ATWltd/fastWay-mobile
+M	assets/translations/ar.json
+M	assets/translations/en.json
+
+b4a37793fad63a23503683b499b0e5e124f19585|2026-05-25 22:27|Yossef Zaki|Merge Nour's changes: accept SarText widget, resolve translation conflicts
+ddc6591a6a1d482bf993f56ba7d3e82704c6684e|2026-05-25 22:21|Yossef Zaki|Trasnaltion Fix
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/api/api_error_handler.dart
+M	lib/core/cubit/delivery_location/delivery_location_cubit.dart
+M	lib/core/layout/web_header.dart
+M	lib/core/utils/enums.dart
+M	lib/core/widgets/confirmation_dialog.dart
+M	lib/core/widgets/full_screen_media_viewer.dart
+M	lib/core/widgets/static_content_page.dart
+M	lib/features/blog/presentation/screens/blog_screen.dart
+M	lib/features/cart/presentation/cubit/cart_cubit.dart
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/cart/presentation/widgets/order_summary.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/view/external_payment_page_mobile.dart
+M	lib/features/checkout/presentation/view/order_success_screen.dart
+M	lib/features/checkout/presentation/widgets/points_redemption_card.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/view/location_map_screen.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/legal/contact_screen.dart
+M	lib/features/legal/privacy_screen.dart
+M	lib/features/legal/return_policy_screen.dart
+M	lib/features/legal/shipping_screen.dart
+M	lib/features/legal/terms_screen.dart
+M	lib/features/orders/presentation/screens/order_tracking_screen.dart
+M	lib/features/orders/presentation/screens/orders_list_screen.dart
+M	lib/features/orders/presentation/widgets/delivery_sla_widget.dart
+M	lib/features/orders/presentation/widgets/order_product_item.dart
+M	lib/features/orders/presentation/widgets/return_status_modal.dart
+M	lib/features/points/data/models/points_model.dart
+M	lib/features/points/presentation/view/points_screen.dart
+M	lib/features/points/presentation/widgets/points_header_card.dart
+M	lib/features/points/presentation/widgets/points_history_section.dart
+M	lib/features/points/presentation/widgets/points_stats_row.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/product_details/presentation/widgets/add_to_cart_button.dart
+M	lib/features/product_details/presentation/widgets/product_bundle_widget.dart
+M	lib/features/product_details/presentation/widgets/product_details_shared.dart
+M	lib/features/product_details/presentation/widgets/product_info_section.dart
+M	lib/features/profile/presentation/view/add_edit_address_screen.dart
+M	lib/features/profile/presentation/view/addresses_screen.dart
+M	lib/features/profile/presentation/view/edit_profile_screen.dart
+M	lib/features/profile/presentation/view/edit_profile_sheet.dart
+M	lib/features/profile/presentation/view/map_address_picker_screen.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+M	lib/features/search/presentation/view/search_sheet.dart
+D	serve_web.py
+D	update_translations.py
+D	update_translations_blog.py
+D	update_translations_home.py
+D	update_translations_product.py
+D	update_translations_profile.py
+
+5c36179af2a0081b95f8241b6e05c1ebfe9cc702|2026-05-25 21:41|Nour Nabil|fix ui
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/layout/web_header.dart
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/cart/presentation/widgets/cart_item_card.dart
+M	lib/features/cart/presentation/widgets/order_summary.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/view/order_success_screen.dart
+M	lib/features/checkout/presentation/widgets/order_summary_card.dart
+M	lib/features/checkout/presentation/widgets/points_redemption_card.dart
+M	lib/features/checkout/presentation/widgets/shipping_method_picker.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/product_details/presentation/widgets/product_info_section.dart
+
+c08f14c7055b56750e34d0f77c053a86dd8bad4c|2026-05-25 21:29|Yossef Zaki|Fix Language
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/blog/presentation/screens/blog_detail_screen.dart
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/category/presentation/screens/sub_categories_screen.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/view/external_payment_page_mobile.dart
+M	lib/features/checkout/presentation/view/order_success_screen.dart
+M	lib/features/home/presentation/view/categories_screen.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/view/location_map_screen.dart
+M	lib/features/home/presentation/view/products_list_screen.dart
+M	lib/features/home/presentation/widget/location_picker_sheet.dart
+M	lib/features/home/presentation/widget/mobile_search_bar.dart
+M	lib/features/product_details/presentation/widgets/product_details_shared.dart
+M	lib/features/profile/presentation/view/add_edit_address_screen.dart
+M	lib/features/profile/presentation/view/change_password_sheet.dart
+M	lib/features/profile/presentation/view/edit_profile_screen.dart
+M	lib/features/profile/presentation/view/edit_profile_sheet.dart
+M	lib/features/profile/presentation/widgets/profile_logout_button.dart
+A	update_translations.py
+A	update_translations_blog.py
+A	update_translations_home.py
+A	update_translations_product.py
+A	update_translations_profile.py
+
+fd647490ac1a5f088b515c74fe11b0df06e81bf9|2026-05-25 21:25|Nour Nabil|Merge remote-tracking branch 'origin/main'
+4d6ef22fb0ba25c92eacf40182dc8f1583cd30f6|2026-05-25 21:25|Nour Nabil|change ui
+A	assets/icons/coin_point.svg
+A	assets/icons/saudi_riyal_symbol.svg
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/layout/simple_web_shell.dart
+M	lib/core/layout/web_header.dart
+M	lib/core/utils/assets.dart
+M	lib/core/widgets/sar_symbol.dart
+M	lib/features/home/presentation/widget/card/animated_cart_button.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/product_details/presentation/widgets/product_bundle_widget.dart
+M	lib/features/product_details/presentation/widgets/product_info_section.dart
+M	lib/features/wishlist/presentation/widgets/cart_wishlist_reminder.dart
+M	lib/features/wishlist/presentation/widgets/wishlist_item_card.dart
+
+2b95ef90f3da6227949898918caa491c69741de0|2026-05-25 20:30|Yossef Zaki|Fix PAges
+M	lib/core/api/model/endpoints.dart
+M	lib/core/di/injection_container.dart
+M	lib/core/layout/web_footer.dart
+M	lib/core/routes/app_routes.dart
+M	lib/core/routes/routes.dart
+A	lib/core/widgets/static_content_page.dart
+A	lib/features/legal/contact_screen.dart
+A	lib/features/legal/privacy_screen.dart
+A	lib/features/legal/return_policy_screen.dart
+A	lib/features/legal/shipping_screen.dart
+A	lib/features/legal/terms_screen.dart
+A	lib/features/legal/warehouse_cubit.dart
+A	lib/features/legal/warehouse_entity.dart
+
+1e882766125e73ac0c9ba333912beac2ba9a9991|2026-05-25 19:57|Yossef Zaki|Fix
+M	lib/features/cart/presentation/view/cart_screen.dart
+
+2e8d06cc0c23f85539efa05f885cd44ce7cc4b1e|2026-05-25 19:13|Yossef Zaki|Home banners change
+M	lib/features/home/presentation/view/home_tab_screen.dart
+
+b36b7b92e0747f4a115840a7d1b680eea095b72e|2026-05-25 19:05|Yossef Zaki|Fix
+M	lib/core/layout/web_url_helper_web.dart
+M	lib/features/home/presentation/widget/location_picker_sheet.dart
+
+13ecc05362210775bba070f93ca3fc88890c094c|2026-05-25 18:52|Yossef Zaki|Banners
+M	lib/features/home/presentation/cubit/home_cubit.dart
+M	lib/features/home/presentation/cubit/home_state.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+
+b71501985061792df1a9e5d87f6583f9885d0373|2026-05-25 18:19|Yossef Zaki|GPS
+M	lib/core/cubit/delivery_location/delivery_location_cubit.dart
+M	lib/core/di/injection_container.dart
+M	lib/features/home/data/datasources/products_remote_datasource.dart
+M	lib/features/home/presentation/cubit/home_cubit.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/main.dart
+
+8a7ef27399e506215f5941049086a661738d5254|2026-05-25 17:54|Yossef Zaki|Fix product Name and Address
+M	lib/features/home/domain/entities/product_entity.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/view/products_list_screen.dart
+M	lib/features/home/presentation/widget/card/product_list.dart
+M	lib/features/home/presentation/widget/card/products_row.dart
+M	lib/features/search/presentation/view/search_sheet.dart
+
+a5fbe1eb41b3fac1b7d1627c4b687cdf60a886bf|2026-05-25 17:32|Yossef Zaki|Fix Banner
+M	lib/core/cubit/delivery_location/delivery_location_cubit.dart
+M	lib/features/cart/data/datasources/cart_remote_datasource.dart
+M	lib/features/cart/data/repositories/cart_repository_impl.dart
+M	lib/features/cart/domain/repositories/cart_repository.dart
+M	lib/features/cart/domain/usecases/add_to_cart_usecase.dart
+M	lib/features/cart/domain/usecases/apply_coupon_usecase.dart
+M	lib/features/cart/domain/usecases/get_cart_usecase.dart
+M	lib/features/cart/domain/usecases/remove_coupon_usecase.dart
+M	lib/features/cart/domain/usecases/remove_item_usecase.dart
+M	lib/features/cart/domain/usecases/toggle_express_item_usecase.dart
+M	lib/features/cart/domain/usecases/update_quantity_usecase.dart
+M	lib/features/cart/presentation/cubit/cart_cubit.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/home/presentation/widget/promo_banner.dart
+
+adf5642a69eb53c26cdce9963cccc7ac9e8fced2|2026-05-25 16:40|Nour Nabil|change ui
+M	lib/core/layout/web_header.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/widget/card/animated_cart_button.dart
+
+9e109075b5ecd089ef656c88d3ee6719b76b6397|2026-05-25 15:24|Yossef Zaki|Category remove
+M	lib/features/home/presentation/view/home_tab_screen.dart
+
+c430adc8e269e60a61065dfb41baf4fb9dd8ef44|2026-05-25 15:14|Yossef Zaki|Fix Mobile home
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/widget/card/products_row.dart
+
+98f4bef11d4f843647537e07df1f0775da2d2f35|2026-05-25 14:31|Yossef Zaki|H
+M	lib/core/theme/light_theme.dart
+
+a6e59c633fdaf504d25a1c08751ab7b1bb9ba957|2026-05-25 14:15|Nour Nabil|update ui product card
+M	lib/features/home/presentation/widget/card/animated_cart_button.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+
+61016e84fe5fee20942bb7fa90d7c159824aedd6|2026-05-25 14:02|Nour Nabil|add assets express
+A	assets/icons/shipping/express_ar.svg
+M	lib/core/widgets/sar_symbol.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+
+e7547f07a07c92c1308d78c10931fb921d251f3c|2026-05-25 12:20|Nour Nabil|Merge remote-tracking branch 'origin/main'
+591a04bb91b3e4929b9e37e84af7c8eda42f9eb1|2026-05-25 12:20|Nour Nabil|add assets
+M	lib/core/utils/assets.dart
+
+615c953a6affc00f193b7d1ef375d6fb0fcdc469|2026-05-25 12:18|Yossef Zaki|Merge branch 'main' of https://github.com/ATWltd/fastWay-mobile
+5d72f81c4bf0cee87184a641ea4dbf685f939c04|2026-05-25 12:17|Nour Nabil|Merge remote-tracking branch 'origin/main'
+a2c3594eedfeb51a0eff1066ade7ece379c2f62e|2026-05-25 12:16|Nour Nabil|product details
+M	lib/core/theme/light_theme.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+
+e05d8925e0950b3a28384c61318f72b18a54a76e|2026-05-25 12:15|Yossef Zaki|Blog in Home
+M	lib/features/home/presentation/view/home_tab_screen.dart
+
+e0254f6cc6f7aec8a257b6ee196895c4070549a9|2026-05-25 12:07|Yossef Zaki|Fix Blog
+M	lib/core/di/injection_container.dart
+M	lib/core/layout/simple_web_shell.dart
+M	lib/core/layout/web_header.dart
+M	lib/features/blog/presentation/screens/blog_detail_screen.dart
+M	lib/features/blog/presentation/screens/blog_screen.dart
+M	lib/features/dashboard/dashboard.dart
+
+60178533a982de40270789811d7d9900606e63aa|2026-05-25 11:54|Nour Nabil|edit product card
+M	lib/features/home/presentation/widget/card/product_card.dart
+
+07139e798bf3c294ab8e275c9cd4516c41c331ba|2026-05-25 11:50|Yossef Zaki|Fix Pull
+M	lib/core/layout/web_header.dart
+M	lib/core/routes/app_routes.dart
+
+11713640f936e7d4fcbcecc4c76e9e9e15da13f5|2026-05-25 11:35|Yossef Zaki|Fix Category
+M	lib/features/home/presentation/view/home_tab_screen.dart
+
+771df3e10923f0caed70d2aef79cfb23fc9bc6d1|2026-05-25 11:30|Yossef Zaki|Blog Categories
+M	lib/core/api/model/endpoints.dart
+M	lib/core/layout/web_header.dart
+M	lib/features/blog/data/datasources/blog_remote_datasource.dart
+M	lib/features/blog/domain/entities/blog_entity.dart
+M	lib/features/blog/presentation/cubit/blog_cubit.dart
+M	lib/features/blog/presentation/cubit/blog_state.dart
+M	lib/features/blog/presentation/screens/blog_detail_screen.dart
+M	lib/features/blog/presentation/screens/blog_screen.dart
+M	lib/features/dashboard/dashboard.dart
+
+2f8e052eb41693adfebe193458037072a4a1eb6c|2026-05-25 06:29|Yossef Zaki|Chekout fix
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/cubit/delivery_location/delivery_location_cubit.dart
+M	lib/features/cart/data/datasources/cart_remote_datasource.dart
+M	lib/features/checkout/domain/entities/shipping_method_entity.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/widgets/order_summary_card.dart
+M	lib/features/checkout/presentation/widgets/shipping_method_picker.dart
+
+838ef3ff7fb30aeca971ec64c17a4701b7a0b6d7|2026-05-25 04:53|Yossef Zaki|Fix
+M	lib/features/checkout/presentation/widgets/order_summary_card.dart
+M	lib/features/checkout/presentation/widgets/shipping_method_picker.dart
+
+76558a14249ba149909c39e0aaae39cb8a095c3c|2026-05-25 04:49|Yossef Zaki|Fix GPS
+M	lib/core/cubit/delivery_location/delivery_location_cubit.dart
+
+730f2919c189c5aecdff8c3ec232a424c13c8dd9|2026-05-25 04:43|Yossef Zaki|Fix express in checkout
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/widgets/order_summary_card.dart
+M	lib/features/checkout/presentation/widgets/shipping_method_picker.dart
+
+d91a8a1592af77c968f30d6264a2b6022df73d6f|2026-05-25 04:26|Yossef Zaki|Merge branch 'main' of https://github.com/ATWltd/fastWay-mobile
+50a8988d3fb6e796e5fce734f37b3eb4217b9707|2026-05-25 04:26|Yossef Zaki|Checkout
+M	lib/features/cart/presentation/cubit/cart_cubit.dart
+M	lib/features/cart/presentation/cubit/cart_state.dart
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/cart/presentation/widgets/cart_item_card.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/widgets/shipping_method_picker.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+
+d307a3dec7ac366a40395d084283f1192f25544f|2026-05-25 04:19|Nour Nabil|Breadcrumb handle navigator
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+
+cb66d7c6d6333ea634d3a7a9a481e1d1be456842|2026-05-25 04:11|Nour Nabil|Merge remote-tracking branch 'origin/main'
+a022a27db797fb951d0b2f1a9cf03a19da905e8f|2026-05-25 04:11|Nour Nabil|Breadcrumb
+M	lib/features/product_details/data/models/product_details_model.dart
+M	lib/features/product_details/domain/entities/product_details_entity.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+
+420ffe81e3715019773d601b6cdb621ffbc042ac|2026-05-25 03:54|Yossef Zaki|Merge branch 'main' of https://github.com/ATWltd/fastWay-mobile
+f976a67807b4635abd7a61cfec31c041a5979894|2026-05-25 03:54|Yossef Zaki|PLS
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/cart/presentation/widgets/cart_item_card.dart
+M	lib/features/checkout/data/models/checkout_model.dart
+M	lib/features/checkout/domain/entities/checkout_entity.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+A	lib/features/checkout/presentation/widgets/shipping_method_picker.dart
+
+732a6a8941ac24abb5c7d009efbad2e758da923a|2026-05-25 03:46|Nour Nabil|Merge remote-tracking branch 'origin/main'
+ea81e210e42dccd3768e5bc0d902cd5025fd181a|2026-05-25 03:46|Nour Nabil|announcements feature
+M	lib/core/api/model/endpoints.dart
+M	lib/core/di/injection_container.dart
+M	lib/core/layout/simple_web_shell.dart
+M	lib/core/layout/web_shell.dart
+A	lib/features/announcements/data/datasources/announcements_remote_data_source.dart
+A	lib/features/announcements/data/models/announcement_model.dart
+A	lib/features/announcements/data/repositories/announcements_repository_impl.dart
+A	lib/features/announcements/domain/entities/announcement_entity.dart
+A	lib/features/announcements/domain/repositories/announcements_repository.dart
+A	lib/features/announcements/presentation/cubit/announcements_cubit.dart
+A	lib/features/announcements/presentation/cubit/announcements_state.dart
+A	lib/features/announcements/presentation/widgets/announcements_banner.dart
+M	lib/features/dashboard/dashboard.dart
+M	lib/main.dart
+
+3e004ae8b963e508a186110d5ba3a34897f47bdb|2026-05-25 03:09|Yossef Zaki|Merge branch 'main' of https://github.com/ATWltd/fastWay-mobile
+11eeecddc9333c7c6b2c51d6d90cf6cb8767581d|2026-05-25 03:09|Yossef Zaki|Fi
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/checkout/domain/entities/shipping_method_entity.dart
+M	lib/features/checkout/presentation/widgets/order_summary_card.dart
+
+a02313a7941218f888dd65444d79ba4377ea6ade|2026-05-25 03:08|Nour Nabil|edit web footer
+M	lib/core/layout/web_footer.dart
+
+c89c1f22ff02db8090e2541f5e15dc5d3d065fd3|2026-05-25 03:07|Nour Nabil|Merge remote-tracking branch 'origin/main'
+37fab1b0a9ae8adad0acdbe12af74a5bf60e711d|2026-05-25 03:07|Nour Nabil|enhance web/mobile details screens
+M	assets/icons/shipping/express.svg
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/layout/web_header.dart
+M	lib/core/routes/app_routes.dart
+M	lib/core/widgets/wishlist_heart_button.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/home/presentation/widget/card/product_list.dart
+M	lib/features/home/presentation/widget/card/products_row.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/product_details/presentation/widgets/product_bundle_widget.dart
+M	lib/features/product_details/presentation/widgets/product_details_shared.dart
+M	lib/features/product_details/presentation/widgets/product_image_gallery.dart
+M	lib/features/product_details/presentation/widgets/product_info_section.dart
+M	lib/features/profile/presentation/view/add_edit_address_screen.dart
+
+d932b3177b2d4158dd4575bf8c51a23843c32e8d|2026-05-25 02:37|Yossef Zaki|Fix Address
+M	lib/features/profile/presentation/view/add_edit_address_screen.dart
+
+813b1b908cfe885c5be28003783f2263aac8c0f8|2026-05-25 02:36|Yossef Zaki|Fix
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/cart/data/models/cart_model.dart
+M	lib/features/cart/presentation/widgets/order_summary.dart
+
+a5209d358692d1190fbe1932e001d4e66dd8d9ab|2026-05-25 02:24|Nour Nabil|Merge remote-tracking branch 'origin/main'
+fa169e8fcd0c0d601d5ad42fce2dbc5e740d7987|2026-05-25 02:23|Nour Nabil|enhance
+M	assets/translations/en.json
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+
+5a5d9e38dd1b4c8a172fc90a2b145bcab828b828|2026-05-25 02:10|Yossef Zaki|Fix Cart
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/cart/presentation/widgets/cart_item_card.dart
+
+21f5437d47d69d2eecb8b14c1df23fcca999e957|2026-05-25 01:54|Yossef Zaki|Fix Address
+M	lib/features/profile/presentation/view/add_edit_address_screen.dart
+
+deb62f5d2f19352ada9aab4e9b417ec2c63d8ff3|2026-05-25 00:58|Nour Nabil|Merge remote-tracking branch 'origin/main'
+aaf52278bb6767929c06aebcc1fa7c957ff8b516|2026-05-25 00:57|Nour Nabil|enhance
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/layout/web_header.dart
+M	lib/core/widgets/custom_network_image.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+
+8fb23d139de80b68187712334e10d8c06cf67a98|2026-05-25 00:06|Yossef Zaki|Merge branch 'main' of https://github.com/ATWltd/fastWay-mobile
+6c0930e5ebc0cef0a98cb9a5021d60420e8e231f|2026-05-25 00:05|Nour Nabil|fix header menu
+M	lib/core/layout/web_header.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/widget/promo_banner.dart
+
+53219f3dfdeb7c88dc3223147f6071c45db005d2|2026-05-24 23:57|Yossef Zaki|Fix Dart
+M	lib/core/theme/dark_theme.dart
+M	lib/core/theme/light_theme.dart
+M	pubspec.lock
+
+771f7d6a06bc8949c789d31f2a78d45a4ca05555|2026-05-24 23:50|Nour Nabil|fix over flow of card
+M	lib/core/layout/web_header.dart
+M	lib/core/responsive/responsive_layout.dart
+M	lib/features/home/presentation/widget/card/products_row.dart
+
+a302744ef967819c1f67853fd300dfadfac5faf5|2026-05-24 23:22|Nour Nabil|fix over flow of card
+M	lib/features/home/presentation/widget/card/product_card.dart
+
+c020d2dd6e0edb2ae016cb2174d041c18b3482ab|2026-05-24 23:14|Nour Nabil|web header, card product updated
+A	assets/icons/bag-add.svg
+A	assets/images/logo_header.png
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/layout/web_header.dart
+M	lib/core/theme/dark_theme.dart
+M	lib/core/theme/light_theme.dart
+M	lib/core/utils/assets.dart
+M	lib/core/widgets/wishlist_heart_button.dart
+M	lib/features/home/presentation/widget/card/animated_cart_button.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/home/presentation/widget/card/product_countdown_timer.dart
+M	lib/features/home/presentation/widget/card/product_list.dart
+M	lib/features/home/presentation/widget/card/products_row.dart
+M	lib/features/home/presentation/widget/promo_banner.dart
+M	pubspec.lock
+
+52d65acecea4fa222e3e2fb1b8870b91368b024a|2026-05-24 21:16|Yossef Zaki|fix(docker): healthcheck use 127.0.0.1 instead of localhost
+M	Dockerfile
+
+406179671025d8e7c01280be6981b23da0e4d25f|2026-05-24 21:03|Yossef Zaki|Fix
+M	Makefile
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+
+3db1cc2b598169398c36fcc32d3cbeb87ea239e1|2026-05-24 19:07|Yossef Zaki|Fix
+A	Makefile
+M	lib/core/layout/web_category_drawer.dart
+M	lib/core/layout/web_footer.dart
+M	lib/core/layout/web_header.dart
+M	lib/core/responsive/hoverable_card.dart
+M	lib/core/widgets/custom_network_image.dart
+A	lib/core/widgets/safe_mouse_region.dart
+M	lib/features/blog/presentation/screens/blog_detail_screen.dart
+M	lib/features/blog/presentation/screens/blog_screen.dart
+M	lib/features/home/presentation/view/categories_screen.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/view/products_list_screen.dart
+M	lib/features/home/presentation/widget/brands_rail.dart
+M	lib/features/home/presentation/widget/card/web_category_card.dart
+M	lib/features/home/presentation/widget/categories_row.dart
+M	lib/features/home/presentation/widget/promo_banner.dart
+M	lib/features/orders/presentation/screens/order_tracking_screen.dart
+M	lib/features/orders/presentation/screens/orders_list_screen.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/product_details/presentation/widgets/product_bundle_widget.dart
+M	lib/features/product_details/presentation/widgets/product_details_shared.dart
+M	lib/features/product_details/presentation/widgets/product_image_gallery.dart
+M	lib/features/profile/presentation/view/change_password_sheet.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+M	lib/features/profile/presentation/widgets/profile_header.dart
+M	lib/features/profile/presentation/widgets/profile_stats_row.dart
+M	pubspec.lock
+
+caf0f6000908deeb0d8b76402356753981e31caa|2026-05-24 16:32|Nour Nabil|web header updated
+M	lib/core/layout/web_header.dart
+D	lib/core/widgets/web_sidebar.dart
+M	lib/firebase_options.dart
+M	pubspec.lock
+
+8c7a427707e29f9305191c3e6c1b623a6a50115a|2026-05-23 19:01|Yossef Zaki|fix: replace Expanded with AspectRatio in ProductCard ΓÇö fixes RenderFlex unbounded height crash in scroll contexts
+M	lib/features/home/presentation/widget/card/product_card.dart
+
+7e9397d9e7808d0c2a2a533e77760352e1259888|2026-05-23 16:22|Yossef Zaki|feat: add BASE_URL dart-define support ΓÇö allows per-environment base URL override at build time
+M	lib/core/api/model/endpoints.dart
+
+4855b5f9fbd12af0f237612b7f4fe7bfa669cc65|2026-05-23 16:11|Yossef Zaki|chore: update pubspec.lock
+M	pubspec.lock
+
+4c6902dcefa18e829aa7912a20abd5988715e185|2026-05-23 16:04|Yossef Zaki|fix: restore deleted firebase_options.dart ΓÇö fixes web Docker build (main.dart imports it)
+A	lib/firebase_options.dart
+
+02587d0c3e5100a05cc43ddbfde66272a2027974|2026-05-23 16:00|Yossef Zaki|fix: replace dart:io Platform with defaultTargetPlatform ΓÇö fixes web build failure in Docker/AWS pipeline
+M	lib/core/services/push_handler.dart
+
+a7193f91634f6251e3df31c92eadd0398c8e65d5|2026-05-23 14:33|Yossef Zaki|fix(audit): remove duplicate/unused imports across 5 files
+M	lib/core/widgets/empty_modal.dart
+M	lib/features/blog/presentation/screens/blog_screen.dart
+M	lib/features/home/presentation/view/location_map_screen.dart
+M	lib/features/home/presentation/widget/location_picker_sheet.dart
+M	lib/features/wishlist/presentation/view/wishlist_screen.dart
+
+bd171c9b2d6dc8714a5eb89ad9ab61954edc4411|2026-05-23 14:22|Yossef Zaki|feat: save for later in cart (swipe gesture + wishlist), gateway refund wired into ReturnService
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/cart/presentation/view/cart_screen.dart
+
+462ad63d17e4061de6c5c4db5d56366d2eb43f51|2026-05-23 14:12|Yossef Zaki|fix: clean up Nour's pull ΓÇö remove duplicate imports/overrides, fix withOpacity deprecations
+M	lib/features/home/presentation/widget/card/products_row.dart
+M	lib/features/home/presentation/widget/mobile_search_bar.dart
+M	lib/features/search/presentation/view/search_sheet.dart
+
+8da4244d1569cc9b8f2a663158fbb84a543facf4|2026-05-23 14:08|Yossef Zaki|Merge branch 'main' of https://github.com/ATWltd/fastWay-mobile
+08523e65a460e0dd8a7d0da1e2fa6079134ad76e|2026-05-23 14:07|Yossef Zaki|Fix
+M	lib/features/orders/presentation/screens/order_details_screen.dart
+A	lib/features/orders/presentation/widgets/delivery_sla_widget.dart
+M	lib/features/profile/presentation/view/add_edit_address_screen.dart
+A	lib/features/profile/presentation/view/map_address_picker_screen.dart
+
+25dec35630e495f835b669b9269ca0941c32dde8|2026-05-23 13:58|Nour Nabil|fix mobile bugs
+M	android/app/build.gradle
+M	android/app/src/main/AndroidManifest.xml
+A	android/app/src/main/java/com/fastway/app/MainActivity.java
+M	android/settings.gradle
+M	lib/features/checkout/presentation/widgets/points_redemption_card.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/home/presentation/widget/card/products_row.dart
+M	lib/features/home/presentation/widget/mobile_search_bar.dart
+M	lib/features/search/presentation/view/search_sheet.dart
+D	lib/firebase_options.dart
+M	pubspec.lock
+M	pubspec.yaml
+
+7c70ab01bcd5d2ad33393a0df2d958fbd771a66a|2026-05-23 13:52|Yossef Zaki|Commit X
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/api/model/endpoints.dart
+M	lib/features/checkout/data/models/checkout_model.dart
+M	lib/features/checkout/data/models/place_order_result_model.dart
+M	lib/features/checkout/domain/entities/checkout_entity.dart
+M	lib/features/checkout/domain/entities/place_order_result.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/view/external_payment_page_mobile.dart
+M	lib/features/checkout/presentation/view/order_success_screen.dart
+M	lib/features/orders/presentation/screens/order_details_screen.dart
+M	lib/features/orders/presentation/screens/orders_list_screen.dart
+
+dc453f243fc8339eee65b19be2f54c8874c49282|2026-05-21 18:22|Yossef Zaki|VAT
+M	lib/core/cubit/delivery_location/delivery_location_cubit.dart
+M	lib/core/responsive/responsive_layout.dart
+M	lib/core/services/app_settings_service.dart
+M	lib/core/widgets/skeletons.dart
+M	lib/features/cart/presentation/widgets/order_summary.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/widgets/order_summary_card.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/home/presentation/widget/card/product_list.dart
+M	lib/features/home/presentation/widget/card/products_row.dart
+
+2da006ecd3ea04a4c9eda2ee39245944dcaa5940|2026-05-21 17:54|Yossef Zaki|Merge branch 'main' of https://github.com/ATWltd/fastWay-mobile
+99cdbd6b519d70b521fc610fd4dae06a81cb3727|2026-05-21 17:54|Yossef Zaki|Fix
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/widgets/skeletons.dart
+M	lib/features/cart/presentation/widgets/order_summary.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+
+5bea9edf9bd0d9829e94f93575aca40bb5c862c7|2026-05-21 07:45|Nour|fix app release
+M	android/app/build.gradle
+M	android/app/src/main/AndroidManifest.xml
+M	android/settings.gradle
+M	lib/core/routes/app_routes.dart
+M	lib/features/onboarding/presentation/pages/onboarding_screen.dart
+M	lib/main.dart
+
+871c01c871271df05e0ec96e2b671a627e9b368e|2026-05-21 17:28|Yossef Zaki|Fix
+M	lib/features/checkout/domain/entities/checkout_entity.dart
+M	lib/features/checkout/domain/entities/shipping_method_entity.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/cubit/checkout_state.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/widgets/order_summary_card.dart
+
+78292c0efdd819838fb8777ae1ebebef1a8001b6|2026-05-21 17:28|Yossef Zaki|FIx Concflict
+M	lib/features/checkout/domain/entities/checkout_entity.dart
+M	lib/features/checkout/domain/entities/shipping_method_entity.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/cubit/checkout_state.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/view/order_success_screen.dart
+M	lib/features/checkout/presentation/widgets/order_summary_card.dart
+
+791ebc9afa508098b185d95fe6ddb6cf59c195a3|2026-05-21 16:49|Yossef Zaki|Fix conflict
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/widgets/order_summary_card.dart
+
+86feda61d9b0eb0891c3f758baf9e5b6ae0c414c|2026-05-21 16:34|Yossef Zaki|Merge branch 'main' of https://github.com/ATWltd/fastWay-mobile
+e95df0d1832fa160a51452d82889f02a72d966f6|2026-05-21 16:30|Yossef Zaki|Fix
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/checkout/domain/entities/checkout_entity.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/cubit/checkout_state.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/widgets/order_summary_card.dart
+M	lib/features/orders/data/models/order_model.dart
+M	lib/features/orders/domain/entities/order_entity.dart
+M	lib/features/orders/presentation/screens/order_details_screen.dart
+
+22ac3d1d2164be19105570aed934ea69e1e17b8e|2026-05-21 06:12|Nour|change app icon for android/ios/web
+A	android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
+M	android/app/src/main/res/mipmap-hdpi/ic_launcher.png
+A	android/app/src/main/res/mipmap-hdpi/ic_launcher_background.png
+A	android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png
+A	android/app/src/main/res/mipmap-hdpi/ic_launcher_monochrome.png
+M	android/app/src/main/res/mipmap-mdpi/ic_launcher.png
+A	android/app/src/main/res/mipmap-mdpi/ic_launcher_background.png
+A	android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png
+A	android/app/src/main/res/mipmap-mdpi/ic_launcher_monochrome.png
+M	android/app/src/main/res/mipmap-xhdpi/ic_launcher.png
+A	android/app/src/main/res/mipmap-xhdpi/ic_launcher_background.png
+A	android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png
+A	android/app/src/main/res/mipmap-xhdpi/ic_launcher_monochrome.png
+M	android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png
+A	android/app/src/main/res/mipmap-xxhdpi/ic_launcher_background.png
+A	android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png
+A	android/app/src/main/res/mipmap-xxhdpi/ic_launcher_monochrome.png
+M	android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+A	android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_background.png
+A	android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png
+A	android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_monochrome.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon-20@2x.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon-20@2x~ipad.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon-20@3x.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon-20~ipad.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon-29.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon-29@2x.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon-29@2x~ipad.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon-29@3x.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon-29~ipad.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon-40@2x.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon-40@2x~ipad.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon-40@3x.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon-40~ipad.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon-60@2x~car.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon-60@3x~car.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon-83.5@2x~ipad.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon@2x.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon@2x~ipad.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon@3x.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon~ios-marketing.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon~ipad.png
+M	ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json
+M	web/icons/Icon-192.png
+M	web/icons/Icon-512.png
+A	web/icons/apple-touch-icon.png
+A	web/icons/favicon.ico
+A	web/icons/icon-192-maskable.png
+A	web/icons/icon-512-maskable.png
+M	web/index.html
+M	web/manifest.json
+
+0c7f1aab8e842662323e749b23f991478b40e7b7|2026-05-21 06:08|Nour|enhance ui errors shown
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+
+c5fa87b2524a602bb9911109f9a7c844ef571a36|2026-05-21 05:49|Nour|only has 1 units at the express warehouse (you re Γòæ          quested 2). fixed
+M	lib/features/checkout/data/datasources/checkout_remote_datasource.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/cubit/checkout_state.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+
+03362d381616bb182d558010d7318b0e9cff8d7d|2026-05-21 05:11|Nour|checkout updated
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/widgets/checkout_section_card.dart
+M	lib/features/checkout/presentation/widgets/order_summary_card.dart
+M	lib/features/checkout/presentation/widgets/points_redemption_card.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+
+f2094aa91dd7a7bd8e7233349b0ada7f356a0f1f|2026-05-21 10:23|Ahmad Al-Assem|Optimize Dockerfile for Flutter web build
+M	Dockerfile
+
+21775ea6fd9edca5569f503995cb80bfbd460b5f|2026-05-21 01:11|Yossef Zaki|PH2
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/services/app_settings_service.dart
+M	lib/features/cart/data/models/cart_model.dart
+M	lib/features/cart/domain/entities/cart_entity.dart
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/cart/presentation/widgets/cart_item_card.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/product_details/presentation/widgets/product_info_section.dart
+
+8ef993a1a415c1f8f151ade2a717212025c2db32|2026-05-21 00:47|Yossef Zaki|FP
+M	lib/features/checkout/domain/entities/checkout_entity.dart
+M	lib/features/checkout/domain/entities/shipping_method_entity.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/view/order_success_screen.dart
+M	lib/features/checkout/presentation/widgets/order_summary_card.dart
+
+e039305abbb70601f239e2efbebd7c7b1fc90db2|2026-05-20 23:27|Nour Nabil|Merge remote-tracking branch 'origin/main'
+22700d185624032e52d56277a0ba32f48d6e4092|2026-05-20 22:47|Yossef Zaki|P12
+M	lib/core/cubit/delivery_location/delivery_location_cubit.dart
+M	lib/features/checkout/presentation/view/external_payment_page.dart
+A	lib/features/checkout/presentation/view/web_payment_iframe.dart
+A	lib/features/checkout/presentation/view/web_payment_iframe_stub.dart
+
+056876a05ba6e91c6b00b56b82b96bdad9cb33e9|2026-05-20 22:43|Yossef Zaki|Fix Payment
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/api/model/endpoints.dart
+M	lib/core/cubit/delivery_location/delivery_location_cubit.dart
+M	lib/features/checkout/presentation/view/external_payment_page.dart
+A	lib/features/checkout/presentation/view/external_payment_page_mobile.dart
+A	lib/features/checkout/presentation/view/external_payment_page_web_stub.dart
+A	lib/features/checkout/presentation/view/web_payment_listener.dart
+A	lib/features/checkout/presentation/view/web_payment_listener_stub.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/home/presentation/widget/card/product_list.dart
+M	lib/features/home/presentation/widget/card/products_row.dart
+
+3b1dc3a54013d8b6205ee6a9367f00fabb0ab809|2026-05-20 17:13|Yossef Zaki|Merge branch 'main' of https://github.com/ATWltd/fastWay-mobile
+6569339df64db7a904cba79713ff54c0fc08e533|2026-05-20 17:12|Yossef Zaki|Fix Order Tracking
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/orders/data/models/order_model.dart
+M	lib/features/orders/domain/entities/order_entity.dart
+M	lib/features/orders/presentation/screens/order_tracking_screen.dart
+
+0dababbe7ec01abeecad86c911671e33fb7198b8|2026-05-20 07:11|Nour|add wishButton on cart card
+M	lib/features/points/presentation/view/points_screen.dart
+
+67053ce2c09458e399d7e95109c4d2b9de94a6f5|2026-05-20 07:00|Nour|add wishButton on cart card
+M	lib/features/cart/presentation/widgets/cart_item_card.dart
+
+1a686b68d394d8e9211ba2b0f5327f9f32bc0a7e|2026-05-20 06:09|Nour|change package name
+M	android/app/build.gradle
+D	android/app/src/main/kotlin/com/fastway/fastway/MainActivity.kt
+M	ios/Runner.xcodeproj/project.pbxproj
+
+3325741fbc0c0fa65a004e954045e86e1fdd1434|2026-05-20 06:00|Nour|Merge remote-tracking branch 'origin/main'
+175ea557b9e759026e1843836cdc6296afecec89|2026-05-20 15:50|Yossef Zaki|Fix Order Status
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/orders/data/datasources/orders_remote_datasource.dart
+M	lib/features/orders/data/repositories/orders_repository_impl.dart
+M	lib/features/orders/domain/repositories/orders_repository.dart
+M	lib/features/orders/presentation/cubit/orders_cubit.dart
+M	lib/features/orders/presentation/screens/order_details_screen.dart
+M	lib/features/orders/presentation/widgets/order_status_badge.dart
+
+a0f9b08e8cdc742158d04249df1b946b2610b4de|2026-05-20 05:27|Nour|fix webHeader Sub Category shown
+M	lib/core/layout/simple_web_shell.dart
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/dashboard/dashboard.dart
+M	lib/main.dart
+
+335e6f6b420bad48999abfc886f28ecec204bcec|2026-05-20 15:11|Yossef Zaki|Fix Order Refund
+M	lib/features/orders/presentation/screens/order_details_screen.dart
+M	lib/features/orders/presentation/widgets/return_status_modal.dart
+
+d637e3276d6d61e8f5cb30ccd9291c46b2ddfdcb|2026-05-20 15:08|Yossef Zaki|Merge branch 'main' of https://github.com/ATWltd/fastWay-mobile
+ada181da6b74ba4ee52558edcf6fabb77b3571ca|2026-05-20 15:07|Yossef Zaki|Refund
+M	lib/features/orders/data/models/order_model.dart
+M	lib/features/orders/domain/entities/order_entity.dart
+M	lib/features/orders/presentation/screens/order_details_screen.dart
+M	lib/features/orders/presentation/screens/order_tracking_screen.dart
+M	lib/features/orders/presentation/screens/return_status_screen.dart
+A	lib/features/orders/presentation/widgets/return_status_modal.dart
+
+026e667d1663ee7cb65fbec00993911690ebacb5|2026-05-20 04:28|Nour|fix web header and webShell
+M	lib/features/points/presentation/view/points_screen.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+
+5951d9ee641c9b569edef0753a186601d5220867|2026-05-20 04:17|Nour|Merge remote-tracking branch 'origin/main'
+c88febfd0f08ee76a373a412ba8488a20f2fe2f4|2026-05-20 04:16|Nour|fix web header and webShell
+M	lib/core/layout/simple_web_shell.dart
+M	lib/core/layout/web_header.dart
+M	lib/features/dashboard/dashboard.dart
+M	lib/features/points/presentation/view/points_screen.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+
+5ff7fc2ee06620bfa86756ca9d9eb96f878e0df7|2026-05-20 13:56|Yossef Zaki|Fix
+M	lib/core/widgets/custom_snack_bar.dart
+M	lib/features/orders/presentation/screens/order_tracking_screen.dart
+
+4b2db6d85032ec41139b1ef87107905c753f97f2|2026-05-20 13:35|Yossef Zaki|Fix
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+
+8285eedde8b49172dcf5efc716b286c4f8af1b05|2026-05-20 13:25|Yossef Zaki|Image In Refund
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/api/model/endpoints.dart
+M	lib/features/orders/data/datasources/orders_remote_datasource.dart
+M	lib/features/orders/data/repositories/orders_repository_impl.dart
+M	lib/features/orders/domain/repositories/orders_repository.dart
+M	lib/features/orders/domain/usecases/submit_return_usecase.dart
+M	lib/features/orders/presentation/cubit/orders_cubit.dart
+M	lib/features/orders/presentation/widgets/return_request_sheet.dart
+
+dcf36d66593aa328266a4b173a5ec0feb31baa8f|2026-05-20 12:56|Yossef Zaki|Refund and Cancel
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/orders/presentation/screens/order_details_screen.dart
+
+96fc9195a4b54ab7b4d6f88ab75d3092884b70e1|2026-05-20 12:09|Yossef Zaki|Nooooour
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+
+9ebee9e1a91b76dc970a63b74d587943f0e2e7e3|2026-05-20 11:53|Yossef Zaki|Che
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/cubit/delivery_location/delivery_location_cubit.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+
+f35c201cd9e56d67ba648da187f0881eca1c96a8|2026-05-20 11:09|Yossef Zaki|Fix
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/checkout/data/models/checkout_model.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/main.dart
+
+560ac2a2a3ebb0cde4d92357f37f2b5365dbf0ba|2026-05-20 10:36|Yossef Zaki|fix(orders): correct guest check + missing header/footer on web
+M	lib/features/checkout/presentation/view/order_success_screen.dart
+M	lib/features/orders/presentation/screens/orders_list_screen.dart
+
+56c09fd3eed6595777c968d83ce70bebd2a0e6c2|2026-05-20 03:31|Nour Nabil|fix blog screen for mobile
+M	lib/features/blog/presentation/screens/blog_screen.dart
+
+04b0e9c9fdd12ca6eaed967515ba20979db4fd6c|2026-05-20 02:52|Yossef Zaki|fix(checkout): validate national address (short_address) client-side
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/cubit/checkout_state.dart
+
+80a693124295bc7e443d9cf1f1296bf753a76be2|2026-05-20 02:42|Yossef Zaki|fix(cart): reload cart immediately after login/signup/otp-verify
+M	lib/features/auth/presentation/view/otp_verification_page.dart
+M	lib/features/auth/presentation/widget/taps/login_tab.dart
+M	lib/features/auth/presentation/widget/taps/signup_tab.dart
+
+4c3b25157476c3f2022e379d31a6cd0f18c6c030|2026-05-20 02:33|Nour Nabil|fix bottom nav bar
+M	lib/features/dashboard/dashboard.dart
+
+17ec698b6dcaf7ed47c3cd8be967fd82f4301a57|2026-05-20 02:32|Nour Nabil|fix points shown
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/profile/data/models/profile_model.dart
+
+a031a9d802846c3c55a14365c580ed0a12039b57|2026-05-20 02:28|Yossef Zaki|fix(payment): Tamara & Tabby provider and return URL bugs
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+
+0a3952005cec6bd50d41eb1234ff444be9483930|2026-05-20 02:23|Nour Nabil|update theme for profile screen
+M	lib/features/profile/presentation/view/profile_screen.dart
+M	lib/features/profile/presentation/widgets/profile_menu_section.dart
+M	lib/features/profile/presentation/widgets/profile_stats_row.dart
+M	lib/features/profile/presentation/widgets/profile_theme_tile.dart
+
+05f15452ef4ee7687790c1ccc9cbd263fa544559|2026-05-20 02:18|Yossef Zaki|fix(checkout): shipping validation fails when using per-group selection
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+
+7a846ecda4f6aad2fafa0441e19b4a2017a36378|2026-05-20 01:56|Yossef Zaki|test: pipeline smoke test ≡ƒÜÇ
+A	pipeline-test.txt
+
+4599a13f14db9fc286d86162ba9821d1e63452ec|2026-05-20 01:42|Yossef Zaki|fix: remove --web-renderer flag removed in Flutter 3.22+
+M	Dockerfile
+
+b4223f100878faad9f804b56b57570ba05be1c2e|2026-05-20 01:39|Yossef Zaki|refactor: clean simple Docker setup from scratch
+M	.github/workflows/main-cicd.yml
+M	docker-compose.yml
+
+044550edeb6f56cd38a2f2dbbde49a4c799d653f|2026-05-19 23:39|Yossef Zaki|fix(pipeline): use docker compose build+up instead of build_web.sh
+M	.github/workflows/main-cicd.yml
+
+83bc8cf5e0302bd9053e8d3cb47f69aae962a4d0|2026-05-19 23:36|Yossef Zaki|feat: add standalone docker-compose.yml
+A	docker-compose.yml
+
+f590e92b1e6128cccae25c5dab6d0a22b085067f|2026-05-19 15:58|Yossef Zaki|Merge branch 'main' of https://github.com/ATWltd/fastWay-mobile
+5cb571b2a853c811111900995fd11ce403f6cde3|2026-05-19 14:19|Yossef Zaki|Location
+M	lib/core/cubit/delivery_location/delivery_location_cubit.dart
+M	lib/core/services/location_service.dart
+M	lib/features/home/presentation/view/location_map_screen.dart
+M	lib/features/home/presentation/widget/location_picker_sheet.dart
+
+adf4febd07b2312551d40fffa9c1a92c785b98de|2026-05-19 14:19|Yossef Zaki|Location
+M	lib/core/cubit/delivery_location/delivery_location_cubit.dart
+M	lib/core/services/location_service.dart
+M	lib/features/home/presentation/view/location_map_screen.dart
+M	lib/features/home/presentation/widget/location_picker_sheet.dart
+
+223f929879ce1429cf9ba99d6d50c1e70d67d9c2|2026-05-19 14:09|Yossef Zaki|Product list
+M	lib/core/layout/simple_web_shell.dart
+M	lib/features/home/presentation/view/products_list_screen.dart
+
+ca9be044a16107748b5a3e45c85244ee36f56f02|2026-05-19 13:41|Yossef Zaki|Docker
+A	.dockerignore
+A	Dockerfile
+A	docker/nginx/mobile.conf
+
+6f7cb4c29851ff1ae3c00e4e2792cd463bca51ce|2026-05-19 13:30|Yossef Zaki|Friendly Routes
+M	lib/core/layout/web_category_drawer.dart
+M	lib/core/layout/web_footer.dart
+M	lib/core/layout/web_header.dart
+M	lib/core/routes/app_routes.dart
+A	lib/core/utils/slug_utils.dart
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/category/presentation/screens/sub_categories_screen.dart
+M	lib/features/home/presentation/view/categories_screen.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/view/products_list_screen.dart
+M	lib/features/home/presentation/widget/card/product_list.dart
+M	lib/features/home/presentation/widget/card/products_row.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/search/presentation/view/search_sheet.dart
+M	lib/features/wishlist/presentation/widgets/cart_wishlist_reminder.dart
+M	lib/features/wishlist/presentation/widgets/wishlist_item_card.dart
+
+128180882246ae3cd24c1b3671711a9bad8c5fa8|2026-05-19 13:11|Yossef Zaki|Routes
+M	lib/core/layout/web_footer.dart
+M	lib/core/layout/web_header.dart
+M	lib/core/layout/web_nav_controller.dart
+A	lib/core/layout/web_url_helper.dart
+A	lib/core/layout/web_url_helper_web.dart
+A	lib/core/routes/app_navigator.dart
+M	lib/core/routes/routes.dart
+A	lib/core/routes/web_route_observer.dart
+M	lib/core/widgets/empty_modal.dart
+M	lib/core/widgets/web_sidebar.dart
+M	lib/features/auth/presentation/view/auth_screen.dart
+M	lib/features/auth/presentation/widget/taps/login_tab.dart
+M	lib/features/auth/presentation/widget/taps/signup_tab.dart
+M	lib/features/blog/presentation/screens/blog_detail_screen.dart
+M	lib/features/blog/presentation/screens/blog_screen.dart
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/checkout/presentation/view/order_success_screen.dart
+M	lib/features/dashboard/dashboard.dart
+M	lib/features/home/presentation/view/categories_screen.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/widget/location_picker_sheet.dart
+M	lib/features/home/presentation/widget/mobile_search_bar.dart
+M	lib/features/onboarding/presentation/pages/onboarding_screen.dart
+M	lib/features/orders/presentation/screens/order_details_screen.dart
+M	lib/features/orders/presentation/screens/orders_list_screen.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+M	lib/features/search/presentation/view/search_sheet.dart
+M	lib/features/user_data/auth_guard.dart
+M	lib/features/wishlist/presentation/view/wishlist_screen.dart
+M	lib/features/wishlist/presentation/widgets/cart_wishlist_reminder.dart
+M	lib/main.dart
+A	serve_web.py
+
+33c7abf5950d4ae4db41bcb1699963f56ffb4f34|2026-05-19 05:38|Yossef Zaki|rroutes
+M	lib/core/layout/web_footer.dart
+M	lib/core/layout/web_header.dart
+M	lib/core/routes/app_routes.dart
+M	lib/core/routes/routes.dart
+M	lib/core/services/push_handler.dart
+M	lib/features/blog/presentation/screens/blog_detail_screen.dart
+M	lib/features/blog/presentation/screens/blog_screen.dart
+M	lib/features/home/presentation/view/categories_screen.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/orders/presentation/screens/order_details_screen.dart
+M	lib/features/orders/presentation/screens/orders_list_screen.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/search/presentation/view/search_sheet.dart
+M	lib/main.dart
+
+da035dede7cae160c8d42ecc26acb0e75aaf7164|2026-05-19 05:01|Yossef Zaki|Refresh and routing
+M	build_web.sh
+M	lib/main.dart
+A	web/nginx.conf
+
+749e5666299aa65d13e100f67f0278c9457991bd|2026-05-19 04:53|Yossef Zaki|chekout location
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+
+820a6abea7498d4af97542254685a58797adfaa5|2026-05-19 04:44|Yossef Zaki|Location
+M	lib/core/cubit/delivery_location/delivery_location_cubit.dart
+M	lib/core/di/injection_container.dart
+M	lib/core/routes/app_routes.dart
+M	lib/features/cart/data/datasources/cart_remote_datasource.dart
+M	lib/features/cart/data/repositories/cart_repository_impl.dart
+M	lib/features/cart/domain/repositories/cart_repository.dart
+M	lib/features/cart/domain/usecases/add_to_cart_usecase.dart
+M	lib/features/cart/domain/usecases/apply_coupon_usecase.dart
+M	lib/features/cart/domain/usecases/get_cart_usecase.dart
+M	lib/features/cart/domain/usecases/remove_coupon_usecase.dart
+M	lib/features/cart/domain/usecases/remove_item_usecase.dart
+M	lib/features/cart/domain/usecases/update_quantity_usecase.dart
+M	lib/features/cart/presentation/cubit/cart_cubit.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/widget/location_picker_sheet.dart
+M	lib/features/profile/presentation/cubit/addresses_cubit.dart
+M	lib/features/wishlist/presentation/view/wishlist_screen.dart
+M	lib/features/wishlist/presentation/widgets/cart_wishlist_reminder.dart
+M	lib/main.dart
+
+4065eb1cab1dbd3b511ceb391c9409d84383670a|2026-05-19 02:25|Yossef Zaki|Fix
+M	lib/features/home/presentation/widget/location_picker_sheet.dart
+
+de32110e380418790ebc47e75b2acab81ff18571|2026-05-19 02:18|Yossef Zaki|Phase 7
+M	lib/core/layout/web_header.dart
+M	lib/core/routes/app_routes.dart
+M	lib/core/routes/routes.dart
+M	lib/features/cart/presentation/widgets/cart_item_card.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+A	lib/features/home/presentation/view/location_map_screen.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+A	lib/features/home/presentation/widget/location_picker_sheet.dart
+
+2d0fd1bcb2b361d475297917ee68027312be57b3|2026-05-19 02:10|Yossef Zaki|Phase 5
+M	lib/core/api/model/endpoints.dart
+A	lib/core/cubit/delivery_location/delivery_location_cubit.dart
+A	lib/core/cubit/delivery_location/delivery_location_state.dart
+M	lib/core/di/injection_container.dart
+M	lib/core/layout/web_header.dart
+A	lib/core/services/geocoding_service.dart
+M	lib/features/checkout/data/models/checkout_model.dart
+M	lib/features/checkout/domain/entities/saved_address_entity.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/profile/data/datasources/profile_remote_datasource.dart
+M	lib/features/profile/data/repositories/profile_repository_impl.dart
+M	lib/features/profile/domain/repositories/profile_repository.dart
+M	lib/features/profile/domain/usecases/add_address_usecase.dart
+A	lib/features/profile/domain/usecases/get_nearest_address_usecase.dart
+M	lib/features/profile/domain/usecases/update_address_usecase.dart
+M	lib/features/profile/presentation/cubit/addresses_cubit.dart
+M	lib/main.dart
+M	pubspec.lock
+M	pubspec.yaml
+
+ad462b8466fb1a863d0bcaecc87eb6ca7663c590|2026-05-19 01:20|Yossef Zaki|Wishlist finished and Good , From here , Nour will Fix , Yossef is Tired :D
+M	lib/core/layout/web_header.dart
+M	lib/features/wishlist/presentation/view/wishlist_screen.dart
+M	lib/features/wishlist/presentation/widgets/cart_wishlist_reminder.dart
+M	lib/features/wishlist/presentation/widgets/wishlist_item_card.dart
+
+550fbc20c8c812026f4be7ae6466940c1db8cbc2|2026-05-19 01:01|Yossef Zaki|Wishlist update
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/widgets/custom_network_image.dart
+M	lib/core/widgets/wishlist_heart_button.dart
+M	lib/features/wishlist/presentation/view/wishlist_screen.dart
+
+9eb6d3075b0aff8ff44da9a9ab3606cc595f0dd5|2026-05-19 00:43|Yossef Zaki|Wishlist and modals
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/layout/web_header.dart
+A	lib/core/widgets/empty_modal.dart
+M	lib/core/widgets/wishlist_heart_button.dart
+M	lib/features/auth/presentation/widget/taps/login_tab.dart
+M	lib/features/auth/presentation/widget/taps/signup_tab.dart
+M	lib/features/dashboard/dashboard.dart
+M	lib/features/wishlist/presentation/view/wishlist_screen.dart
+M	lib/main.dart
+
+e430f13790ebdf67fadfe1d69ea096c0aaf4977f|2026-05-18 23:40|Yossef Zaki|Wish
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/widgets/wishlist_heart_button.dart
+M	lib/features/dashboard/dashboard.dart
+M	lib/features/wishlist/data/models/wishlist_item_model.dart
+M	lib/features/wishlist/domain/entities/wishlist_entity.dart
+M	lib/features/wishlist/presentation/cubit/wishlist_cubit.dart
+M	lib/features/wishlist/presentation/view/wishlist_screen.dart
+M	lib/features/wishlist/presentation/widgets/wishlist_item_card.dart
+
+f428668094ae89da66d517f8e8f6c961f66c7fb2|2026-05-18 23:20|Yossef Zaki|Wishlist edits
+M	lib/core/widgets/custom_app_bar.dart
+M	lib/core/widgets/wishlist_heart_button.dart
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/view/products_list_screen.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/home/presentation/widget/card/product_list.dart
+M	lib/features/home/presentation/widget/card/products_row.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/search/presentation/view/search_sheet.dart
+M	lib/features/wishlist/presentation/cubit/wishlist_cubit.dart
+M	lib/features/wishlist/presentation/cubit/wishlist_state.dart
+M	lib/features/wishlist/presentation/view/wishlist_screen.dart
+M	lib/features/wishlist/presentation/widgets/wishlist_item_card.dart
+
+a7cf58a8f40b80a2ce8e9b36f18a73a9d2479575|2026-05-18 23:10|Yossef Zaki|Wishlist
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/api/model/endpoints.dart
+M	lib/core/di/injection_container.dart
+M	lib/core/layout/web_header.dart
+M	lib/core/routes/app_routes.dart
+M	lib/core/routes/routes.dart
+A	lib/core/widgets/wishlist_heart_button.dart
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/dashboard/dashboard.dart
+M	lib/features/home/data/model/product_model.dart
+M	lib/features/home/domain/entities/product_entity.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/view/products_list_screen.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/home/presentation/widget/card/product_list.dart
+M	lib/features/home/presentation/widget/card/products_row.dart
+M	lib/features/product_details/data/models/product_details_model.dart
+M	lib/features/product_details/domain/entities/product_details_entity.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+M	lib/features/search/presentation/view/search_sheet.dart
+A	lib/features/wishlist/data/datasources/wishlist_remote_datasource.dart
+A	lib/features/wishlist/data/models/wishlist_item_model.dart
+A	lib/features/wishlist/data/repositories/wishlist_repository_impl.dart
+A	lib/features/wishlist/domain/entities/wishlist_entity.dart
+A	lib/features/wishlist/domain/repositories/wishlist_repository.dart
+A	lib/features/wishlist/domain/usecases/clear_wishlist_usecase.dart
+A	lib/features/wishlist/domain/usecases/get_wishlist_usecase.dart
+A	lib/features/wishlist/domain/usecases/remove_wishlist_item_usecase.dart
+A	lib/features/wishlist/domain/usecases/toggle_wishlist_usecase.dart
+A	lib/features/wishlist/presentation/cubit/wishlist_cubit.dart
+A	lib/features/wishlist/presentation/cubit/wishlist_state.dart
+A	lib/features/wishlist/presentation/view/wishlist_screen.dart
+A	lib/features/wishlist/presentation/widgets/cart_wishlist_reminder.dart
+A	lib/features/wishlist/presentation/widgets/wishlist_item_card.dart
+M	lib/main.dart
+
+0d39e9bd770a78575faeb94cda7d3e334e73dcdd|2026-05-18 07:47|Nour|fix web header / update ui details
+A	assets/icons/payments/tabby.png
+A	assets/icons/payments/tamara.png
+M	lib/core/layout/web_header.dart
+M	lib/core/utils/assets.dart
+M	lib/features/auth/presentation/widget/taps/login_tab.dart
+M	lib/features/auth/presentation/widget/taps/signup_tab.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/product_details/presentation/widgets/product_info_section.dart
+
+1541270bf77fff0b6b8a477d9e056d474a7c6e8f|2026-05-18 05:13|Nour|Merge remote-tracking branch 'origin/main'
+5a0d8f723cac0cf83fe5fa2f071a0fbc704c764d|2026-05-18 04:29|Nour|Fix cart add-remove from cart / enhance ui item cart
+M	lib/core/layout/web_header.dart
+M	lib/core/widgets/web_sidebar.dart
+M	lib/features/cart/data/models/cart_model.dart
+M	lib/features/cart/presentation/cubit/cart_cubit.dart
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/cart/presentation/widgets/cart_item_card.dart
+M	lib/features/cart/presentation/widgets/order_summary.dart
+M	lib/features/dashboard/dashboard.dart
+M	lib/features/orders/data/models/order_model.dart
+
+dbb3c69a29f6cfae5b6820120fa319fe1fe904bb|2026-05-18 13:50|Yossef Zaki|Shimmer
+M	lib/core/layout/web_category_drawer.dart
+A	lib/core/widgets/skeletons.dart
+M	lib/features/blog/presentation/screens/blog_detail_screen.dart
+M	lib/features/blog/presentation/screens/blog_screen.dart
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/view/products_list_screen.dart
+M	lib/features/home/presentation/widget/card/product_list.dart
+M	lib/features/points/presentation/view/points_screen.dart
+M	lib/features/product_details/presentation/view/product_details_screen.dart
+
+7900644f686878dea857a0a4a67d78622305c967|2026-05-18 13:27|Yossef Zaki|Blog update
+M	lib/core/layout/web_header.dart
+M	lib/core/routes/app_routes.dart
+M	lib/features/blog/presentation/screens/blog_detail_screen.dart
+M	lib/features/blog/presentation/screens/blog_screen.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+
+390f1208f1dfbaa82eb3056f2667fd7537a6cd1c|2026-05-18 13:03|Yossef Zaki|Fix Blog Page
+M	lib/core/layout/web_header.dart
+M	lib/features/blog/presentation/screens/blog_detail_screen.dart
+
+c21bf1f04af52b1bf941209f25f8a3cb335ce8de|2026-05-18 13:00|Yossef Zaki|Fix
+M	lib/core/routes/app_routes.dart
+M	lib/core/routes/routes.dart
+A	lib/features/blog/presentation/screens/blog_detail_screen.dart
+M	lib/features/blog/presentation/screens/blog_screen.dart
+
+52125ee6cbfc93bc1f4d3a6497ce368362a07756|2026-05-18 12:53|Yossef Zaki|Fix
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/layout/web_header.dart
+A	lib/core/widgets/sar_symbol.dart
+M	lib/features/home/data/model/product_model.dart
+M	lib/features/home/domain/entities/product_entity.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/home/presentation/widget/card/product_list.dart
+M	lib/features/home/presentation/widget/card/products_row.dart
+M	lib/features/orders/presentation/widgets/order_product_item.dart
+M	lib/features/orders/presentation/widgets/order_summary_section.dart
+M	lib/features/points/data/datasources/points_local_datasource.dart
+M	lib/features/points/presentation/view/points_screen.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/product_details/presentation/widgets/product_bundle_widget.dart
+M	lib/features/product_details/presentation/widgets/product_details_shared.dart
+
+d6d18a1e7aa8886c1f7ffabc680449c8273027c1|2026-05-18 03:36|Yossef Zaki|Chunk 1
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/api/model/endpoints.dart
+M	lib/core/di/injection_container.dart
+M	lib/core/layout/web_header.dart
+M	lib/core/routes/app_routes.dart
+M	lib/core/routes/routes.dart
+A	lib/features/blog/data/datasources/blog_remote_datasource.dart
+A	lib/features/blog/domain/entities/blog_entity.dart
+A	lib/features/blog/presentation/cubit/blog_cubit.dart
+A	lib/features/blog/presentation/cubit/blog_state.dart
+A	lib/features/blog/presentation/screens/blog_screen.dart
+M	lib/features/cart/data/datasources/cart_remote_datasource.dart
+M	lib/features/cart/data/models/cart_model.dart
+M	lib/features/cart/data/repositories/cart_repository_impl.dart
+M	lib/features/cart/domain/entities/cart_entity.dart
+M	lib/features/cart/domain/repositories/cart_repository.dart
+A	lib/features/cart/domain/usecases/toggle_express_item_usecase.dart
+M	lib/features/cart/presentation/cubit/cart_cubit.dart
+M	lib/features/cart/presentation/widgets/cart_item_card.dart
+A	lib/features/category/presentation/screens/sub_categories_screen.dart
+M	lib/features/checkout/data/models/checkout_model.dart
+M	lib/features/checkout/domain/entities/checkout_entity.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/dashboard/dashboard.dart
+M	lib/features/home/data/model/category_model.dart
+M	lib/features/home/domain/entities/category_entity.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/orders/presentation/widgets/order_product_item.dart
+M	lib/features/orders/presentation/widgets/order_summary_section.dart
+M	lib/features/points/data/datasources/points_local_datasource.dart
+M	lib/features/points/presentation/view/points_screen.dart
+M	lib/features/product_details/data/models/product_details_model.dart
+M	lib/features/product_details/domain/entities/product_details_entity.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/product_details/presentation/widgets/product_bundle_widget.dart
+M	lib/features/product_details/presentation/widgets/product_details_shared.dart
+M	lib/features/product_details/presentation/widgets/product_info_section.dart
+M	pubspec.lock
+
+1bfed6e2f50bca4d3231aa2122a8ddb25579edf9|2026-05-17 18:55|Nour Nabil|Merge remote-tracking branch 'origin/main'
+b18bc4647236d72c3bf9791308e841a7ca8d50f6|2026-05-17 18:55|Nour Nabil|enhance webHeader UI/UX
+M	lib/core/layout/simple_web_shell.dart
+M	lib/core/layout/web_header.dart
+A	lib/core/layout/web_nav_controller.dart
+M	lib/core/layout/web_shell.dart
+M	lib/features/dashboard/dashboard.dart
+M	lib/features/orders/presentation/screens/orders_list_screen.dart
+
+b89a5de3a6f54a7132cef3d817c3f3a55bf697cc|2026-05-16 01:01|Yossef Zaki|Merge branch 'main' of https://github.com/ATWltd/fastWay-mobile
+0387f0a18c7df89957785c5ecb76f8ce14649b10|2026-05-16 01:01|Yossef Zaki|Pipelince cache build
+M	.github/workflows/main-cicd.yml
+
+2e3c552a615ff87c11843a542cb4b48599644e8a|2026-05-15 21:46|Nour Nabil|Merge remote-tracking branch 'origin/main'
+ff01c0d3787277c9b30e54ab40a3810143c59894|2026-05-15 21:44|Nour Nabil|update add to cart button
+M	lib/features/home/presentation/widget/card/animated_cart_button.dart
+
+1dc28d956181700d9f306aca57c8ab2fc03f6a9e|2026-05-15 21:32|Yossef Zaki|Merge branch 'main' of https://github.com/ATWltd/fastWay-mobile
+642804e3fdb62d40eb42e3cf7ab35af35693ab9a|2026-05-15 21:32|Yossef Zaki|Fix
+M	build_web.sh
+
+3f368ad60909af85b561a4c2678b0513c6a838db|2026-05-15 21:14|Nour Nabil|Merge remote-tracking branch 'origin/main'
+7e2623bb526f116e11569868d6db63114d2e7367|2026-05-15 21:14|Nour Nabil|change font for all app update order card ui
+M	lib/core/theme/text_theme.dart
+M	lib/features/dashboard/dashboard.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/orders/presentation/screens/orders_list_screen.dart
+M	lib/features/orders/presentation/widgets/order_card.dart
+
+5459613b4344ba2eaf70062a72d93f13d8499a8c|2026-05-15 21:10|Yossef Zaki|Fix
+M	build_web.sh
+
+72ab8363199de3d398cf8aa2a844f0598c387aa8|2026-05-15 20:34|Nour Nabil|Merge remote-tracking branch 'origin/main'
+ca95ab412f4a4073e0e2fc365b17d2638c83a071|2026-05-15 20:33|Nour Nabil|add font tajwal
+A	assets/font/Tajawal-Black.ttf
+A	assets/font/Tajawal-Bold.ttf
+A	assets/font/Tajawal-ExtraBold.ttf
+A	assets/font/Tajawal-ExtraLight.ttf
+A	assets/font/Tajawal-Light.ttf
+A	assets/font/Tajawal-Medium.ttf
+A	assets/font/Tajawal-Regular.ttf
+M	pubspec.yaml
+A	web/icons/fastway.png
+M	web/index.html
+
+8da17842ecf596bc87e43300f96ca1d8985e3f28|2026-05-15 20:30|Yossef Zaki|Fix
+M	build_web.sh
+M	web/index.html
+
+290dc438820b5bf00bb7ff37c17399d31963854b|2026-05-15 20:14|Nour Nabil|update cart screen add promo section and order ui enhance
+M	lib/core/theme/dark_theme.dart
+M	lib/core/theme/light_theme.dart
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/orders/presentation/screens/orders_list_screen.dart
+
+a7327459506159be3d16353a527636fe22178530|2026-05-15 19:55|Nour Nabil|update cart ui/ orders ui / fix errors
+M	assets/icons/shipping/express.svg
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/layout/web_header.dart
+M	lib/core/theme/dark_theme.dart
+M	lib/core/theme/light_theme.dart
+M	lib/core/widgets/web_sidebar.dart
+M	lib/features/auth/presentation/widget/taps/login_tab.dart
+M	lib/features/auth/presentation/widget/taps/signup_tab.dart
+M	lib/features/cart/data/models/cart_model.dart
+M	lib/features/cart/domain/entities/cart_entity.dart
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/cart/presentation/widgets/order_summary.dart
+M	lib/features/dashboard/dashboard.dart
+M	lib/features/orders/presentation/screens/order_tracking_screen.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+
+17b94a6e62d5b924f6d62d38f70ca27711c516a4|2026-05-15 00:39|Yossef Zaki|Fix
+M	lib/core/api/model/endpoints.dart
+M	lib/features/checkout/data/datasources/checkout_remote_datasource.dart
+M	lib/features/checkout/data/repositories/checkout_repository_impl.dart
+M	lib/features/checkout/domain/repositories/checkout_repository.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/product_details/data/repositories/product_details_repository_impl.dart
+M	lib/features/product_details/presentation/cubit/product_details_cubit.dart
+M	pubspec.lock
+
+16466c16cc67bbde424777d10e7f7efd14e71b2d|2026-05-15 00:01|Yossef Zaki|Fix
+A	lib/core/services/location_service.dart
+M	lib/features/home/data/datasources/products_remote_datasource.dart
+M	lib/features/home/presentation/cubit/home_cubit.dart
+M	lib/features/product_details/data/datasources/product_details_remote_datasource.dart
+M	lib/features/product_details/domain/repositories/product_details_repository.dart
+M	lib/features/product_details/domain/usecases/get_product_details_usecase.dart
+M	pubspec.yaml
+
+6bc4d0b9ed2bed592f666961fe30bdc6d526ebd6|2026-05-14 23:53|Yossef Zaki|Fix
+M	lib/core/routes/app_routes.dart
+M	lib/core/services/push_handler.dart
+M	lib/features/dashboard/dashboard.dart
+M	lib/features/home/presentation/view/products_list_screen.dart
+M	lib/features/home/presentation/widget/card/product_countdown_timer.dart
+M	lib/features/home/presentation/widget/promo_banner.dart
+M	lib/features/notifications/presentation/screens/notifications_screen.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+A	lib/firebase_options.dart
+M	lib/main.dart
+
+a2528993097e1e085e0c2ca83e220af85e327964|2026-05-14 22:57|Yossef Zaki|Chunks before fix
+M	assets/translations/en.json
+M	lib/core/services/push_handler.dart
+M	lib/features/checkout/data/datasources/checkout_remote_datasource.dart
+M	lib/features/checkout/data/repositories/checkout_repository_impl.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/view/order_success_screen.dart
+M	lib/features/orders/presentation/screens/order_details_screen.dart
+M	lib/features/orders/presentation/screens/return_status_screen.dart
+M	lib/main.dart
+
+168e941c47b760a3db814713177e5fdb8e5ee016|2026-05-14 22:36|Yossef Zaki|C
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+
+f715d3ddd5b236e78da358651ef358ccf490c57e|2026-05-14 22:33|Yossef Zaki|Chunks
+M	lib/core/di/injection_container.dart
+M	lib/features/product_details/data/datasources/product_details_remote_datasource.dart
+M	lib/features/product_details/data/repositories/product_details_repository_impl.dart
+M	lib/features/product_details/domain/repositories/product_details_repository.dart
+A	lib/features/product_details/domain/usecases/fetch_questions_usecase.dart
+A	lib/features/product_details/domain/usecases/submit_question_usecase.dart
+M	lib/features/product_details/presentation/cubit/product_details_cubit.dart
+M	lib/features/product_details/presentation/cubit/product_details_state.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/product_details_screen.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+
+d50ee93a6df401530324f230790fbd2cc1cb5a25|2026-05-14 22:28|Yossef Zaki|Fixes
+M	lib/features/product_details/data/models/product_details_model.dart
+M	lib/features/product_details/domain/entities/product_details_entity.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/widgets/product_details_shared.dart
+
+d3e49ab416f5d91d20b0b264c482ec99991cc247|2026-05-14 21:57|Yossef Zaki|Chunk
+M	lib/core/api/model/endpoints.dart
+M	lib/core/di/injection_container.dart
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/checkout/data/datasources/checkout_remote_datasource.dart
+M	lib/features/checkout/data/repositories/checkout_repository_impl.dart
+M	lib/features/checkout/domain/repositories/checkout_repository.dart
+A	lib/features/checkout/domain/usecases/get_delivery_slots_usecase.dart
+M	lib/features/checkout/domain/usecases/place_order_usecase.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/cubit/checkout_state.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/view/order_success_screen.dart
+M	lib/features/home/data/model/product_model.dart
+M	lib/features/home/domain/entities/product_entity.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/view/products_list_screen.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+A	lib/features/home/presentation/widget/card/product_countdown_timer.dart
+M	lib/features/home/presentation/widget/card/product_list.dart
+M	lib/features/home/presentation/widget/card/products_row.dart
+M	lib/features/product_details/data/models/product_details_model.dart
+M	lib/features/product_details/domain/entities/product_details_entity.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/product_details/presentation/widgets/product_info_section.dart
+M	lib/features/profile/presentation/view/add_edit_address_screen.dart
+M	lib/features/search/presentation/view/search_sheet.dart
+M	pubspec.lock
+M	pubspec.yaml
+
+fb1ecc605fff626e868437e9586ecef094a490da|2026-05-14 21:28|Yossef Zaki|Fix
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/api/model/endpoints.dart
+M	lib/core/di/injection_container.dart
+M	lib/core/layout/web_footer.dart
+A	lib/core/services/push_handler.dart
+M	lib/features/product_details/data/datasources/product_details_remote_datasource.dart
+M	lib/features/product_details/data/repositories/product_details_repository_impl.dart
+M	lib/features/product_details/domain/repositories/product_details_repository.dart
+A	lib/features/product_details/domain/usecases/join_waitlist_usecase.dart
+M	lib/features/product_details/presentation/cubit/product_details_cubit.dart
+M	lib/features/product_details/presentation/cubit/product_details_state.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/product_details_screen.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/main.dart
+M	pubspec.lock
+M	pubspec.yaml
+
+fb49fa7bcff4c92f978c1581925bd2b0cc819371|2026-05-14 20:11|Yossef Zaki|Chunk 2
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/layout/web_footer.dart
+M	lib/core/routes/app_routes.dart
+M	lib/core/routes/routes.dart
+M	lib/core/services/app_settings_service.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/cubit/checkout_state.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+R084	lib/features/checkout/presentation/view/telr_payment_page.dart	lib/features/checkout/presentation/view/external_payment_page.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/orders/presentation/screens/order_details_screen.dart
+A	lib/features/orders/presentation/screens/return_status_screen.dart
+M	lib/features/orders/presentation/widgets/order_card.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+
+93fa510f9642b4bd685b588972cea6bf17ef50d6|2026-05-14 19:13|Yossef Zaki|feat: complete multi-group logistics checkout & order management UI
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/routes/app_routes.dart
+M	lib/core/routes/routes.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/cubit/checkout_state.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/orders/presentation/screens/order_details_screen.dart
+M	lib/features/orders/presentation/screens/order_tracking_screen.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+
+bd03a7c37989c0453e5180c395ff9af9c77b7d00|2026-05-14 18:44|Yossef Zaki|Chunk 1
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/di/injection_container.dart
+M	lib/core/layout/web_header.dart
+M	lib/core/routes/app_routes.dart
+M	lib/core/routes/routes.dart
+A	lib/core/services/app_settings_service.dart
+M	lib/features/checkout/data/datasources/checkout_local_datasource.dart
+M	lib/features/checkout/data/models/checkout_model.dart
+M	lib/features/checkout/domain/entities/checkout_entity.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+A	lib/features/notifications/data/datasources/notifications_remote_datasource.dart
+A	lib/features/notifications/data/repositories/notifications_repository_impl.dart
+A	lib/features/notifications/domain/entities/notification_entity.dart
+A	lib/features/notifications/domain/repositories/notifications_repository.dart
+A	lib/features/notifications/presentation/cubit/notifications_cubit.dart
+A	lib/features/notifications/presentation/cubit/notifications_state.dart
+A	lib/features/notifications/presentation/screens/notifications_screen.dart
+M	lib/features/orders/data/datasources/orders_remote_datasource.dart
+M	lib/features/orders/data/models/order_model.dart
+M	lib/features/orders/data/repositories/orders_repository_impl.dart
+M	lib/features/orders/domain/entities/order_entity.dart
+A	lib/features/orders/domain/entities/return_entity.dart
+M	lib/features/orders/domain/repositories/orders_repository.dart
+A	lib/features/orders/domain/usecases/submit_return_usecase.dart
+M	lib/features/orders/presentation/cubit/orders_cubit.dart
+M	lib/features/orders/presentation/cubit/orders_state.dart
+M	lib/features/orders/presentation/screens/order_details_screen.dart
+A	lib/features/orders/presentation/widgets/return_request_sheet.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+M	lib/main.dart
+
+3f0b1b3c6f05d122a06a44ac2049b60b1d116f41|2026-05-14 07:28|Nour|update ui
+M	lib/core/layout/web_footer.dart
+M	lib/core/utils/assets.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/product_details/presentation/widgets/product_bundle_widget.dart
+M	lib/features/product_details/presentation/widgets/product_details_shared.dart
+M	lib/features/product_details/presentation/widgets/product_image_gallery.dart
+M	lib/features/product_details/presentation/widgets/product_info_section.dart
+
+3618995734db0b693c6ce82636b9e7b12bd0d2e3|2026-05-13 07:34|Nour|update ui v1
+A	assets/icons/articles.svg
+A	assets/icons/cart.svg
+A	assets/icons/payments/apple-pay-svgrepo-com.svg
+A	assets/icons/payments/mada_Logo.svg
+A	assets/icons/payments/mastercard-svgrepo-com.svg
+M	assets/icons/payments/telr.svg
+A	assets/icons/payments/visa-svgrepo-com.svg
+A	assets/icons/reward.svg
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/layout/simple_web_shell.dart
+M	lib/core/layout/web_header.dart
+M	lib/core/layout/web_shell.dart
+M	lib/core/utils/assets.dart
+M	lib/features/dashboard/dashboard.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+D	lib/features/home/presentation/widget/home_search_bar.dart
+M	lib/features/search/presentation/view/search_sheet.dart
+
+7c882c32241729cfac8ee68bf61576cb3afb1a9c|2026-05-12 20:49|Nour Nabil|update home app bar mobile
+M	lib/features/home/presentation/view/home_tab_screen.dart
+
+7e82c6735912a3f893af204774c7d667f3e4ca96|2026-05-12 18:58|Nour Nabil|update
+M	assets/icons/payments/tabby.svg
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+M	lib/features/profile/presentation/widgets/profile_field_tile.dart
+
+d4eefc24773bd72fe1b664a72cd47080b4294a2a|2026-05-12 17:56|Nour Nabil|fix errors/ enhance ui / update icons
+M	.gitignore
+A	assets/icons/coins-cash.svg
+A	assets/icons/delivery-fast.svg
+A	assets/icons/fire.json
+A	assets/icons/savings.json
+A	assets/icons/warning.svg
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/layout/simple_web_shell.dart
+M	lib/core/layout/web_footer.dart
+M	lib/core/layout/web_header.dart
+M	lib/core/layout/web_shell.dart
+M	lib/core/responsive/hoverable_card.dart
+M	lib/core/responsive/max_width_container.dart
+M	lib/core/responsive/responsive_grid.dart
+M	lib/core/responsive/responsive_layout.dart
+M	lib/core/theme/text_theme.dart
+M	lib/core/utils/assets.dart
+M	lib/core/utils/extension.dart
+M	lib/core/widgets/CustomIcon.dart
+M	lib/core/widgets/app_buton.dart
+M	lib/core/widgets/app_text_feild.dart
+M	lib/core/widgets/custom_app_bar.dart
+M	lib/core/widgets/custom_lottie_icon.dart
+M	lib/core/widgets/empty_state_widget.dart
+M	lib/core/widgets/error_state_widget.dart
+M	lib/core/widgets/full_screen_media_viewer.dart
+M	lib/core/widgets/loading_widget.dart
+M	lib/core/widgets/web_sidebar.dart
+M	lib/features/auth/presentation/view/auth_screen.dart
+M	lib/features/auth/presentation/view/otp_verification_page.dart
+M	lib/features/auth/presentation/widget/auth_background.dart
+M	lib/features/auth/presentation/widget/auth_logo.dart
+M	lib/features/auth/presentation/widget/auth_tab_selector.dart
+M	lib/features/auth/presentation/widget/auth_title.dart
+M	lib/features/auth/presentation/widget/taps/login_tab.dart
+M	lib/features/auth/presentation/widget/taps/signup_tab.dart
+M	lib/features/cart/data/datasources/cart_remote_datasource.dart
+M	lib/features/cart/presentation/cubit/cart_cubit.dart
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/cart/presentation/widgets/cart_item_card.dart
+M	lib/features/cart/presentation/widgets/coupon_section.dart
+M	lib/features/cart/presentation/widgets/order_summary.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/view/order_success_screen.dart
+M	lib/features/checkout/presentation/view/telr_payment_page.dart
+M	lib/features/checkout/presentation/widgets/checkout_section_card.dart
+M	lib/features/checkout/presentation/widgets/city_dropdown.dart
+M	lib/features/checkout/presentation/widgets/order_summary_card.dart
+M	lib/features/checkout/presentation/widgets/points_redemption_card.dart
+M	lib/features/checkout/presentation/widgets/promo_code_field.dart
+M	lib/features/checkout/presentation/widgets/saved_address_tile.dart
+M	lib/features/checkout/presentation/widgets/selectable_option_tile.dart
+M	lib/features/dashboard/dashboard.dart
+M	lib/features/home/presentation/view/categories_screen.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/view/products_list_screen.dart
+M	lib/features/home/presentation/widget/campaign_categories_row.dart
+M	lib/features/home/presentation/widget/card/animated_cart_button.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/home/presentation/widget/card/product_list.dart
+M	lib/features/home/presentation/widget/card/products_row.dart
+M	lib/features/home/presentation/widget/card/web_category_card.dart
+M	lib/features/home/presentation/widget/categories_row.dart
+M	lib/features/home/presentation/widget/home_search_bar.dart
+A	lib/features/home/presentation/widget/mobile_search_bar.dart
+M	lib/features/home/presentation/widget/promo_banner.dart
+M	lib/features/home/presentation/widget/section_header.dart
+M	lib/features/onboarding/presentation/pages/onboarding_screen.dart
+M	lib/features/onboarding/presentation/widgets/onboarding_page_view.dart
+M	lib/features/onboarding/presentation/widgets/page_indicator.dart
+M	lib/features/orders/data/datasources/orders_local_datasource.dart
+M	lib/features/orders/presentation/cubit/orders_cubit.dart
+M	lib/features/orders/presentation/cubit/orders_state.dart
+M	lib/features/orders/presentation/screens/order_details_screen.dart
+M	lib/features/orders/presentation/screens/order_tracking_screen.dart
+M	lib/features/orders/presentation/screens/orders_list_screen.dart
+M	lib/features/orders/presentation/widgets/order_card.dart
+M	lib/features/orders/presentation/widgets/order_product_item.dart
+M	lib/features/orders/presentation/widgets/order_status_badge.dart
+M	lib/features/orders/presentation/widgets/order_status_timeline.dart
+M	lib/features/orders/presentation/widgets/order_summary_section.dart
+M	lib/features/points/presentation/view/points_screen.dart
+M	lib/features/points/presentation/widgets/points_header_card.dart
+M	lib/features/points/presentation/widgets/points_history_section.dart
+M	lib/features/points/presentation/widgets/points_stats_row.dart
+M	lib/features/product_details/data/datasources/product_details_remote_datasource.dart
+M	lib/features/product_details/data/models/product_details_model.dart
+M	lib/features/product_details/domain/entities/product_details_entity.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/product_details_screen.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/product_details/presentation/widgets/add_to_cart_button.dart
+A	lib/features/product_details/presentation/widgets/product_bundle_widget.dart
+M	lib/features/product_details/presentation/widgets/product_details_shared.dart
+M	lib/features/product_details/presentation/widgets/product_image_gallery.dart
+M	lib/features/product_details/presentation/widgets/product_info_section.dart
+M	lib/features/profile/presentation/cubit/addresses_cubit.dart
+M	lib/features/profile/presentation/view/add_edit_address_screen.dart
+M	lib/features/profile/presentation/view/addresses_screen.dart
+M	lib/features/profile/presentation/view/change_password_screen.dart
+M	lib/features/profile/presentation/view/change_password_sheet.dart
+M	lib/features/profile/presentation/view/edit_profile_screen.dart
+M	lib/features/profile/presentation/view/edit_profile_sheet.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+M	lib/features/profile/presentation/widgets/profile_field_tile.dart
+M	lib/features/profile/presentation/widgets/profile_header.dart
+M	lib/features/profile/presentation/widgets/profile_logout_button.dart
+M	lib/features/profile/presentation/widgets/profile_menu_section.dart
+M	lib/features/profile/presentation/widgets/profile_stats_row.dart
+M	lib/features/profile/presentation/widgets/profile_theme_tile.dart
+M	lib/features/search/presentation/view/search_sheet.dart
+M	lib/features/search/presentation/widgets/animated_search_hint.dart
+M	lib/features/search/presentation/widgets/staggered_chip.dart
+M	lib/features/settings/presentation/cubit/settings_cubit.dart
+M	lib/features/settings/presentation/widgets/settings_card.dart
+M	lib/features/settings/presentation/widgets/settings_header.dart
+M	lib/features/settings/presentation/widgets/settings_item.dart
+M	lib/features/settings/presentation/widgets/settings_section.dart
+M	lib/main.dart
+
+a5227dd8e33e145fafa6de0f685e1705287a428b|2026-05-12 06:19|Yossef Zaki|Fix
+M	lib/features/profile/presentation/view/addresses_screen.dart
+M	lib/features/profile/presentation/view/change_password_sheet.dart
+M	lib/features/profile/presentation/view/edit_profile_sheet.dart
+M	lib/features/profile/presentation/widgets/profile_header.dart
+M	lib/features/profile/presentation/widgets/profile_stats_row.dart
+
+cca583af2b4920784c22a575dcff0b5cc7bb9e54|2026-05-12 05:31|Yossef Zaki|Home and product
+M	lib/features/dashboard/dashboard.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/product_details/data/datasources/product_details_remote_datasource.dart
+M	lib/features/product_details/data/models/product_details_model.dart
+M	lib/features/product_details/domain/entities/product_details_entity.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+
+4fd9b8066ffa56854b495b18584ef5a3a725ef80|2026-05-12 04:52|Yossef Zaki|Home REvamp
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/home/presentation/view/home_tab_screen.dart
+A	lib/features/home/presentation/widget/brands_rail.dart
+M	lib/features/home/presentation/widget/categories_row.dart
+M	lib/features/home/presentation/widget/promo_banner.dart
+
+bfa7152f0850bd3bfcc807598a3eb9bb51e00fe1|2026-05-12 04:43|Yossef Zaki|Home page
+A	lib/features/home/domain/entities/brand_entity.dart
+M	lib/features/home/presentation/cubit/home_cubit.dart
+M	lib/features/home/presentation/cubit/home_state.dart
+M	lib/features/home/presentation/widget/categories_row.dart
+
+dfa3c9c8e1cd8587537b5fb58b92f49c626c2446|2026-05-12 04:11|Yossef Zaki|Fix
+M	lib/core/layout/web_footer.dart
+M	lib/core/layout/web_header.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/profile/presentation/view/addresses_screen.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+M	lib/features/search/presentation/view/search_sheet.dart
+
+44046725fed2f70cb66897c87646a0bed967be49|2026-05-12 04:00|Yossef Zaki|Fix 1
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/points/presentation/view/points_screen.dart
+M	lib/features/profile/presentation/view/add_edit_address_screen.dart
+M	lib/features/profile/presentation/view/addresses_screen.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+M	lib/features/profile/presentation/widgets/profile_stats_row.dart
+
+3b650953dd65367467a12612e547433898548f5c|2026-05-12 03:48|Yossef Zaki|Fix
+M	lib/features/home/data/model/category_model.dart
+M	lib/features/home/domain/entities/category_entity.dart
+M	lib/features/home/presentation/widget/campaign_categories_row.dart
+
+274512775737501a5badf5fb1db08a0b95fcb308|2026-05-12 03:43|Yossef Zaki|Fix
+A	analyze.txt
+M	lib/core/layout/web_category_drawer.dart
+M	lib/core/widgets/full_screen_media_viewer.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/profile/data/datasources/profile_remote_datasource.dart
+M	lib/features/profile/data/repositories/profile_repository_impl.dart
+M	lib/features/profile/domain/repositories/profile_repository.dart
+M	lib/features/profile/domain/usecases/get_profile_usecase.dart
+M	lib/features/profile/presentation/cubit/profile_cubit.dart
+M	lib/features/profile/presentation/view/edit_profile_sheet.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+M	lib/features/profile/presentation/widgets/profile_header.dart
+
+3734fa4eb05feb0d366660fa18cddb75a48c4ccd|2026-05-12 03:13|Yossef Zaki|Spinner
+M	lib/core/layout/simple_web_shell.dart
+M	lib/core/layout/web_category_drawer.dart
+M	lib/core/theme/dark_theme.dart
+M	lib/core/theme/light_theme.dart
+M	lib/core/widgets/custom_loading_dialog.dart
+M	lib/core/widgets/loading_widget.dart
+M	lib/core/widgets/web_sidebar.dart
+M	lib/features/checkout/presentation/view/telr_payment_page.dart
+M	lib/features/home/presentation/view/products_list_screen.dart
+M	lib/features/points/presentation/view/points_screen.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/search/presentation/view/search_sheet.dart
+M	web/index.html
+A	web/logo.png
+
+5d4cdfc8c5e32e17b72aaabb64fe991610d0d7e7|2026-05-12 02:59|Yossef Zaki|Fix
+M	assets/icons/payments/tabby.svg
+M	assets/icons/payments/tamara.svg
+M	assets/icons/payments/telr.svg
+M	assets/icons/shipping/aramex.svg
+M	assets/icons/shipping/redbox.svg
+M	lib/core/db/shared_pref_helper.dart
+M	lib/features/dashboard/dashboard.dart
+
+939206a15bfe9505f336cd6e2b322434c8aef556|2026-05-12 01:20|Yossef Zaki|Enhacment
+M	lib/core/db/shared_pref_helper.dart
+M	lib/features/checkout/data/datasources/checkout_remote_datasource.dart
+M	lib/features/checkout/data/models/place_order_result_model.dart
+M	lib/features/checkout/data/repositories/checkout_repository_impl.dart
+M	lib/features/checkout/domain/repositories/checkout_repository.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/search/presentation/view/search_sheet.dart
+
+76c8e37a596d8e06ae9085b58fc2751e78e399df|2026-05-11 23:47|Yossef Zaki|Fix
+A	analyze_output.txt
+M	lib/core/di/injection_container.dart
+M	lib/core/layout/web_category_drawer.dart
+M	lib/core/layout/web_footer.dart
+M	lib/core/layout/web_header.dart
+M	lib/core/responsive/hoverable_card.dart
+M	lib/core/routes/app_routes.dart
+M	lib/core/theme/dark_theme.dart
+M	lib/core/theme/light_theme.dart
+M	lib/core/widgets/app_buton.dart
+M	lib/core/widgets/app_text_feild.dart
+M	lib/core/widgets/confirmation_dialog.dart
+M	lib/core/widgets/custom_snack_bar.dart
+M	lib/core/widgets/full_screen_media_viewer.dart
+M	lib/core/widgets/web_sidebar.dart
+M	lib/features/auth/presentation/view/auth_screen.dart
+M	lib/features/auth/presentation/view/otp_verification_page.dart
+M	lib/features/auth/presentation/widget/auth_logo.dart
+M	lib/features/auth/presentation/widget/auth_tab_selector.dart
+M	lib/features/auth/presentation/widget/taps/login_tab.dart
+M	lib/features/auth/presentation/widget/taps/signup_tab.dart
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/cart/presentation/widgets/cart_item_card.dart
+M	lib/features/cart/presentation/widgets/coupon_section.dart
+M	lib/features/cart/presentation/widgets/order_summary.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/widgets/checkout_section_card.dart
+M	lib/features/checkout/presentation/widgets/order_summary_card.dart
+M	lib/features/checkout/presentation/widgets/points_redemption_card.dart
+M	lib/features/checkout/presentation/widgets/promo_code_field.dart
+M	lib/features/checkout/presentation/widgets/saved_address_tile.dart
+M	lib/features/checkout/presentation/widgets/selectable_option_tile.dart
+M	lib/features/dashboard/dashboard.dart
+M	lib/features/home/presentation/view/categories_screen.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/widget/campaign_categories_row.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/home/presentation/widget/card/web_category_card.dart
+M	lib/features/home/presentation/widget/categories_row.dart
+M	lib/features/home/presentation/widget/promo_banner.dart
+M	lib/features/orders/presentation/screens/order_details_screen.dart
+M	lib/features/orders/presentation/screens/order_tracking_screen.dart
+M	lib/features/orders/presentation/screens/orders_list_screen.dart
+M	lib/features/orders/presentation/widgets/order_card.dart
+M	lib/features/orders/presentation/widgets/order_product_item.dart
+M	lib/features/orders/presentation/widgets/order_status_badge.dart
+M	lib/features/orders/presentation/widgets/order_status_timeline.dart
+M	lib/features/orders/presentation/widgets/order_summary_section.dart
+M	lib/features/points/data/datasources/points_remote_datasource.dart
+M	lib/features/points/data/repositories/points_repository_impl.dart
+M	lib/features/points/domain/repositories/points_repository.dart
+A	lib/features/points/domain/usecases/get_points_history_usecase.dart
+M	lib/features/points/presentation/cubit/points_cubit.dart
+M	lib/features/points/presentation/cubit/points_state.dart
+M	lib/features/points/presentation/view/points_screen.dart
+M	lib/features/points/presentation/widgets/points_header_card.dart
+M	lib/features/points/presentation/widgets/points_history_section.dart
+M	lib/features/points/presentation/widgets/points_stats_row.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/product_details/presentation/widgets/add_to_cart_button.dart
+M	lib/features/product_details/presentation/widgets/product_details_shared.dart
+M	lib/features/product_details/presentation/widgets/product_image_gallery.dart
+M	lib/features/product_details/presentation/widgets/product_info_section.dart
+M	lib/features/profile/domain/usecases/get_profile_usecase.dart
+M	lib/features/profile/presentation/cubit/profile_cubit.dart
+M	lib/features/profile/presentation/view/add_edit_address_screen.dart
+M	lib/features/profile/presentation/view/addresses_screen.dart
+A	lib/features/profile/presentation/view/change_password_sheet.dart
+M	lib/features/profile/presentation/view/edit_profile_screen.dart
+A	lib/features/profile/presentation/view/edit_profile_sheet.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+M	lib/features/profile/presentation/widgets/profile_field_tile.dart
+M	lib/features/profile/presentation/widgets/profile_header.dart
+M	lib/features/profile/presentation/widgets/profile_menu_section.dart
+M	lib/features/profile/presentation/widgets/profile_stats_row.dart
+M	lib/features/profile/presentation/widgets/profile_theme_tile.dart
+M	lib/features/search/presentation/view/search_sheet.dart
+M	lib/features/settings/presentation/widgets/settings_card.dart
+M	lib/features/settings/presentation/widgets/settings_header.dart
+M	lib/features/settings/presentation/widgets/settings_item.dart
+M	lib/features/user_data/auth_guard.dart
+M	pubspec.lock
+M	pubspec.yaml
+
+2bc14b911abda89f75867b95a9aa8b67b287cfea|2026-05-11 22:49|Yossef Zaki|Task 35
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/api/model/endpoints.dart
+M	lib/core/di/injection_container.dart
+M	lib/core/layout/web_header.dart
+M	lib/core/routes/app_routes.dart
+M	lib/core/widgets/app_buton.dart
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/dashboard/dashboard.dart
+M	lib/features/home/data/datasources/products_remote_datasource.dart
+M	lib/features/home/presentation/cubit/home_cubit.dart
+M	lib/features/home/presentation/cubit/home_state.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+A	lib/features/home/presentation/widget/campaign_categories_row.dart
+M	lib/features/orders/presentation/screens/order_details_screen.dart
+M	lib/features/orders/presentation/screens/orders_list_screen.dart
+M	lib/features/orders/presentation/widgets/order_card.dart
+M	lib/features/profile/data/datasources/profile_remote_datasource.dart
+M	lib/features/profile/data/repositories/profile_repository_impl.dart
+M	lib/features/profile/domain/repositories/profile_repository.dart
+A	lib/features/search/presentation/cubit/search_cubit.dart
+A	lib/features/search/presentation/cubit/search_state.dart
+D	lib/features/search/presentation/view/search_screen.dart
+A	lib/features/search/presentation/view/search_sheet.dart
+
+d500d8b50fa9467241c6c21038f0aec56b104972|2026-05-11 21:51|Yossef Zaki|Phase 6
+M	lib/core/di/injection_container.dart
+M	lib/features/orders/data/datasources/orders_remote_datasource.dart
+M	lib/features/orders/data/repositories/orders_repository_impl.dart
+M	lib/features/orders/domain/repositories/orders_repository.dart
+A	lib/features/orders/domain/usecases/reorder_usecase.dart
+M	lib/features/orders/presentation/cubit/orders_cubit.dart
+M	lib/features/orders/presentation/cubit/orders_state.dart
+
+79955c3cf52b410731ea3e7bc9d2bb7f5dcc81d7|2026-05-11 21:42|Yossef Zaki|Phase 5
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/checkout/data/datasources/checkout_remote_datasource.dart
+M	lib/features/checkout/data/repositories/checkout_repository_impl.dart
+M	lib/features/checkout/domain/repositories/checkout_repository.dart
+M	lib/features/checkout/domain/usecases/place_order_usecase.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/cubit/checkout_state.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+A	lib/features/checkout/presentation/widgets/points_redemption_card.dart
+
+e505cabc8c7fc2386e891ccbf0d79cb4f4046659|2026-05-11 21:31|Yossef Zaki|Audit
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/widgets/selectable_option_tile.dart
+
+f40e5e16d22989c714afdf03e173ecf5197d6c2f|2026-05-11 21:21|Yossef Zaki|phase 4
+M	lib/features/checkout/presentation/widgets/selectable_option_tile.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/view/products_list_screen.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/home/presentation/widget/card/product_list.dart
+M	lib/features/home/presentation/widget/card/products_row.dart
+M	lib/features/product_details/data/models/product_details_model.dart
+M	lib/features/product_details/domain/entities/product_details_entity.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/product_details/presentation/widgets/product_info_section.dart
+M	lib/features/search/presentation/view/search_screen.dart
+M	pubspec.lock
+
+78a02a838c4854aa120d5dc406cca1d42c7264b6|2026-05-11 21:02|Yossef Zaki|Phase 3
+A	assets/icons/payments/cod.svg
+A	assets/icons/payments/tabby.svg
+A	assets/icons/payments/tamara.svg
+A	assets/icons/payments/telr.svg
+A	assets/icons/shipping/aramex.svg
+A	assets/icons/shipping/express.svg
+A	assets/icons/shipping/oto.svg
+A	assets/icons/shipping/redbox.svg
+A	assets/icons/shipping/standard.svg
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/utils/assets.dart
+M	lib/features/checkout/data/models/checkout_model.dart
+M	lib/features/checkout/domain/entities/checkout_entity.dart
+M	lib/features/points/data/models/points_model.dart
+M	lib/features/points/domain/entities/points_entity.dart
+M	lib/features/profile/data/models/profile_model.dart
+M	lib/features/profile/domain/entities/profile_entity.dart
+M	pubspec.yaml
+
+b03b5af523695045e6087d97676b5985295b1531|2026-05-11 20:43|Yossef Zaki|Phas2 audit
+M	lib/features/cart/data/models/cart_model.dart
+M	lib/features/cart/domain/entities/cart_entity.dart
+M	lib/features/checkout/data/datasources/checkout_local_datasource.dart
+M	lib/features/checkout/data/models/checkout_model.dart
+M	lib/features/checkout/domain/entities/payment_method_entity.dart
+M	lib/features/checkout/domain/entities/shipping_method_entity.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/orders/data/models/order_model.dart
+M	lib/features/orders/domain/entities/order_entity.dart
+
+03768de662c2b47b85c52336714edb08d866db07|2026-05-11 20:34|Yossef Zaki|Phase 1 Audit
+M	lib/features/home/data/model/product_model.dart
+M	lib/features/home/domain/entities/product_entity.dart
+
+f071d54f529827ccb187d2678b80187394a6be60|2026-05-11 20:27|Yossef Zaki|Phase 1
+A	TASKS_UPDATE.md
+M	lib/core/api/dio_client.dart
+M	lib/core/di/injection_container.dart
+M	lib/core/layout/web_category_drawer.dart
+M	lib/features/auth/presentation/widget/taps/login_tab.dart
+M	lib/features/auth/presentation/widget/taps/signup_tab.dart
+M	lib/features/checkout/data/datasources/checkout_remote_datasource.dart
+M	lib/features/checkout/data/models/checkout_model.dart
+M	lib/features/checkout/data/repositories/checkout_repository_impl.dart
+M	lib/features/checkout/domain/entities/checkout_entity.dart
+M	lib/features/checkout/domain/repositories/checkout_repository.dart
+M	lib/features/checkout/domain/usecases/place_order_usecase.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/cubit/checkout_state.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/view/telr_payment_page.dart
+M	lib/features/home/data/model/product_model.dart
+M	lib/features/home/domain/entities/product_entity.dart
+M	lib/features/home/presentation/view/products_list_screen.dart
+M	lib/features/home/presentation/widget/card/web_category_card.dart
+M	lib/features/home/presentation/widget/categories_row.dart
+M	lib/features/home/presentation/widget/promo_banner.dart
+M	lib/features/orders/data/repositories/orders_repository_impl.dart
+M	lib/features/orders/domain/repositories/orders_repository.dart
+A	lib/features/orders/domain/usecases/cancel_order_usecase.dart
+M	lib/features/orders/presentation/cubit/orders_cubit.dart
+M	lib/features/orders/presentation/cubit/orders_state.dart
+M	lib/features/points/presentation/view/points_screen.dart
+M	lib/features/product_details/data/repositories/product_details_repository_impl.dart
+M	lib/features/product_details/presentation/widgets/product_image_gallery.dart
+M	lib/features/settings/presentation/widgets/settings_header.dart
+
+1dc303c3e5366934d9a673af20cc6d080d36ac85|2026-05-11 18:22|Yossef Zaki|Fix Address and points
+M	lib/core/api/model/endpoints.dart
+M	lib/core/di/injection_container.dart
+M	lib/features/checkout/data/models/checkout_model.dart
+M	lib/features/checkout/domain/entities/saved_address_entity.dart
+M	lib/features/points/data/datasources/points_remote_datasource.dart
+M	lib/features/points/data/models/points_model.dart
+M	lib/features/points/data/repositories/points_repository_impl.dart
+M	lib/features/points/domain/entities/points_entity.dart
+M	lib/features/points/domain/repositories/points_repository.dart
+D	lib/features/points/domain/usecases/redeem_reward_usecase.dart
+M	lib/features/points/presentation/cubit/points_cubit.dart
+M	lib/features/points/presentation/cubit/points_state.dart
+M	lib/features/points/presentation/view/points_screen.dart
+D	lib/features/points/presentation/widgets/rewards_grid.dart
+M	lib/features/profile/data/datasources/profile_remote_datasource.dart
+M	lib/features/profile/data/repositories/profile_repository_impl.dart
+M	lib/features/profile/domain/repositories/profile_repository.dart
+M	lib/features/profile/domain/usecases/add_address_usecase.dart
+A	lib/features/profile/domain/usecases/lookup_address_usecase.dart
+M	lib/features/profile/domain/usecases/update_address_usecase.dart
+M	lib/features/profile/presentation/cubit/addresses_cubit.dart
+M	lib/features/profile/presentation/view/add_edit_address_screen.dart
+
+f9224e0592ce64ce6988837c9d683bcce95a3424|2026-05-11 17:06|Nour Nabil|points screen refactor ui
+A	assets/icons/bronze-medal.svg
+A	assets/icons/coin_lottie.json
+A	assets/icons/gold-medal.svg
+A	assets/icons/plat-medal.svg
+A	assets/icons/silver-medal.svg
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/di/injection_container.dart
+M	lib/core/utils/assets.dart
+M	lib/features/points/data/datasources/points_local_datasource.dart
+M	lib/features/points/data/models/points_model.dart
+M	lib/features/points/data/repositories/points_repository_impl.dart
+M	lib/features/points/domain/entities/points_entity.dart
+M	lib/features/points/presentation/view/points_screen.dart
+M	lib/features/points/presentation/widgets/how_to_earn_section.dart
+M	lib/features/points/presentation/widgets/points_stats_row.dart
+
+e32ef8d351f559f5c0973ebc0c78ee8d11a2828b|2026-05-11 13:38|Yossef Zaki|ci: inject cache busting into github actions workflow
+M	.github/workflows/main-cicd.yml
+
+cec7ea2d447a2762e21fb54c0503a3ccc9d1e4c1|2026-05-11 13:35|Yossef Zaki|chore(web): add cache busting to index.html and provide build script
+A	build_web.sh
+M	web/index.html
+
+1f01be1a3e0a6c72fd066cea59615aaa3fe9a905|2026-05-11 13:26|Yossef Zaki|Merge branch 'main' of https://github.com/ATWltd/fastWay-mobile
+8ee18990be46069e698277ecf592ee391ab003f8|2026-05-11 13:22|Yossef Zaki|fix(localization): remove const from address datasource and fix category card flex overflow
+M	lib/features/checkout/data/datasources/checkout_local_datasource.dart
+M	lib/features/home/presentation/widget/card/web_category_card.dart
+
+e79fa6830bed4579bb92d10523e2c7d8db114003|2026-05-11 13:19|Ahmad Al-Assem|Delete .github/workflows/main.yml
+D	.github/workflows/main.yml
+
+33484b618e6fa2c0eab537b0ccbcc305ab271705|2026-05-11 13:07|Yossef Zaki|fix(localization): deep translation of remaining hardcoded profile and search text
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/checkout/data/datasources/checkout_local_datasource.dart
+M	lib/features/profile/presentation/view/change_password_screen.dart
+M	lib/features/profile/presentation/view/edit_profile_screen.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+M	lib/features/search/presentation/view/search_screen.dart
+
+75747c7c7f2840e447b913227a4d6a2890406ee5|2026-05-11 13:01|Yossef Zaki|fix(localization): translate hardcoded Explore text in categories card
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/home/presentation/widget/card/web_category_card.dart
+M	lib/features/points/presentation/view/points_screen.dart
+
+f3c34151b72aed8cfda1291ce2ccfeade5e65762|2026-05-11 12:57|Yossef Zaki|fix(localization): add missing product.empty and auth.user keys
+M	assets/translations/ar.json
+M	assets/translations/en.json
+
+b3b6a3755a693217a13fd72f778991d8292efc64|2026-05-11 12:49|Yossef Zaki|fix(localization): add missing easy_localization imports
+M	lib/core/layout/web_footer.dart
+M	lib/features/orders/data/datasources/orders_local_datasource.dart
+M	lib/features/points/data/datasources/points_local_datasource.dart
+M	lib/features/points/presentation/view/points_screen.dart
+M	lib/features/points/presentation/widgets/points_stats_row.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/product_details/presentation/widgets/product_image_gallery.dart
+
+6e644c89738bf16a336c31ec290649b1dea3cb26|2026-05-11 12:40|Yossef Zaki|refactor(localization): replace remaining hardcoded strings with localization keys
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/layout/web_footer.dart
+M	lib/core/widgets/web_sidebar.dart
+M	lib/features/orders/data/datasources/orders_local_datasource.dart
+M	lib/features/points/data/datasources/points_local_datasource.dart
+M	lib/features/points/presentation/view/points_screen.dart
+M	lib/features/points/presentation/widgets/points_stats_row.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/product_details/presentation/widgets/product_image_gallery.dart
+
+1d980bcea0d7dedf567b08ee9a266885b223334b|2026-05-11 12:36|Yossef Zaki|feat(localization): complete translation audit and add modernization keys
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/features/dashboard/dashboard.dart
+
+84e56228ee5c28fc1ee6228b2777ff0d80057284|2026-05-11 06:55|Nour Nabil|fix error of navigator slide
+M	lib/core/widgets/web_sidebar.dart
+
+9057a828f57412933a3eed4486e0eb6bf0983765|2026-05-11 06:47|Nour Nabil|enhance ui
+M	lib/core/layout/web_shell.dart
+M	lib/core/widgets/web_sidebar.dart
+M	lib/features/dashboard/dashboard.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/widget/promo_banner.dart
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/product_details_screen.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+A	lib/features/product_details/presentation/widgets/add_to_cart_button.dart
+M	lib/features/product_details/presentation/widgets/product_image_gallery.dart
+D	lib/features/product_details/presentation/widgets/product_tabs_section.dart
+M	lib/features/search/presentation/view/search_screen.dart
+A	lib/features/search/presentation/widgets/animated_search_hint.dart
+A	lib/features/search/presentation/widgets/staggered_chip.dart
+
+84e31ddca87db96d9db6cad7f6cdac7ecaa343fd|2026-05-11 03:40|Nour Nabil|review / NutritionWidget UI updated
+M	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/web/product_details_web.dart
+M	lib/features/product_details/presentation/widgets/product_details_shared.dart
+M	lib/features/search/presentation/view/search_screen.dart
+
+8ed683d3382b958511c50aa6cdb02d65e0cc483b|2026-05-11 02:37|Nour Nabil|product screen update ui
+M	assets/translations/ar.json
+M	lib/features/dashboard/dashboard.dart
+A	lib/features/product_details/presentation/view/mobile/product_details_mobile.dart
+M	lib/features/product_details/presentation/view/product_details_screen.dart
+A	lib/features/product_details/presentation/view/web/product_details_web.dart
+A	lib/features/product_details/presentation/widgets/product_details_shared.dart
+M	lib/features/product_details/presentation/widgets/product_image_gallery.dart
+M	lib/features/product_details/presentation/widgets/product_info_section.dart
+M	lib/features/profile/presentation/view/add_edit_address_screen.dart
+M	lib/features/profile/presentation/view/edit_profile_screen.dart
+
+86759942fcc02926a063d254c7743866a8b10117|2026-05-11 02:32|Yossef Zaki|Edit password in mobile
+M	lib/core/di/injection_container.dart
+M	lib/features/profile/data/datasources/profile_remote_datasource.dart
+M	lib/features/profile/data/repositories/profile_repository_impl.dart
+M	lib/features/profile/domain/repositories/profile_repository.dart
+M	lib/features/profile/domain/usecases/get_profile_usecase.dart
+M	lib/features/profile/presentation/cubit/profile_cubit.dart
+A	lib/features/profile/presentation/view/change_password_screen.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+
+3be5b462f45262d8f1c8b0eae67fd7ed20fd8f7c|2026-05-11 02:13|Yossef Zaki|Fix Auth
+M	lib/core/api/model/endpoints.dart
+M	lib/features/auth/data/repositories/auth_repository_impl.dart
+M	lib/features/auth/presentation/widget/taps/login_tab.dart
+M	lib/features/auth/presentation/widget/taps/signup_tab.dart
+
+3a01976514dd3b180ade826fd269e2853b93481b|2026-05-10 19:47|Nour Nabil|fix overflow errors
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/api/api_error_handler.dart
+M	lib/features/home/presentation/view/products_list_screen.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/profile/data/datasources/profile_remote_datasource.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+M	lib/features/search/presentation/view/search_screen.dart
+
+c304c57300d13401cb15e19f6b5aef0b05a59d34|2026-05-10 16:16|Nour Nabil|Merge remote-tracking branch 'origin/main'
+63801d3ef66ea1c701148c5ddf9536bcd3b6cd8b|2026-05-10 16:15|Nour Nabil|fix responsive web for profile screens
+M	lib/features/profile/presentation/view/add_edit_address_screen.dart
+M	lib/features/profile/presentation/view/addresses_screen.dart
+M	lib/features/profile/presentation/view/edit_profile_screen.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+M	lib/features/profile/presentation/widgets/profile_field_tile.dart
+
+b0c3a4235d58cd770ab02b24717af7707b546ff9|2026-05-10 12:26|Yossef Zaki|Merge branch 'main' of https://github.com/ATWltd/fastWay-mobile
+ac464cb0dae8e4a7718b58f7ed84bbada7bbf83b|2026-05-10 10:50|Ahmad Al-Assem|Change Flutter build command to release mode
+M	.github/workflows/main-cicd.yml
+
+0fc917c0ead750e84c75a66495036826bd9a5d21|2026-05-10 05:24|Nour Nabil|update theme for server
+M	lib/core/theme/dark_theme.dart
+M	lib/core/theme/light_theme.dart
+
+edb6ea86dc35daa9b1fd67eeb8496e4c7abd2ce6|2026-05-10 05:20|Nour Nabil|UPDATE YAML.
+M	pubspec.yaml
+
+115e46e9c2c11ae5c7f56227ebcf054accbc44f1|2026-05-10 05:17|Nour Nabil|update favicon.ico
+A	web/favicon.ico
+M	web/index.html
+
+721df4e89e5d352d6473069b5544ec91dc101e12|2026-05-10 05:14|Nour Nabil|handle theme mode
+M	lib/features/cart/presentation/widgets/cart_item_card.dart
+M	lib/features/cart/presentation/widgets/coupon_section.dart
+M	lib/features/cart/presentation/widgets/order_summary.dart
+M	lib/features/points/presentation/widgets/rewards_grid.dart
+
+16d0a6fb12d77a5ded94f1e5a64b7bcc1e883e61|2026-05-10 04:57|Nour Nabil|handle web responsive
+M	android/gradle/wrapper/gradle-wrapper.properties
+A	lib/core/responsive/hoverable_card.dart
+A	lib/core/responsive/max_width_container.dart
+M	lib/core/theme/dark_theme.dart
+M	lib/core/theme/light_theme.dart
+M	lib/core/widgets/custom_snack_bar.dart
+M	lib/core/widgets/empty_state_widget.dart
+M	lib/features/auth/presentation/view/auth_screen.dart
+M	lib/features/auth/presentation/widget/taps/login_tab.dart
+M	lib/features/auth/presentation/widget/taps/signup_tab.dart
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/dashboard/dashboard.dart
+M	lib/features/home/presentation/view/categories_screen.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/view/products_list_screen.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/home/presentation/widget/card/product_list.dart
+M	lib/features/home/presentation/widget/card/products_row.dart
+M	lib/features/home/presentation/widget/categories_row.dart
+M	lib/features/home/presentation/widget/promo_banner.dart
+M	lib/features/orders/presentation/screens/order_details_screen.dart
+M	lib/features/orders/presentation/screens/order_tracking_screen.dart
+M	lib/features/orders/presentation/screens/orders_list_screen.dart
+M	lib/features/points/presentation/view/points_screen.dart
+M	lib/features/points/presentation/widgets/points_header_card.dart
+M	lib/features/points/presentation/widgets/points_history_section.dart
+M	lib/features/product_details/presentation/view/product_details_screen.dart
+M	lib/features/product_details/presentation/widgets/product_image_gallery.dart
+M	lib/features/profile/presentation/view/edit_profile_screen.dart
+D	lib/features/profile/presentation/view/points_screen.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+M	lib/features/search/presentation/view/search_screen.dart
+M	lib/features/user_data/auth_guard.dart
+M	lib/main.dart
+M	pubspec.lock
+M	pubspec.yaml
+
+3b859500a35b4e5fae9836bd5274395dc59be6ea|2026-05-10 04:56|Nour Nabil|setup web view responsive
+A	lib/core/layout/simple_web_shell.dart
+A	lib/core/layout/web_category_drawer.dart
+A	lib/core/layout/web_footer.dart
+A	lib/core/layout/web_header.dart
+A	lib/core/layout/web_shell.dart
+A	lib/core/responsive/responsive_grid.dart
+A	lib/core/responsive/responsive_layout.dart
+M	lib/core/widgets/web_sidebar.dart
+
+730208d3cceeb4e29c95935b82715eeaec218357|2026-05-10 04:56|Nour Nabil|upload logo
+A	assets/images/logo_fastway.png
+
+813d5cc2a7ad1526c963161693e88a7ddcfe05ef|2026-05-10 04:56|Nour Nabil|update the translate
+M	assets/translations/ar.json
+M	lib/core/utils/assets.dart
+
+2b5474c0a6139ea30bf3e5714198ff489c9cc06c|2026-05-09 19:14|Nour Nabil|category list ui web
+M	lib/features/home/presentation/view/home_tab_screen.dart
+A	lib/features/home/presentation/widget/card/web_category_card.dart
+
+ba8bc8c274014ddcfc7aab700724eb777aca6993|2026-05-05 07:10|Nour|web responsive v1
+M	lib/core/widgets/responsive_layout.dart
+A	lib/core/widgets/web_sidebar.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+
+7762aa480c7fd9b4b919028a03e1cec49d91ec88|2026-05-05 06:43|Nour|fix resposive details page
+A	lib/core/widgets/responsive_layout.dart
+M	lib/features/product_details/presentation/view/product_details_screen.dart
+M	lib/features/product_details/presentation/widgets/product_image_gallery.dart
+M	lib/features/product_details/presentation/widgets/product_info_section.dart
+M	lib/features/product_details/presentation/widgets/product_tabs_section.dart
+M	lib/main.dart
+
+2bf86e2418184464d8e5fa7d3494b85388e78424|2026-05-04 21:52|Ahmad Al-Assem|Add CI/CD workflow for local server deployment
+A	.github/workflows/main-cicd.yml
+
+cb4fea6d8c64f4ae5715c1d94c4ef35e19143bec|2026-05-04 09:19|Nour|fix add to cart state enhance UX
+M	lib/features/cart/presentation/cubit/cart_cubit.dart
+M	lib/features/cart/presentation/cubit/cart_state.dart
+M	lib/features/home/presentation/widget/card/animated_cart_button.dart
+
+65be2a3201f8a35b69a65919940d2d22df2f20c0|2026-05-04 06:18|Nour|fix ParentDataWidget
+M	lib/features/checkout/data/models/checkout_model.dart
+M	lib/features/home/presentation/widget/promo_banner.dart
+
+ac906746f9d829ee6635532d08ec0a5c963d4f7f|2026-05-02 12:15|Ahmad Al-Assem|Add CI/CD workflow for production deployment
+A	.github/workflows/main.yml
+
+a762b61cc143f115da0fd5914e078a9e618302d5|2026-04-30 08:22|Nour|update named import
+M	lib/core/widgets/app_buton.dart
+M	lib/features/home/presentation/view/categories_screen.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+
+de2d714b272b0a172579fa9376d3d3636cfdcef0|2026-04-30 08:12|Nour|update file location
+R100	lib/core/widgets/Loading_widget.dart	lib/core/widgets/loading_widget.dart
+
+7b7713a3472562512328258063477cfca9184ae3|2026-04-30 08:06|Nour|update
+M	lib/main.dart
+
+b084d25f11b301736afd9e7ede5d3ffc45ccf526|2026-04-30 07:48|Nour|UPDATE ar.json translate
+M	assets/translations/ar.json
+
+c02859de986a72839969f120fcd57f142a666a6e|2026-04-28 05:05|Nour|payment online handler
+M	lib/core/di/injection_container.dart
+M	lib/features/checkout/data/datasources/checkout_remote_datasource.dart
+M	lib/features/checkout/data/models/place_order_result_model.dart
+M	lib/features/checkout/data/repositories/checkout_repository_impl.dart
+M	lib/features/checkout/domain/entities/place_order_result.dart
+M	lib/features/checkout/domain/repositories/checkout_repository.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/cubit/checkout_state.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/view/telr_payment_page.dart
+
+55a1e455352bbce9af8f56239390bf49441aef4a|2026-04-28 04:19|Nour|order list
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/dashboard/dashboard.dart
+M	lib/features/orders/presentation/cubit/orders_cubit.dart
+M	lib/features/orders/presentation/cubit/orders_state.dart
+M	lib/features/orders/presentation/screens/orders_list_screen.dart
+
+c2fa4edc627fc9122aaf14b7759df5062523c1d9|2026-04-28 03:20|Nour|addresses_screen.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/profile/presentation/view/addresses_screen.dart
+
+a15a98cb76d49651b5a460b59feb66aacddc0a2f|2026-04-28 03:08|Nour|README.md
+M	README.md
+
+45bb5c2707c60038345a58cb2519791312497203|2026-04-28 03:04|Nour|guest mode checkout
+M	assets/translations/ar.json
+M	lib/core/api/dio_client.dart
+M	lib/core/routes/app_routes.dart
+A	lib/core/service/session_service.dart
+M	lib/features/checkout/data/repositories/checkout_repository_impl.dart
+M	lib/features/checkout/domain/repositories/checkout_repository.dart
+M	lib/features/checkout/domain/usecases/place_order_usecase.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/cubit/checkout_state.dart
+D	lib/features/checkout/presentation/view/checkout_page.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/user_data/auth_guard.dart
+
+6126ffce29feb11a675da86393630b77fe4ad12f|2026-04-27 09:01|Nour|check out features
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/di/injection_container.dart
+M	lib/core/routes/app_routes.dart
+M	lib/core/routes/routes.dart
+M	lib/features/cart/presentation/cubit/cart_cubit.dart
+M	lib/features/checkout/data/models/checkout_model.dart
+M	lib/features/checkout/domain/entities/saved_address_entity.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/cubit/checkout_state.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/orders/data/datasources/orders_remote_datasource.dart
+M	lib/features/orders/data/models/order_model.dart
+M	lib/features/orders/presentation/screens/order_tracking_screen.dart
+M	lib/features/profile/data/datasources/profile_remote_datasource.dart
+M	lib/features/profile/data/repositories/profile_repository_impl.dart
+M	lib/features/profile/domain/repositories/profile_repository.dart
+A	lib/features/profile/domain/usecases/add_address_usecase.dart
+A	lib/features/profile/domain/usecases/delete_address_usecase.dart
+A	lib/features/profile/domain/usecases/get_addresses_usecase.dart
+A	lib/features/profile/domain/usecases/set_default_address_usecase.dart
+A	lib/features/profile/domain/usecases/update_address_usecase.dart
+A	lib/features/profile/presentation/cubit/addresses_cubit.dart
+A	lib/features/profile/presentation/cubit/addresses_state.dart
+M	lib/features/profile/presentation/cubit/profile_cubit.dart
+A	lib/features/profile/presentation/view/add_edit_address_screen.dart
+A	lib/features/profile/presentation/view/addresses_screen.dart
+M	lib/features/profile/presentation/view/profile_screen.dart
+M	lib/features/profile/presentation/widgets/profile_theme_tile.dart
+M	lib/features/settings/presentation/cubit/settings_cubit.dart
+M	lib/features/settings/presentation/cubit/settings_state.dart
+D	lib/features/settings/presentation/view/settings_screen.dart
+M	lib/main.dart
+M	pubspec.lock
+
+2d7a9dd15db00f874cb2a5fa84d80c04f389b0f2|2026-04-27 05:22|Nour|check-out/cart features handle
+M	lib/core/api/model/endpoints.dart
+M	lib/core/di/injection_container.dart
+M	lib/core/routes/app_routes.dart
+M	lib/core/theme/dark_theme.dart
+M	lib/core/theme/light_theme.dart
+M	lib/features/cart/data/datasources/cart_remote_datasource.dart
+M	lib/features/cart/data/repositories/cart_repository_impl.dart
+M	lib/features/cart/presentation/cubit/cart_cubit.dart
+M	lib/features/checkout/data/datasources/checkout_remote_datasource.dart
+A	lib/features/checkout/data/models/city_model.dart
+A	lib/features/checkout/data/models/place_order_result_model.dart
+M	lib/features/checkout/data/repositories/checkout_repository_impl.dart
+A	lib/features/checkout/domain/entities/city_entity.dart
+A	lib/features/checkout/domain/entities/place_order_result.dart
+M	lib/features/checkout/domain/repositories/checkout_repository.dart
+M	lib/features/checkout/domain/usecases/get_checkout_data_usecase.dart
+A	lib/features/checkout/domain/usecases/get_cities_usecase.dart
+M	lib/features/checkout/domain/usecases/place_order_usecase.dart
+D	lib/features/checkout/domain/usecases/select_payment_method_usecase.dart
+D	lib/features/checkout/domain/usecases/select_shipping_method_usecase.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/cubit/checkout_state.dart
+A	lib/features/checkout/presentation/view/checkout_page.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/view/order_success_screen.dart
+A	lib/features/checkout/presentation/view/telr_payment_page.dart
+A	lib/features/checkout/presentation/widgets/city_dropdown.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	pubspec.yaml
+
+991a8595ed49c3891d6df9c6d1db42343977d2b7|2026-04-27 02:15|Nour Nabil|remove error snackbar
+M	lib/features/auth/presentation/widget/taps/login_tab.dart
+M	lib/features/auth/presentation/widget/taps/signup_tab.dart
+M	lib/features/orders/presentation/screens/orders_list_screen.dart
+
+2615975f21e33659158f40531d51edafd5420b89|2026-04-26 18:58|Nour Nabil|product card/details/list/ fix home screen fix ui logic fix flow
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/api/dio_client.dart
+M	lib/core/api/model/endpoints.dart
+M	lib/core/di/injection_container.dart
+M	lib/core/theme/light_theme.dart
+M	lib/features/checkout/data/datasources/checkout_local_datasource.dart
+M	lib/features/home/data/model/product_model.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/home/presentation/widget/card/product_list.dart
+M	lib/features/home/presentation/widget/card/products_row.dart
+M	lib/features/home/presentation/widget/categories_row.dart
+M	lib/features/home/presentation/widget/promo_banner.dart
+M	lib/features/home/presentation/widget/section_header.dart
+M	lib/features/product_details/data/datasources/product_details_fake_data.dart
+M	lib/features/product_details/data/datasources/product_details_remote_datasource.dart
+M	lib/features/product_details/data/models/product_details_model.dart
+M	lib/features/product_details/domain/entities/product_details_entity.dart
+M	lib/features/product_details/presentation/view/product_details_screen.dart
+M	lib/features/product_details/presentation/widgets/product_image_gallery.dart
+M	lib/features/product_details/presentation/widgets/product_tabs_section.dart
+
+d81f80d1790a18a09ee93caf290aafa68f279b79|2026-04-22 00:57|Yossef Zaki|Fix Cart
+M	lib/features/cart/data/datasources/cart_remote_datasource.dart
+M	lib/features/cart/data/models/cart_model.dart
+
+2cf7443370f224ac94e3edb36131b76e3eb84908|2026-04-14 14:51|Nour Nabil|Merge remote-tracking branch 'origin/main'
+97ec338480f5d7b58803ba4adf02f70b8dcda814|2026-04-14 14:51|Nour Nabil|fix gallery show
+M	lib/features/product_details/data/datasources/product_details_remote_datasource.dart
+M	lib/features/product_details/data/models/product_details_model.dart
+
+48c9de6df4cbd669c18968830ea1463ffd71f294|2026-04-12 16:11|Yossef Zaki|Merge branch 'main' of https://github.com/ATWltd/fastWay-mobile
+181f53a1c6e4de0268866614a6904655c63f3c87|2026-04-12 16:11|Yossef Zaki|Fix
+M	lib/features/checkout/data/models/checkout_model.dart
+M	lib/features/checkout/domain/entities/payment_method_entity.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+
+a84f154289969e605a0e0a5ebc6963a09c96a725|2026-04-07 18:38|Nour Nabil|fix error/ enhance UI
+M	lib/core/theme/dark_theme.dart
+M	lib/core/theme/light_theme.dart
+M	lib/features/dashboard/dashboard.dart
+M	lib/features/home/data/datasources/products_remote_datasource.dart
+M	lib/features/home/presentation/cubit/home_cubit.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/view/products_list_screen.dart
+M	lib/features/home/presentation/widget/categories_row.dart
+M	lib/features/home/presentation/widget/section_header.dart
+M	lib/features/orders/presentation/screens/orders_list_screen.dart
+M	lib/features/settings/presentation/view/settings_screen.dart
+M	lib/features/user_data/auth_guard.dart
+
+c634036d49cda9371a12b7c88070e15db4342fad|2026-04-06 23:39|Yossef Zaki|Update to check
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/api/dio_client.dart
+M	lib/core/api/model/endpoints.dart
+M	lib/core/di/injection_container.dart
+M	lib/core/errors/error_handler.dart
+M	lib/core/routes/app_routes.dart
+M	lib/core/widgets/custom_app_bar.dart
+M	lib/core/widgets/custom_loading_dialog.dart
+M	lib/core/widgets/custom_network_image.dart
+M	lib/core/widgets/full_screen_media_viewer.dart
+M	lib/features/auth/data/repositories/auth_repository_impl.dart
+M	lib/features/auth/presentation/cubit/auth_cubit.dart
+M	lib/features/auth/presentation/widget/taps/signup_tab.dart
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/cart/presentation/widgets/cart_item_card.dart
+M	lib/features/cart/presentation/widgets/coupon_section.dart
+M	lib/features/checkout/data/repositories/checkout_repository_impl.dart
+M	lib/features/checkout/domain/usecases/get_payment_methods_usecase.dart
+M	lib/features/checkout/domain/usecases/get_shipping_methods_usecase.dart
+M	lib/features/home/presentation/view/categories_screen.dart
+M	lib/features/home/presentation/widget/card/animated_cart_button.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/home/presentation/widget/categories_row.dart
+M	lib/features/orders/data/datasources/orders_local_datasource.dart
+M	lib/features/orders/presentation/screens/order_details_screen.dart
+M	lib/features/points/presentation/view/points_screen.dart
+M	lib/features/points/presentation/widgets/points_stats_row.dart
+M	lib/features/product_details/data/repositories/product_details_repository_impl.dart
+M	lib/features/settings/presentation/view/settings_screen.dart
+M	lib/features/settings/presentation/widgets/settings_header.dart
+M	lib/features/user_data/user_model.dart
+
+d8f85e2bcc6d868a414594d99c7c929276bd04e3|2026-04-06 21:56|Yossef Zaki|Enhacning , and integration with api
+A	.gitignore
+A	.metadata
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/api/dio_client.dart
+M	lib/core/api/model/endpoints.dart
+M	lib/core/di/injection_container.dart
+M	lib/core/errors/error_handler.dart
+M	lib/core/routes/app_routes.dart
+M	lib/core/routes/routes.dart
+M	lib/core/theme/dark_theme.dart
+M	lib/core/theme/light_theme.dart
+M	lib/core/utils/app_constans.dart
+M	lib/core/utils/app_size.dart
+M	lib/features/auth/data/repositories/auth_repository_impl.dart
+M	lib/features/auth/domain/entities/user.dart
+M	lib/features/auth/domain/repositories/auth_repository.dart
+M	lib/features/auth/presentation/cubit/auth_cubit.dart
+M	lib/features/auth/presentation/cubit/auth_state.dart
+M	lib/features/auth/presentation/view/otp_verification_page.dart
+M	lib/features/auth/presentation/widget/taps/login_tab.dart
+A	lib/features/cart/data/datasources/cart_remote_datasource.dart
+M	lib/features/cart/data/repositories/cart_repository_impl.dart
+M	lib/features/cart/presentation/cubit/cart_cubit.dart
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/cart/presentation/widgets/cart_item_card.dart
+M	lib/features/cart/presentation/widgets/coupon_section.dart
+M	lib/features/cart/presentation/widgets/order_summary.dart
+M	lib/features/checkout/data/datasources/checkout_local_datasource.dart
+A	lib/features/checkout/data/datasources/checkout_remote_datasource.dart
+M	lib/features/checkout/data/models/checkout_model.dart
+M	lib/features/checkout/domain/entities/payment_method_entity.dart
+M	lib/features/checkout/domain/entities/saved_address_entity.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/view/order_success_screen.dart
+M	lib/features/checkout/presentation/widgets/order_summary_card.dart
+M	lib/features/dashboard/dashboard.dart
+M	lib/features/home/data/datasources/products_local_datasource.dart
+M	lib/features/home/data/datasources/products_remote_datasource.dart
+A	lib/features/home/data/model/category_model.dart
+M	lib/features/home/data/repositories/products_repository_impl.dart
+A	lib/features/home/domain/entities/banner_entity.dart
+M	lib/features/home/domain/entities/category_entity.dart
+M	lib/features/home/presentation/cubit/home_cubit.dart
+M	lib/features/home/presentation/cubit/home_state.dart
+A	lib/features/home/presentation/view/categories_screen.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+A	lib/features/home/presentation/view/products_list_screen.dart
+M	lib/features/home/presentation/widget/promo_banner.dart
+A	lib/features/orders/data/datasources/orders_remote_datasource.dart
+M	lib/features/orders/data/models/order_model.dart
+M	lib/features/orders/data/repositories/orders_repository_impl.dart
+A	lib/features/points/data/datasources/points_remote_datasource.dart
+M	lib/features/points/data/repositories/points_repository_impl.dart
+M	lib/features/points/presentation/widgets/points_history_section.dart
+A	lib/features/product_details/data/datasources/product_details_remote_datasource.dart
+M	lib/features/product_details/data/models/product_details_model.dart
+M	lib/features/product_details/data/repositories/product_details_repository_impl.dart
+A	lib/features/profile/data/datasources/profile_remote_datasource.dart
+M	lib/features/profile/data/repositories/profile_repository_impl.dart
+M	lib/features/profile/presentation/cubit/profile_cubit.dart
+A	lib/features/profile/presentation/view/profile_screen.dart
+A	lib/features/search/presentation/view/search_screen.dart
+M	lib/features/user_data/auth_guard.dart
+M	lib/features/user_data/user_model.dart
+M	lib/main.dart
+M	pubspec.lock
+M	pubspec.yaml
+A	web/favicon.png
+A	web/icons/Icon-192.png
+A	web/icons/Icon-512.png
+A	web/icons/Icon-maskable-192.png
+A	web/icons/Icon-maskable-512.png
+A	web/index.html
+A	web/manifest.json
+
+0aa8560dbfa31ba34061e8247acc9c178971aeeb|2026-04-05 13:59|Nour Nabil|points and profile Feature
+M	lib/core/di/injection_container.dart
+M	lib/core/routes/app_routes.dart
+M	lib/core/routes/routes.dart
+M	lib/features/dashboard/dashboard.dart
+A	lib/features/points/presentation/view/points_screen.dart
+A	lib/features/points/presentation/widgets/how_to_earn_section.dart
+A	lib/features/points/presentation/widgets/points_header_card.dart
+A	lib/features/points/presentation/widgets/points_history_section.dart
+A	lib/features/points/presentation/widgets/points_stats_row.dart
+A	lib/features/points/presentation/widgets/rewards_grid.dart
+A	lib/features/profile/presentation/view/edit_profile_screen.dart
+M	lib/features/profile/presentation/view/points_screen.dart
+A	lib/features/profile/presentation/widgets/profile_field_tile.dart
+A	lib/features/profile/presentation/widgets/profile_logout_button.dart
+A	lib/features/profile/presentation/widgets/profile_theme_tile.dart
+
+e81b371585e855fd92bab20447e23e94b16aa5ef|2026-04-01 16:35|Nour Nabil|points screen and profile
+M	assets/translations/ar.json
+M	lib/core/di/injection_container.dart
+M	lib/core/routes/app_routes.dart
+M	lib/core/routes/routes.dart
+M	lib/features/cart/presentation/cubit/cart_cubit.dart
+M	lib/features/checkout/presentation/view/order_success_screen.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+A	lib/features/home/presentation/widget/card/animated_cart_button.dart
+M	lib/features/home/presentation/widget/card/product_card.dart
+M	lib/features/home/presentation/widget/card/product_list.dart
+M	lib/features/home/presentation/widget/card/products_row.dart
+M	lib/features/orders/presentation/screens/order_details_screen.dart
+M	lib/features/orders/presentation/screens/order_tracking_screen.dart
+M	lib/features/orders/presentation/screens/orders_list_screen.dart
+M	lib/features/orders/presentation/widgets/order_card.dart
+M	lib/features/orders/presentation/widgets/order_status_timeline.dart
+A	lib/features/points/data/datasources/points_local_datasource.dart
+A	lib/features/points/data/models/points_model.dart
+A	lib/features/points/data/repositories/points_repository_impl.dart
+A	lib/features/points/domain/entities/points_entity.dart
+A	lib/features/points/domain/repositories/points_repository.dart
+A	lib/features/points/domain/usecases/get_points_summary_usecase.dart
+A	lib/features/points/domain/usecases/redeem_reward_usecase.dart
+A	lib/features/points/presentation/cubit/points_cubit.dart
+A	lib/features/points/presentation/cubit/points_state.dart
+M	lib/features/product_details/presentation/cubit/product_details_cubit.dart
+M	lib/features/product_details/presentation/cubit/product_details_state.dart
+M	lib/features/product_details/presentation/view/product_details_screen.dart
+A	lib/features/profile/data/datasources/profile_local_datasource.dart
+A	lib/features/profile/data/models/profile_model.dart
+A	lib/features/profile/data/repositories/profile_repository_impl.dart
+A	lib/features/profile/domain/entities/profile_entity.dart
+A	lib/features/profile/domain/repositories/profile_repository.dart
+A	lib/features/profile/domain/usecases/get_profile_usecase.dart
+A	lib/features/profile/presentation/cubit/profile_cubit.dart
+A	lib/features/profile/presentation/cubit/profile_state.dart
+A	lib/features/profile/presentation/view/points_screen.dart
+A	lib/features/profile/presentation/widgets/profile_header.dart
+A	lib/features/profile/presentation/widgets/profile_menu_section.dart
+A	lib/features/profile/presentation/widgets/profile_stats_row.dart
+M	lib/main.dart
+
+7872193e6515f93597c5782ddbc2f461ec5ef512|2026-03-30 17:19|Nour Nabil|my order feature v1 stable
+A	assets/icons/category.svg
+A	assets/icons/lucide_box.svg
+A	assets/icons/profile_icon.svg
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/di/injection_container.dart
+M	lib/core/routes/app_routes.dart
+M	lib/core/routes/routes.dart
+M	lib/core/utils/assets.dart
+D	lib/features/cart/cart_injection.dart
+M	lib/features/cart/presentation/cubit/cart_cubit.dart
+M	lib/features/cart/presentation/cubit/cart_state.dart
+M	lib/features/cart/presentation/view/cart_screen.dart
+M	lib/features/cart/presentation/widgets/cart_item_card.dart
+M	lib/features/cart/presentation/widgets/coupon_section.dart
+M	lib/features/cart/presentation/widgets/order_summary.dart
+D	lib/features/checkout/checkout_injection.dart
+M	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+M	lib/features/checkout/presentation/cubit/checkout_state.dart
+M	lib/features/checkout/presentation/view/checkout_screen.dart
+M	lib/features/checkout/presentation/view/order_success_screen.dart
+M	lib/features/checkout/presentation/widgets/order_summary_card.dart
+M	lib/features/checkout/presentation/widgets/promo_code_field.dart
+M	lib/features/checkout/presentation/widgets/selectable_option_tile.dart
+M	lib/features/dashboard/dashboard.dart
+A	lib/features/orders/data/datasources/orders_local_datasource.dart
+A	lib/features/orders/data/models/order_model.dart
+A	lib/features/orders/data/repositories/orders_repository_impl.dart
+A	lib/features/orders/domain/entities/order_entity.dart
+A	lib/features/orders/domain/repositories/orders_repository.dart
+A	lib/features/orders/domain/usecases/get_order_details_usecase.dart
+A	lib/features/orders/domain/usecases/get_orders_usecase.dart
+A	lib/features/orders/domain/usecases/track_order_usecase.dart
+A	lib/features/orders/presentation/cubit/orders_cubit.dart
+A	lib/features/orders/presentation/cubit/orders_state.dart
+A	lib/features/orders/presentation/screens/order_details_screen.dart
+A	lib/features/orders/presentation/screens/order_tracking_screen.dart
+A	lib/features/orders/presentation/screens/orders_list_screen.dart
+A	lib/features/orders/presentation/widgets/order_card.dart
+A	lib/features/orders/presentation/widgets/order_product_item.dart
+A	lib/features/orders/presentation/widgets/order_status_badge.dart
+A	lib/features/orders/presentation/widgets/order_status_timeline.dart
+A	lib/features/orders/presentation/widgets/order_summary_section.dart
+
+14b0b1b5a583f4b354c4a25e84baaf8b292bfd38|2026-03-30 01:31|Nour Nabil|check out / cart Feature v2 stable
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/di/injection_container.dart
+A	lib/features/cart/cart_injection.dart
+A	lib/features/cart/data/models/cart_model.dart
+A	lib/features/cart/domain/entities/cart_entity.dart
+A	lib/features/cart/domain/usecases/add_to_cart_usecase.dart
+A	lib/features/cart/domain/usecases/apply_coupon_usecase.dart
+A	lib/features/cart/domain/usecases/get_cart_usecase.dart
+A	lib/features/cart/domain/usecases/remove_coupon_usecase.dart
+A	lib/features/cart/domain/usecases/remove_item_usecase.dart
+A	lib/features/cart/domain/usecases/update_quantity_usecase.dart
+A	lib/features/cart/presentation/widgets/coupon_section.dart
+A	lib/features/cart/presentation/widgets/order_summary.dart
+A	lib/features/checkout/checkout_injection.dart
+A	lib/features/checkout/data/datasources/checkout_local_datasource.dart
+A	lib/features/checkout/data/models/checkout_model.dart
+A	lib/features/checkout/data/repositories/checkout_repository_impl.dart
+A	lib/features/checkout/domain/entities/checkout_entity.dart
+A	lib/features/checkout/domain/entities/payment_method_entity.dart
+A	lib/features/checkout/domain/entities/saved_address_entity.dart
+A	lib/features/checkout/domain/entities/shipping_method_entity.dart
+A	lib/features/checkout/domain/repositories/checkout_repository.dart
+A	lib/features/checkout/domain/usecases/get_checkout_data_usecase.dart
+A	lib/features/checkout/domain/usecases/get_payment_methods_usecase.dart
+A	lib/features/checkout/domain/usecases/get_shipping_methods_usecase.dart
+A	lib/features/checkout/domain/usecases/place_order_usecase.dart
+A	lib/features/checkout/domain/usecases/select_payment_method_usecase.dart
+A	lib/features/checkout/domain/usecases/select_shipping_method_usecase.dart
+A	lib/features/checkout/presentation/cubit/checkout_cubit.dart
+A	lib/features/checkout/presentation/cubit/checkout_state.dart
+A	lib/features/checkout/presentation/view/checkout_screen.dart
+A	lib/features/checkout/presentation/view/order_success_screen.dart
+A	lib/features/checkout/presentation/widgets/checkout_section_card.dart
+A	lib/features/checkout/presentation/widgets/order_summary_card.dart
+A	lib/features/checkout/presentation/widgets/promo_code_field.dart
+A	lib/features/checkout/presentation/widgets/saved_address_tile.dart
+A	lib/features/checkout/presentation/widgets/selectable_option_tile.dart
+M	lib/features/product_details/domain/repositories/product_details_repository.dart
+D	lib/features/product_details/domain/usecases/add_to_cart_usecase.dart
+M	lib/features/product_details/presentation/cubit/product_details_cubit.dart
+
+26d2e43f373e02f52391f6141e034f24aa9abaaa|2026-03-30 00:51|Nour Nabil|check out / cart Feature setup V1
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/di/injection_container.dart
+M	lib/core/routes/app_routes.dart
+M	lib/core/routes/routes.dart
+A	lib/features/cart/data/datasources/cart_local_datasource.dart
+A	lib/features/cart/data/repositories/cart_repository_impl.dart
+A	lib/features/cart/domain/repositories/cart_repository.dart
+A	lib/features/cart/presentation/cubit/cart_cubit.dart
+A	lib/features/cart/presentation/cubit/cart_state.dart
+A	lib/features/cart/presentation/view/cart_screen.dart
+A	lib/features/cart/presentation/widgets/cart_item_card.dart
+D	lib/features/home/presentation/view/home_screen.dart
+D	lib/features/home/presentation/view/medication_tap_screen.dart
+M	lib/main.dart
+
+d27edf195350c633a4d3c1ad28d505679a8a2e94|2026-03-25 18:44|Nour Nabil|product details UI / data layer
+M	lib/core/di/injection_container.dart
+M	lib/core/routes/app_routes.dart
+M	lib/core/routes/routes.dart
+M	lib/features/home/presentation/view/home_tab_screen.dart
+M	lib/features/home/presentation/widget/categories_row.dart
+A	lib/features/product_details/data/datasources/product_details_fake_data.dart
+A	lib/features/product_details/data/models/product_details_model.dart
+A	lib/features/product_details/data/repositories/product_details_repository_impl.dart
+A	lib/features/product_details/domain/entities/product_details_entity.dart
+A	lib/features/product_details/domain/repositories/product_details_repository.dart
+A	lib/features/product_details/domain/usecases/add_to_cart_usecase.dart
+A	lib/features/product_details/domain/usecases/get_product_details_usecase.dart
+A	lib/features/product_details/domain/usecases/toggle_favorite_usecase.dart
+A	lib/features/product_details/presentation/cubit/product_details_cubit.dart
+A	lib/features/product_details/presentation/cubit/product_details_state.dart
+A	lib/features/product_details/presentation/view/product_details_screen.dart
+A	lib/features/product_details/presentation/widgets/product_image_gallery.dart
+A	lib/features/product_details/presentation/widgets/product_info_section.dart
+A	lib/features/product_details/presentation/widgets/product_tabs_section.dart
+
+732604684e58c9d41155f1a6c76b6cf1d83cbc30|2026-03-16 13:28|Nour Nabil|home screen, products list, card
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/api/model/endpoints.dart
+M	lib/core/di/injection_container.dart
+M	lib/core/routes/routes.dart
+M	lib/features/dashboard/dashboard.dart
+D	lib/features/home/data/datasources/localdatasource/location_data_source.dart
+D	lib/features/home/data/datasources/localdatasource/location_data_source_impl.dart
+A	lib/features/home/data/datasources/products_local_datasource.dart
+A	lib/features/home/data/datasources/products_remote_datasource.dart
+D	lib/features/home/data/model/clinic_model.dart
+D	lib/features/home/data/model/clinics_response.dart
+A	lib/features/home/data/model/product_model.dart
+D	lib/features/home/data/repositories/home_repository_impl.dart
+D	lib/features/home/data/repositories/location_repository_impl.dart
+A	lib/features/home/data/repositories/products_repository_impl.dart
+A	lib/features/home/domain/entities/category_entity.dart
+D	lib/features/home/domain/entities/clinic_summary.dart
+A	lib/features/home/domain/entities/product_entity.dart
+D	lib/features/home/domain/entities/user_location.dart
+D	lib/features/home/domain/repositories/home_repository.dart
+D	lib/features/home/domain/repositories/location_repository.dart
+A	lib/features/home/domain/repositories/products_repository.dart
+A	lib/features/home/domain/usecases/get_products_usecase.dart
+D	lib/features/home/domain/usecases/location/get_current_location_usecase.dart
+M	lib/features/home/presentation/cubit/home_cubit.dart
+M	lib/features/home/presentation/cubit/home_state.dart
+M	lib/features/home/presentation/view/home_screen.dart
+A	lib/features/home/presentation/view/home_tab_screen.dart
+D	lib/features/home/presentation/widget/card/clinic_list.dart
+D	lib/features/home/presentation/widget/card/last_booking_card.dart
+R080	lib/features/home/presentation/widget/card/clinic_card.dart	lib/features/home/presentation/widget/card/product_card.dart
+A	lib/features/home/presentation/widget/card/product_list.dart
+A	lib/features/home/presentation/widget/card/products_row.dart
+A	lib/features/home/presentation/widget/categories_row.dart
+D	lib/features/home/presentation/widget/clinical_refresh_indicator.dart
+D	lib/features/home/presentation/widget/home_app_bar_widget.dart
+A	lib/features/home/presentation/widget/home_search_bar.dart
+D	lib/features/home/presentation/widget/home_shimmer_loading.dart
+A	lib/features/home/presentation/widget/promo_banner.dart
+A	lib/features/home/presentation/widget/section_header.dart
+M	lib/main.dart
+
+9cd2096cf0cd7933037b39a7d20d1d28e0c0a873|2026-03-12 15:03|Nour Nabil|auth screen, home screen
+M	assets/translations/ar.json
+M	lib/core/di/injection_container.dart
+M	lib/core/routes/app_routes.dart
+M	lib/core/routes/routes.dart
+M	lib/features/auth/presentation/view/auth_screen.dart
+M	lib/features/auth/presentation/widget/taps/login_tab.dart
+M	lib/features/auth/presentation/widget/taps/signup_tab.dart
+M	lib/features/home/presentation/cubit/home_cubit.dart
+M	lib/features/home/presentation/cubit/home_state.dart
+M	lib/features/home/presentation/view/home_screen.dart
+M	lib/features/home/presentation/widget/card/clinic_card.dart
+M	lib/features/home/presentation/widget/card/clinic_list.dart
+M	pubspec.lock
+
+efaaeb3dcb3d99d927c2fe28d2e566e7b965a2fb|2026-03-10 20:48|Nour Nabil|onboarding
+M	android/app/build.gradle
+M	android/gradle/wrapper/gradle-wrapper.properties
+M	android/settings.gradle
+A	assets/images/onboarding1.png
+A	assets/images/onboarding2.png
+A	assets/images/onboarding3.png
+M	assets/translations/ar.json
+M	assets/translations/en.json
+M	lib/core/api/model/endpoints.dart
+M	lib/core/routes/app_routes.dart
+M	lib/core/service/app_initializer.dart
+D	lib/core/service/notification_helper.dart
+M	lib/core/theme/colors.dart
+M	lib/core/utils/assets.dart
+M	lib/core/widgets/app_buton.dart
+M	lib/features/home/data/repositories/home_repository_impl.dart
+M	lib/features/home/domain/repositories/home_repository.dart
+D	lib/features/home/domain/usecases/get_clinics_usecase.dart
+D	lib/features/home/domain/usecases/get_latest_clinics_usecase.dart
+D	lib/features/home/domain/usecases/get_nearby_clinics_usecase.dart
+M	lib/features/home/presentation/cubit/home_cubit.dart
+M	lib/features/home/presentation/cubit/home_state.dart
+M	lib/features/home/presentation/view/home_screen.dart
+M	lib/features/home/presentation/widget/card/clinic_card.dart
+M	lib/features/home/presentation/widget/card/clinic_list.dart
+M	lib/features/home/presentation/widget/card/last_booking_card.dart
+M	lib/features/home/presentation/widget/clinical_refresh_indicator.dart
+M	lib/features/home/presentation/widget/home_app_bar_widget.dart
+A	lib/features/onboarding/presentation/models/onboarding_item.dart
+A	lib/features/onboarding/presentation/pages/onboarding_screen.dart
+A	lib/features/onboarding/presentation/widgets/onboarding_page_view.dart
+A	lib/features/onboarding/presentation/widgets/page_indicator.dart
+M	lib/main.dart
+M	pubspec.lock
+M	pubspec.yaml
+
+d1926218ad604c035e1eb9ad3285ba1af5e554a9|2026-03-09 03:28|Nour Nabil|setup
+A	analysis_options.yaml
+A	android/.gitignore
+A	android/app/build.gradle
+A	android/app/src/debug/AndroidManifest.xml
+A	android/app/src/main/AndroidManifest.xml
+A	android/app/src/main/kotlin/com/fastway/fastway/MainActivity.kt
+A	android/app/src/main/res/drawable-v21/launch_background.xml
+A	android/app/src/main/res/drawable/launch_background.xml
+A	android/app/src/main/res/mipmap-hdpi/ic_launcher.png
+A	android/app/src/main/res/mipmap-mdpi/ic_launcher.png
+A	android/app/src/main/res/mipmap-xhdpi/ic_launcher.png
+A	android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png
+A	android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+A	android/app/src/main/res/values-night/styles.xml
+A	android/app/src/main/res/values/styles.xml
+A	android/app/src/profile/AndroidManifest.xml
+A	android/build.gradle
+A	android/gradle.properties
+A	android/gradle/wrapper/gradle-wrapper.properties
+A	android/settings.gradle
+A	assets/icons/arrow-down.svg
+A	assets/icons/arrow-left.svg
+A	assets/icons/arrowup.svg
+A	assets/icons/box_icon.svg
+A	assets/icons/calendar.svg
+A	assets/icons/calendar_nav_bar.svg
+A	assets/icons/cart_icon.svg
+A	assets/icons/category_icon.svg
+A	assets/icons/chats_icon.svg
+A	assets/icons/doctor_icon.svg
+A	assets/icons/heart_Pop.json
+A	assets/icons/home.svg
+A	assets/icons/home_icon.svg
+A	assets/icons/location.svg
+A	assets/icons/notification-bing.svg
+A	assets/icons/pills_icon.svg
+A	assets/icons/search-icon.svg
+A	assets/icons/search-normal.svg
+A	assets/icons/settings_icon.svg
+A	assets/icons/verified.svg
+A	assets/translations/ar.json
+A	assets/translations/en.json
+A	ios/.gitignore
+A	ios/Flutter/AppFrameworkInfo.plist
+A	ios/Flutter/Debug.xcconfig
+A	ios/Flutter/Release.xcconfig
+A	ios/Runner.xcodeproj/project.pbxproj
+A	ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+A	ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+A	ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+A	ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme
+A	ios/Runner.xcworkspace/contents.xcworkspacedata
+A	ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+A	ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+A	ios/Runner/AppDelegate.swift
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png
+A	ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png
+A	ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json
+A	ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png
+A	ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png
+A	ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png
+A	ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md
+A	ios/Runner/Base.lproj/LaunchScreen.storyboard
+A	ios/Runner/Base.lproj/Main.storyboard
+A	ios/Runner/Info.plist
+A	ios/Runner/Runner-Bridging-Header.h
+A	ios/RunnerTests/RunnerTests.swift
+A	lib/core/api/api_error_handler.dart
+A	lib/core/api/base_api_services.dart
+A	lib/core/api/dio_client.dart
+A	lib/core/api/model/endpoints.dart
+A	lib/core/api/model/http_method.dart
+A	lib/core/db/shared_pref_helper.dart
+A	lib/core/di/injection_container.dart
+A	lib/core/errors/error_handler.dart
+A	lib/core/errors/exceptions.dart
+A	lib/core/errors/failure_message_mapper.dart
+A	lib/core/errors/failures.dart
+A	lib/core/errors/result_handler.dart
+A	lib/core/routes/app_routes.dart
+A	lib/core/routes/routes.dart
+A	lib/core/service/app_initializer.dart
+A	lib/core/service/notification_helper.dart
+A	lib/core/theme/app_theme.dart
+A	lib/core/theme/colors.dart
+A	lib/core/theme/dark_theme.dart
+A	lib/core/theme/font_weigth_helper.dart
+A	lib/core/theme/light_theme.dart
+A	lib/core/theme/text_theme.dart
+A	lib/core/utils/app_constans.dart
+A	lib/core/utils/app_localizations.dart
+A	lib/core/utils/app_size.dart
+A	lib/core/utils/assets.dart
+A	lib/core/utils/enums.dart
+A	lib/core/utils/extension.dart
+A	lib/core/utils/validators.dart
+A	lib/core/widgets/CustomIcon.dart
+A	lib/core/widgets/Loading_widget.dart
+A	lib/core/widgets/app_buton.dart
+A	lib/core/widgets/app_text_feild.dart
+A	lib/core/widgets/confirmation_dialog.dart
+A	lib/core/widgets/custom_app_bar.dart
+A	lib/core/widgets/custom_checkbox.dart
+A	lib/core/widgets/custom_loading_dialog.dart
+A	lib/core/widgets/custom_lottie_icon.dart
+A	lib/core/widgets/custom_network_image.dart
+A	lib/core/widgets/custom_snack_bar.dart
+A	lib/core/widgets/empty_state_widget.dart
+A	lib/core/widgets/error_state_widget.dart
+A	lib/core/widgets/full_screen_media_viewer.dart
+A	lib/features/auth/data/datasources/auth_local_data_source.dart
+A	lib/features/auth/data/datasources/auth_local_data_source_impl.dart
+A	lib/features/auth/data/datasources/auth_remote_data_source.dart
+A	lib/features/auth/data/model/auth_response_model.dart
+A	lib/features/auth/data/repositories/auth_repository_impl.dart
+A	lib/features/auth/domain/entities/user.dart
+A	lib/features/auth/domain/entities/verify_otp_params.dart
+A	lib/features/auth/domain/repositories/auth_repository.dart
+A	lib/features/auth/domain/usecases/get_current_user_usecase.dart
+A	lib/features/auth/domain/usecases/login_usecase.dart
+A	lib/features/auth/domain/usecases/logout_usecase.dart
+A	lib/features/auth/domain/usecases/signup_usecase.dart
+A	lib/features/auth/domain/usecases/usecase.dart
+A	lib/features/auth/domain/usecases/verify_otp_usecase.dart
+A	lib/features/auth/presentation/cubit/auth_cubit.dart
+A	lib/features/auth/presentation/cubit/auth_state.dart
+A	lib/features/auth/presentation/view/auth_screen.dart
+A	lib/features/auth/presentation/view/otp_verification_page.dart
+A	lib/features/auth/presentation/widget/auth_background.dart
+A	lib/features/auth/presentation/widget/auth_logo.dart
+A	lib/features/auth/presentation/widget/auth_tab_selector.dart
+A	lib/features/auth/presentation/widget/auth_title.dart
+A	lib/features/auth/presentation/widget/taps/login_tab.dart
+A	lib/features/auth/presentation/widget/taps/signup_tab.dart
+A	lib/features/dashboard/dashboard.dart
+A	lib/features/home/data/datasources/localdatasource/location_data_source.dart
+A	lib/features/home/data/datasources/localdatasource/location_data_source_impl.dart
+A	lib/features/home/data/model/clinic_model.dart
+A	lib/features/home/data/model/clinics_response.dart
+A	lib/features/home/data/repositories/home_repository_impl.dart
+A	lib/features/home/data/repositories/location_repository_impl.dart
+A	lib/features/home/domain/entities/clinic_summary.dart
+A	lib/features/home/domain/entities/user_location.dart
+A	lib/features/home/domain/repositories/home_repository.dart
+A	lib/features/home/domain/repositories/location_repository.dart
+A	lib/features/home/domain/usecases/get_clinics_usecase.dart
+A	lib/features/home/domain/usecases/get_latest_clinics_usecase.dart
+A	lib/features/home/domain/usecases/get_nearby_clinics_usecase.dart
+A	lib/features/home/domain/usecases/location/get_current_location_usecase.dart
+A	lib/features/home/presentation/cubit/home_cubit.dart
+A	lib/features/home/presentation/cubit/home_state.dart
+A	lib/features/home/presentation/cubit/home_ui_cubit.dart
+A	lib/features/home/presentation/view/home_screen.dart
+A	lib/features/home/presentation/view/medication_tap_screen.dart
+A	lib/features/home/presentation/widget/card/clinic_card.dart
+A	lib/features/home/presentation/widget/card/clinic_list.dart
+A	lib/features/home/presentation/widget/card/last_booking_card.dart
+A	lib/features/home/presentation/widget/clinical_refresh_indicator.dart
+A	lib/features/home/presentation/widget/home_app_bar_widget.dart
+A	lib/features/home/presentation/widget/home_shimmer_loading.dart
+A	lib/features/settings/presentation/cubit/settings_cubit.dart
+A	lib/features/settings/presentation/cubit/settings_state.dart
+A	lib/features/settings/presentation/view/settings_screen.dart
+A	lib/features/settings/presentation/widgets/settings_card.dart
+A	lib/features/settings/presentation/widgets/settings_header.dart
+A	lib/features/settings/presentation/widgets/settings_item.dart
+A	lib/features/settings/presentation/widgets/settings_section.dart
+A	lib/features/user_data/auth_guard.dart
+A	lib/features/user_data/user_cubit.dart
+A	lib/features/user_data/user_model.dart
+A	lib/features/user_data/user_repo.dart
+A	lib/features/user_data/user_state.dart
+A	lib/main.dart
+A	pubspec.lock
+A	pubspec.yaml
+A	test/widget_test.dart
+
+2834e2dd4dd1bd0ae1e1292aae14df35d1909a8f|2026-03-09 03:26|Nour Nabil|first commit
+A	README.md

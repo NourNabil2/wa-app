@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "914160982717",
+    "project_id": "fastway-64ae7",
+    "storage_bucket": "fastway-64ae7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914160982717:android:001b5fc74ce8cd1cfff5d4",
+        "android_client_info": {
+          "package_name": "com.fastway.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIhZ8FzU1woHxMF2-EJHfz6MhVdxjwghI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

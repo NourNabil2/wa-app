@@ -1,0 +1,310 @@
+Analyzing fastWay-mobile...                                     
+
+   info • The imported package 'pretty_dio_logger' isn't a dependency of the importing package • lib/core/api/dio_client.dart:10:8 • depend_on_referenced_packages
+   info • Don't use 'BuildContext's across async gaps • lib/core/api/dio_client.dart:42:38 • use_build_context_synchronously
+   info • 'encryptedSharedPreferences' is deprecated and shouldn't be used. EncryptedSharedPreferences is deprecated and will be removed in v11. The Jetpack Security library is deprecated by Google. Your data will be automatically migrated to custom ciphers on first access. Remove this parameter - it will be ignored • lib/core/db/shared_pref_helper.dart:17:30 • deprecated_member_use
+warning • Unused import: 'package:fastway/features/points/data/datasources/points_local_datasource.dart' • lib/core/di/injection_container.dart:33:8 • unused_import
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/core/errors/failures.dart:2:8 • depend_on_referenced_packages
+   info • Parameter 'key' could be a super parameter • lib/core/layout/simple_web_shell.dart:11:9 • use_super_parameters
+   info • 'background' is deprecated and shouldn't be used. Use surface instead. This feature was deprecated after v3.18.0-0.1.pre • lib/core/layout/simple_web_shell.dart:35:36 • deprecated_member_use
+   info • Parameter 'key' could be a super parameter • lib/core/layout/web_footer.dart:8:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/core/layout/web_footer.dart:350:19 • prefer_const_constructors
+   info • Parameter 'key' could be a super parameter • lib/core/layout/web_header.dart:22:9 • use_super_parameters
+warning • A value for optional parameter 'badge' isn't ever given • lib/core/layout/web_header.dart:290:10 • unused_element_parameter
+   info • Parameter 'key' could be a super parameter • lib/core/layout/web_shell.dart:25:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/core/responsive/hoverable_card.dart:35:9 • use_super_parameters
+   info • 'translate' is deprecated and shouldn't be used. Use translateByVector3, translateByVector4, or translateByDouble instead • lib/core/responsive/hoverable_card.dart:70:11 • deprecated_member_use
+   info • 'scale' is deprecated and shouldn't be used. Use scaleByVector3, scaleByVector4, or scaleByDouble instead • lib/core/responsive/hoverable_card.dart:75:11 • deprecated_member_use
+   info • Parameter 'key' could be a super parameter • lib/core/responsive/hoverable_card.dart:131:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/core/responsive/max_width_container.dart:21:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/core/responsive/responsive_grid.dart:32:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/core/responsive/responsive_grid.dart:72:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/core/responsive/responsive_layout.dart:31:9 • use_super_parameters
+warning • Duplicate import • lib/core/routes/app_routes.dart:30:8 • duplicate_import
+   info • 'background' is deprecated and shouldn't be used. Use surface instead. This feature was deprecated after v3.18.0-0.1.pre • lib/core/theme/dark_theme.dart:32:7 • deprecated_member_use
+   info • 'onBackground' is deprecated and shouldn't be used. Use onSurface instead. This feature was deprecated after v3.18.0-0.1.pre • lib/core/theme/dark_theme.dart:43:7 • deprecated_member_use
+   info • 'background' is deprecated and shouldn't be used. Use surface instead. This feature was deprecated after v3.18.0-0.1.pre • lib/core/theme/light_theme.dart:31:7 • deprecated_member_use
+   info • 'onBackground' is deprecated and shouldn't be used. Use onSurface instead. This feature was deprecated after v3.18.0-0.1.pre • lib/core/theme/light_theme.dart:42:7 • deprecated_member_use
+   info • Use 'const' with the constructor to improve performance • lib/core/theme/light_theme.dart:138:21 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/core/theme/light_theme.dart:142:21 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/core/theme/text_theme.dart:155:42 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/core/theme/text_theme.dart:161:45 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/core/theme/text_theme.dart:167:45 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/core/theme/text_theme.dart:173:43 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/core/theme/text_theme.dart:179:41 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/core/theme/text_theme.dart:185:44 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/core/theme/text_theme.dart:191:44 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/core/theme/text_theme.dart:197:42 • prefer_const_constructors
+   info • The local variable '_now' starts with an underscore • lib/core/utils/extension.dart:18:11 • no_leading_underscores_for_local_identifiers
+   info • The file name 'CustomIcon.dart' isn't a lower_case_with_underscores identifier • lib/core/widgets/CustomIcon.dart:1:1 • file_names
+   info • Parameter 'key' could be a super parameter • lib/core/widgets/CustomIcon.dart:15:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/core/widgets/app_buton.dart:23:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/core/widgets/app_buton.dart:106:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/core/widgets/app_buton.dart:148:17 • prefer_const_constructors
+   info • Parameter 'key' could be a super parameter • lib/core/widgets/app_buton.dart:187:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/core/widgets/app_buton.dart:206:16 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/core/widgets/app_buton.dart:206:72 • prefer_const_constructors
+   info • Parameter 'key' could be a super parameter • lib/core/widgets/app_buton.dart:224:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/core/widgets/app_buton.dart:239:20 • prefer_const_constructors
+   info • Parameter 'key' could be a super parameter • lib/core/widgets/app_text_feild.dart:71:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/core/widgets/custom_app_bar.dart:41:25 • prefer_const_constructors
+   info • Parameter 'key' could be a super parameter • lib/core/widgets/custom_lottie_icon.dart:13:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/core/widgets/empty_state_widget.dart:15:9 • use_super_parameters
+   info • 'WillPopScope' is deprecated and shouldn't be used. Use PopScope instead. The Android predictive back feature will not work with WillPopScope. This feature was deprecated after v3.12.0-1.0.pre • lib/core/widgets/empty_state_widget.dart:49:12 • deprecated_member_use
+   info • Parameter 'key' could be a super parameter • lib/core/widgets/error_state_widget.dart:14:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/core/widgets/full_screen_media_viewer.dart:58:26 • prefer_const_constructors
+   info • Parameter 'key' could be a super parameter • lib/core/widgets/loading_widget.dart:11:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/core/widgets/web_sidebar.dart:36:9 • use_super_parameters
+   info • Use 'const' for final variables initialized to a constant value • lib/core/widgets/web_sidebar.dart:301:5 • prefer_const_declarations
+   info • 'scale' is deprecated and shouldn't be used. Use scaleByVector3, scaleByVector4, or scaleByDouble instead • lib/core/widgets/web_sidebar.dart:318:15 • deprecated_member_use
+   info • Use 'const' for final variables initialized to a constant value • lib/core/widgets/web_sidebar.dart:696:5 • prefer_const_declarations
+   info • Use 'const' for final variables initialized to a constant value • lib/core/widgets/web_sidebar.dart:863:5 • prefer_const_declarations
+   info • Use 'const' for final variables initialized to a constant value • lib/core/widgets/web_sidebar.dart:1107:5 • prefer_const_declarations
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/features/auth/domain/entities/user.dart:1:8 • depend_on_referenced_packages
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/features/auth/domain/entities/verify_otp_params.dart:1:8 • depend_on_referenced_packages
+   info • The type parameter name 'Type' matches a visible type name • lib/features/auth/domain/usecases/usecase.dart:5:24 • avoid_types_as_parameter_names
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/features/auth/presentation/cubit/auth_state.dart:3:8 • depend_on_referenced_packages
+   info • Parameter 'key' could be a super parameter • lib/features/auth/presentation/view/auth_screen.dart:11:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/auth/presentation/view/otp_verification_page.dart:21:9 • use_super_parameters
+   info • Statements in a for should be enclosed in a block • lib/features/auth/presentation/view/otp_verification_page.dart:63:35 • curly_braces_in_flow_control_structures
+   info • Statements in a for should be enclosed in a block • lib/features/auth/presentation/view/otp_verification_page.dart:64:34 • curly_braces_in_flow_control_structures
+   info • Parameter 'key' could be a super parameter • lib/features/auth/presentation/widget/auth_background.dart:11:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/auth/presentation/widget/auth_logo.dart:10:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/auth/presentation/widget/auth_tab_selector.dart:12:9 • use_super_parameters
+   info • 'MaterialStateProperty' is deprecated and shouldn't be used. Use WidgetStateProperty instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre • lib/features/auth/presentation/widget/auth_tab_selector.dart:51:23 • deprecated_member_use
+   info • Parameter 'key' could be a super parameter • lib/features/auth/presentation/widget/auth_title.dart:11:9 • use_super_parameters
+warning • Duplicate import • lib/features/auth/presentation/widget/taps/login_tab.dart:15:8 • duplicate_import
+   info • Parameter 'key' could be a super parameter • lib/features/auth/presentation/widget/taps/login_tab.dart:20:9 • use_super_parameters
+warning • Duplicate import • lib/features/auth/presentation/widget/taps/signup_tab.dart:15:8 • duplicate_import
+   info • Parameter 'key' could be a super parameter • lib/features/auth/presentation/widget/taps/signup_tab.dart:20:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/features/cart/data/datasources/cart_remote_datasource.dart:96:16 • prefer_const_constructors
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/features/cart/domain/entities/cart_entity.dart:1:8 • depend_on_referenced_packages
+   info • Use 'const' with the constructor to improve performance • lib/features/cart/presentation/cubit/cart_cubit.dart:64:14 • prefer_const_constructors
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/features/cart/presentation/cubit/cart_state.dart:1:8 • depend_on_referenced_packages
+warning • Unused import: '../../domain/entities/cart_entity.dart' • lib/features/cart/presentation/view/cart_screen.dart:18:8 • unused_import
+   info • Parameter 'key' could be a super parameter • lib/features/cart/presentation/view/cart_screen.dart:26:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/features/cart/presentation/view/cart_screen.dart:221:38 • prefer_const_constructors
+   info • Parameter 'key' could be a super parameter • lib/features/cart/presentation/widgets/cart_item_card.dart:17:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/cart/presentation/widgets/coupon_section.dart:18:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/cart/presentation/widgets/order_summary.dart:13:9 • use_super_parameters
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/features/checkout/domain/entities/checkout_entity.dart:1:8 • depend_on_referenced_packages
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/features/checkout/domain/entities/city_entity.dart:1:8 • depend_on_referenced_packages
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/features/checkout/domain/entities/payment_method_entity.dart:3:8 • depend_on_referenced_packages
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/features/checkout/domain/entities/shipping_method_entity.dart:3:8 • depend_on_referenced_packages
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/features/checkout/presentation/cubit/checkout_state.dart:3:8 • depend_on_referenced_packages
+   info • Parameter 'key' could be a super parameter • lib/features/checkout/presentation/view/checkout_screen.dart:31:9 • use_super_parameters
+warning • The declaration '_goToAddAddress' isn't referenced • lib/features/checkout/presentation/view/checkout_screen.dart:44:16 • unused_element
+warning • The declaration '_goToManageAddresses' isn't referenced • lib/features/checkout/presentation/view/checkout_screen.dart:51:16 • unused_element
+warning • The value of the local variable 'v' isn't used • lib/features/checkout/presentation/view/checkout_screen.dart:291:11 • unused_local_variable
+warning • The value of the local variable 'h' isn't used • lib/features/checkout/presentation/view/checkout_screen.dart:292:11 • unused_local_variable
+   info • Use 'const' with the constructor to improve performance • lib/features/checkout/presentation/view/checkout_screen.dart:709:18 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/checkout/presentation/view/checkout_screen.dart:988:22 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/checkout/presentation/view/checkout_screen.dart:1065:11 • prefer_const_constructors
+   info • Parameter 'key' could be a super parameter • lib/features/checkout/presentation/view/order_success_screen.dart:17:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/features/checkout/presentation/view/order_success_screen.dart:39:29 • prefer_const_constructors
+   info • Parameter 'key' could be a super parameter • lib/features/checkout/presentation/view/telr_payment_page.dart:20:9 • use_super_parameters
+   info • Unnecessary braces in a string interpolation • lib/features/checkout/presentation/view/telr_payment_page.dart:84:30 • unnecessary_brace_in_string_interps
+   info • Parameter 'key' could be a super parameter • lib/features/checkout/presentation/widgets/checkout_section_card.dart:17:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/checkout/presentation/widgets/city_dropdown.dart:14:9 • use_super_parameters
+warning • The value of the field '_filtered' isn't used • lib/features/checkout/presentation/widgets/city_dropdown.dart:27:20 • unused_field
+warning • The declaration '_filter' isn't referenced • lib/features/checkout/presentation/widgets/city_dropdown.dart:41:8 • unused_element
+   info • Use 'const' with the constructor to improve performance • lib/features/checkout/presentation/widgets/city_dropdown.dart:223:25 • prefer_const_constructors
+   info • Parameter 'key' could be a super parameter • lib/features/checkout/presentation/widgets/order_summary_card.dart:13:9 • use_super_parameters
+warning • Unused import: 'package:flutter_bloc/flutter_bloc.dart' • lib/features/checkout/presentation/widgets/points_redemption_card.dart:3:8 • unused_import
+   info • Parameter 'key' could be a super parameter • lib/features/checkout/presentation/widgets/points_redemption_card.dart:15:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/checkout/presentation/widgets/promo_code_field.dart:14:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/features/checkout/presentation/widgets/promo_code_field.dart:76:23 • prefer_const_constructors
+   info • Parameter 'key' could be a super parameter • lib/features/checkout/presentation/widgets/saved_address_tile.dart:19:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/features/checkout/presentation/widgets/saved_address_tile.dart:58:29 • prefer_const_constructors
+   info • Parameter 'key' could be a super parameter • lib/features/checkout/presentation/widgets/selectable_option_tile.dart:24:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/features/checkout/presentation/widgets/selectable_option_tile.dart:110:29 • prefer_const_constructors
+   info • Parameter 'key' could be a super parameter • lib/features/dashboard/dashboard.dart:34:9 • use_super_parameters
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/features/home/domain/entities/banner_entity.dart:3:8 • depend_on_referenced_packages
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/features/home/domain/entities/category_entity.dart:3:8 • depend_on_referenced_packages
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/features/home/domain/entities/product_entity.dart:1:8 • depend_on_referenced_packages
+warning • The declaration '_safeFetch' isn't referenced • lib/features/home/presentation/cubit/home_cubit.dart:48:13 • unused_element
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/features/home/presentation/cubit/home_state.dart:3:8 • depend_on_referenced_packages
+   info • Parameter 'key' could be a super parameter • lib/features/home/presentation/view/categories_screen.dart:18:9 • use_super_parameters
+warning • The value of the local variable 'index' isn't used • lib/features/home/presentation/view/categories_screen.dart:249:37 • unused_local_variable
+warning • Unused import: 'package:fastway/core/api/model/endpoints.dart' • lib/features/home/presentation/view/home_tab_screen.dart:12:8 • unused_import
+warning • Unused import: 'package:fastway/features/home/presentation/widget/home_search_bar.dart' • lib/features/home/presentation/view/home_tab_screen.dart:22:8 • unused_import
+   info • Parameter 'key' could be a super parameter • lib/features/home/presentation/view/home_tab_screen.dart:44:9 • use_super_parameters
+warning • Unused import: 'package:flutter_animate/flutter_animate.dart' • lib/features/home/presentation/view/products_list_screen.dart:26:8 • unused_import
+warning • Duplicate import • lib/features/home/presentation/view/products_list_screen.dart:27:8 • duplicate_import
+warning • Unused import: 'package:flutter_animate/flutter_animate.dart' • lib/features/home/presentation/view/products_list_screen.dart:27:8 • unused_import
+warning • Unused import: 'package:cached_network_image/cached_network_image.dart' • lib/features/home/presentation/view/products_list_screen.dart:29:8 • unused_import
+   info • Parameter 'key' could be a super parameter • lib/features/home/presentation/view/products_list_screen.dart:35:9 • use_super_parameters
+warning • Unused import: '../../../../core/theme/colors.dart' • lib/features/home/presentation/widget/campaign_categories_row.dart:5:8 • unused_import
+   info • Parameter 'key' could be a super parameter • lib/features/home/presentation/widget/campaign_categories_row.dart:11:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/home/presentation/widget/card/animated_cart_button.dart:20:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/home/presentation/widget/card/animated_cart_button.dart:107:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/features/home/presentation/widget/card/animated_cart_button.dart:130:20 • prefer_const_constructors
+   info • Parameter 'key' could be a super parameter • lib/features/home/presentation/widget/card/animated_cart_button.dart:150:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/home/presentation/widget/card/product_card.dart:32:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/features/home/presentation/widget/card/product_card.dart:610:9 • prefer_const_constructors
+   info • Parameter 'key' could be a super parameter • lib/features/home/presentation/widget/card/product_list.dart:15:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/home/presentation/widget/card/products_row.dart:10:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/home/presentation/widget/card/web_category_card.dart:17:9 • use_super_parameters
+   info • 'translate' is deprecated and shouldn't be used. Use translateByVector3, translateByVector4, or translateByDouble instead • lib/features/home/presentation/widget/card/web_category_card.dart:69:42 • deprecated_member_use
+   info • Parameter 'key' could be a super parameter • lib/features/home/presentation/widget/categories_row.dart:18:9 • use_super_parameters
+   info • The type of the right operand ('TextDirection') isn't a subtype or a supertype of the left operand ('TextDirection') • lib/features/home/presentation/widget/categories_row.dart:56:45 • unrelated_type_equality_checks
+   info • Parameter 'key' could be a super parameter • lib/features/home/presentation/widget/home_search_bar.dart:8:9 • use_super_parameters
+   info • The import of 'package:flutter/gestures.dart' is unnecessary because all of the used elements are also provided by the import of 'dart:ui' • lib/features/home/presentation/widget/promo_banner.dart:4:8 • unnecessary_import
+warning • Unused import: '../../../../core/routes/routes.dart' • lib/features/home/presentation/widget/promo_banner.dart:9:8 • unused_import
+warning • Unused import: '../../../../core/theme/colors.dart' • lib/features/home/presentation/widget/promo_banner.dart:10:8 • unused_import
+   info • Parameter 'key' could be a super parameter • lib/features/home/presentation/widget/promo_banner.dart:17:9 • use_super_parameters
+   info • Use a 'SizedBox' to add whitespace to a layout • lib/features/home/presentation/widget/promo_banner.dart:64:14 • sized_box_for_whitespace
+   info • Parameter 'key' could be a super parameter • lib/features/home/presentation/widget/section_header.dart:13:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/onboarding/presentation/pages/onboarding_screen.dart:17:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/onboarding/presentation/widgets/onboarding_page_view.dart:12:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/onboarding/presentation/widgets/page_indicator.dart:11:9 • use_super_parameters
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/features/orders/data/datasources/orders_local_datasource.dart:30:14 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/features/orders/data/datasources/orders_local_datasource.dart:31:9 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/orders/data/datasources/orders_local_datasource.dart:39:9 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/features/orders/data/datasources/orders_local_datasource.dart:90:14 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/features/orders/data/datasources/orders_local_datasource.dart:91:9 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/orders/data/datasources/orders_local_datasource.dart:99:9 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/features/orders/data/datasources/orders_local_datasource.dart:150:14 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/features/orders/data/datasources/orders_local_datasource.dart:151:9 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/features/orders/data/datasources/orders_local_datasource.dart:202:14 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/features/orders/data/datasources/orders_local_datasource.dart:203:9 • prefer_const_constructors
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/features/orders/domain/entities/order_entity.dart:3:8 • depend_on_referenced_packages
+   info • Use 'const' with the constructor to improve performance • lib/features/orders/presentation/cubit/orders_cubit.dart:65:16 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/orders/presentation/cubit/orders_cubit.dart:65:34 • prefer_const_constructors
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/features/orders/presentation/cubit/orders_state.dart:3:8 • depend_on_referenced_packages
+warning • Unused import: 'package:fastway/features/auth/presentation/cubit/auth_state.dart' • lib/features/orders/presentation/cubit/orders_state.dart:4:8 • unused_import
+   info • The import of 'package:intl/intl.dart' is unnecessary because all of the used elements are also provided by the import of 'package:easy_localization/easy_localization.dart' • lib/features/orders/presentation/screens/order_details_screen.dart:16:8 • unnecessary_import
+   info • Parameter 'key' could be a super parameter • lib/features/orders/presentation/screens/order_details_screen.dart:33:9 • use_super_parameters
+warning • Unused import: 'package:flutter_screenutil/flutter_screenutil.dart' • lib/features/orders/presentation/screens/order_tracking_screen.dart:15:8 • unused_import
+   info • Parameter 'key' could be a super parameter • lib/features/orders/presentation/screens/order_tracking_screen.dart:28:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/features/orders/presentation/screens/order_tracking_screen.dart:158:26 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/orders/presentation/screens/order_tracking_screen.dart:230:28 • prefer_const_constructors
+   info • The import of 'package:intl/intl.dart' is unnecessary because all of the used elements are also provided by the import of 'package:easy_localization/easy_localization.dart' • lib/features/orders/presentation/screens/orders_list_screen.dart:15:8 • unnecessary_import
+warning • Unused import: '../../../../core/widgets/app_buton.dart' • lib/features/orders/presentation/screens/orders_list_screen.dart:19:8 • unused_import
+   info • Parameter 'key' could be a super parameter • lib/features/orders/presentation/screens/orders_list_screen.dart:31:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/features/orders/presentation/screens/orders_list_screen.dart:51:17 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/orders/presentation/screens/orders_list_screen.dart:58:17 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/orders/presentation/screens/orders_list_screen.dart:334:34 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/orders/presentation/screens/orders_list_screen.dart:356:40 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/features/orders/presentation/screens/orders_list_screen.dart:358:45 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/features/orders/presentation/screens/orders_list_screen.dart:399:39 • prefer_const_constructors
+   info • Unnecessary use of 'toList' in a spread • lib/features/orders/presentation/screens/orders_list_screen.dart:418:16 • unnecessary_to_list_in_spreads
+   info • The import of 'package:intl/intl.dart' is unnecessary because all of the used elements are also provided by the import of 'package:easy_localization/easy_localization.dart' • lib/features/orders/presentation/widgets/order_card.dart:6:8 • unnecessary_import
+   info • Parameter 'key' could be a super parameter • lib/features/orders/presentation/widgets/order_card.dart:18:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/orders/presentation/widgets/order_product_item.dart:12:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/orders/presentation/widgets/order_status_badge.dart:11:9 • use_super_parameters
+   info • The import of 'package:intl/intl.dart' is unnecessary because all of the used elements are also provided by the import of 'package:easy_localization/easy_localization.dart' • lib/features/orders/presentation/widgets/order_status_timeline.dart:6:8 • unnecessary_import
+   info • Parameter 'key' could be a super parameter • lib/features/orders/presentation/widgets/order_status_timeline.dart:13:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/orders/presentation/widgets/order_summary_section.dart:12:9 • use_super_parameters
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/features/points/domain/entities/points_entity.dart:3:8 • depend_on_referenced_packages
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/features/points/presentation/cubit/points_state.dart:3:8 • depend_on_referenced_packages
+   info • The import of 'package:flutter/rendering.dart' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart' • lib/features/points/presentation/view/points_screen.dart:13:8 • unnecessary_import
+   info • Parameter 'key' could be a super parameter • lib/features/points/presentation/view/points_screen.dart:32:9 • use_super_parameters
+warning • The declaration '_showSnack' isn't referenced • lib/features/points/presentation/view/points_screen.dart:45:8 • unused_element
+   info • Use 'const' for final variables initialized to a constant value • lib/features/points/presentation/view/points_screen.dart:133:5 • prefer_const_declarations
+   info • Use 'const' with the constructor to improve performance • lib/features/points/presentation/view/points_screen.dart:765:32 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/points/presentation/view/points_screen.dart:768:34 • prefer_const_constructors
+   info • Parameter 'key' could be a super parameter • lib/features/points/presentation/widgets/points_header_card.dart:16:9 • use_super_parameters
+warning • Unused import: 'package:fastway/core/routes/routes.dart' • lib/features/points/presentation/widgets/points_history_section.dart:4:8 • unused_import
+   info • Parameter 'key' could be a super parameter • lib/features/points/presentation/widgets/points_history_section.dart:17:9 • use_super_parameters
+   info • The local variable '_t' starts with an underscore • lib/features/points/presentation/widgets/points_history_section.dart:122:11 • no_leading_underscores_for_local_identifiers
+   info • The local variable '_h' starts with an underscore • lib/features/points/presentation/widgets/points_history_section.dart:123:11 • no_leading_underscores_for_local_identifiers
+   info • The local variable '_v' starts with an underscore • lib/features/points/presentation/widgets/points_history_section.dart:124:11 • no_leading_underscores_for_local_identifiers
+warning • Unused import: '../../../../core/theme/colors.dart' • lib/features/points/presentation/widgets/points_stats_row.dart:3:8 • unused_import
+   info • Parameter 'key' could be a super parameter • lib/features/points/presentation/widgets/points_stats_row.dart:9:9 • use_super_parameters
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/features/product_details/domain/entities/product_details_entity.dart:3:8 • depend_on_referenced_packages
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/features/product_details/presentation/cubit/product_details_state.dart:3:8 • depend_on_referenced_packages
+warning • Unused import: 'package:fastway/core/theme/colors.dart' • lib/features/product_details/presentation/view/mobile/product_details_mobile.dart:5:8 • unused_import
+   info • Parameter 'key' could be a super parameter • lib/features/product_details/presentation/view/mobile/product_details_mobile.dart:25:9 • use_super_parameters
+warning • The left operand can't be null, so the right operand is never executed • lib/features/product_details/presentation/view/mobile/product_details_mobile.dart:86:47 • dead_null_aware_expression
+warning • The left operand can't be null, so the right operand is never executed • lib/features/product_details/presentation/view/mobile/product_details_mobile.dart:156:57 • dead_null_aware_expression
+warning • The left operand can't be null, so the right operand is never executed • lib/features/product_details/presentation/view/mobile/product_details_mobile.dart:157:69 • dead_null_aware_expression
+warning • The value of the local variable 'isLoading' isn't used • lib/features/product_details/presentation/view/mobile/product_details_mobile.dart:214:23 • unused_local_variable
+   info • Parameter 'key' could be a super parameter • lib/features/product_details/presentation/view/product_details_screen.dart:18:9 • use_super_parameters
+warning • Unused import: 'package:fastway/core/routes/routes.dart' • lib/features/product_details/presentation/view/web/product_details_web.dart:3:8 • unused_import
+warning • Unused import: 'package:fastway/core/theme/colors.dart' • lib/features/product_details/presentation/view/web/product_details_web.dart:4:8 • unused_import
+   info • Parameter 'key' could be a super parameter • lib/features/product_details/presentation/view/web/product_details_web.dart:23:9 • use_super_parameters
+warning • The value of the local variable 'isDark' isn't used • lib/features/product_details/presentation/view/web/product_details_web.dart:32:11 • unused_local_variable
+   info • 'background' is deprecated and shouldn't be used. Use surface instead. This feature was deprecated after v3.18.0-0.1.pre • lib/features/product_details/presentation/view/web/product_details_web.dart:43:54 • deprecated_member_use
+warning • The left operand can't be null, so the right operand is never executed • lib/features/product_details/presentation/view/web/product_details_web.dart:127:65 • dead_null_aware_expression
+warning • The left operand can't be null, so the right operand is never executed • lib/features/product_details/presentation/view/web/product_details_web.dart:277:57 • dead_null_aware_expression
+warning • The left operand can't be null, so the right operand is never executed • lib/features/product_details/presentation/view/web/product_details_web.dart:278:69 • dead_null_aware_expression
+   info • Parameter 'key' could be a super parameter • lib/features/product_details/presentation/widgets/add_to_cart_button.dart:23:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/features/product_details/presentation/widgets/add_to_cart_button.dart:252:30 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/product_details/presentation/widgets/add_to_cart_button.dart:274:30 • prefer_const_constructors
+   info • Parameter 'key' could be a super parameter • lib/features/product_details/presentation/widgets/product_details_shared.dart:12:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/features/product_details/presentation/widgets/product_details_shared.dart:38:11 • prefer_const_constructors
+   info • Parameter 'key' could be a super parameter • lib/features/product_details/presentation/widgets/product_details_shared.dart:63:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/product_details/presentation/widgets/product_details_shared.dart:158:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/product_details/presentation/widgets/product_details_shared.dart:241:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/product_details/presentation/widgets/product_image_gallery.dart:20:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/product_details/presentation/widgets/product_info_section.dart:23:9 • use_super_parameters
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/features/profile/domain/entities/profile_entity.dart:3:8 • depend_on_referenced_packages
+warning • Unnecessary cast • lib/features/profile/presentation/cubit/addresses_cubit.dart:70:50 • unnecessary_cast
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/features/profile/presentation/cubit/profile_state.dart:3:8 • depend_on_referenced_packages
+   info • Parameter 'key' could be a super parameter • lib/features/profile/presentation/view/add_edit_address_screen.dart:27:9 • use_super_parameters
+warning • The '!' will have no effect because the receiver can't be null • lib/features/profile/presentation/view/add_edit_address_screen.dart:73:84 • unnecessary_non_null_assertion
+   info • Use 'const' with the constructor to improve performance • lib/features/profile/presentation/view/add_edit_address_screen.dart:121:50 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/profile/presentation/view/add_edit_address_screen.dart:122:18 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/profile/presentation/view/add_edit_address_screen.dart:258:21 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/profile/presentation/view/add_edit_address_screen.dart:260:30 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/features/profile/presentation/view/add_edit_address_screen.dart:261:35 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/features/profile/presentation/view/add_edit_address_screen.dart:262:27 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/profile/presentation/view/add_edit_address_screen.dart:265:27 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/profile/presentation/view/add_edit_address_screen.dart:266:38 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/profile/presentation/view/add_edit_address_screen.dart:416:42 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/profile/presentation/view/add_edit_address_screen.dart:465:42 • prefer_const_constructors
+   info • 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor or activeTrackColor instead. This feature was deprecated after v3.31.0-2.0.pre • lib/features/profile/presentation/view/add_edit_address_screen.dart:478:35 • deprecated_member_use
+   info • 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor or activeTrackColor instead. This feature was deprecated after v3.31.0-2.0.pre • lib/features/profile/presentation/view/add_edit_address_screen.dart:625:33 • deprecated_member_use
+warning • Unused import: 'package:flutter_screenutil/flutter_screenutil.dart' • lib/features/profile/presentation/view/addresses_screen.dart:6:8 • unused_import
+warning • Unused import: '../../../../core/utils/app_size.dart' • lib/features/profile/presentation/view/addresses_screen.dart:11:8 • unused_import
+   info • Parameter 'key' could be a super parameter • lib/features/profile/presentation/view/addresses_screen.dart:19:9 • use_super_parameters
+warning • Unused import: 'package:fastway/core/theme/colors.dart' • lib/features/profile/presentation/view/change_password_screen.dart:2:8 • unused_import
+   info • Parameter 'key' could be a super parameter • lib/features/profile/presentation/view/change_password_screen.dart:13:9 • use_super_parameters
+warning • The value of the local variable 'isDark' isn't used • lib/features/profile/presentation/view/change_password_screen.dart:42:11 • unused_local_variable
+warning • Unused import: 'package:fastway/core/theme/colors.dart' • lib/features/profile/presentation/view/change_password_sheet.dart:2:8 • unused_import
+   info • Parameter 'key' could be a super parameter • lib/features/profile/presentation/view/change_password_sheet.dart:13:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/profile/presentation/view/edit_profile_screen.dart:24:9 • use_super_parameters
+warning • The left operand can't be null, so the right operand is never executed • lib/features/profile/presentation/view/edit_profile_screen.dart:287:70 • dead_null_aware_expression
+warning • The left operand can't be null, so the right operand is never executed • lib/features/profile/presentation/view/edit_profile_screen.dart:382:51 • dead_null_aware_expression
+warning • The left operand can't be null, so the right operand is never executed • lib/features/profile/presentation/view/edit_profile_screen.dart:407:32 • dead_null_aware_expression
+warning • The left operand can't be null, so the right operand is never executed • lib/features/profile/presentation/view/edit_profile_screen.dart:410:33 • dead_null_aware_expression
+warning • Unused import: '../widgets/profile_field_tile.dart' • lib/features/profile/presentation/view/edit_profile_sheet.dart:11:8 • unused_import
+   info • Parameter 'key' could be a super parameter • lib/features/profile/presentation/view/edit_profile_sheet.dart:17:9 • use_super_parameters
+warning • The left operand can't be null, so the right operand is never executed • lib/features/profile/presentation/view/edit_profile_sheet.dart:169:48 • dead_null_aware_expression
+   info • Use 'const' with the constructor to improve performance • lib/features/profile/presentation/view/edit_profile_sheet.dart:545:13 • prefer_const_constructors
+   info • Parameter 'key' could be a super parameter • lib/features/profile/presentation/view/profile_screen.dart:44:9 • use_super_parameters
+   info • 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre • lib/features/profile/presentation/view/profile_screen.dart:275:37 • deprecated_member_use
+   info • Use 'const' with the constructor to improve performance • lib/features/profile/presentation/view/profile_screen.dart:344:37 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/profile/presentation/view/profile_screen.dart:350:46 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/profile/presentation/view/profile_screen.dart:446:18 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/features/profile/presentation/view/profile_screen.dart:448:23 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/features/profile/presentation/view/profile_screen.dart:449:15 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/profile/presentation/view/profile_screen.dart:451:15 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/profile/presentation/view/profile_screen.dart:453:24 • prefer_const_constructors
+   info • 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre • lib/features/profile/presentation/view/profile_screen.dart:543:21 • deprecated_member_use
+   info • Use 'const' with the constructor to improve performance • lib/features/profile/presentation/view/profile_screen.dart:680:26 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/profile/presentation/view/profile_screen.dart:982:13 • prefer_const_constructors
+   info • Parameter 'key' could be a super parameter • lib/features/profile/presentation/widgets/profile_field_tile.dart:16:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/profile/presentation/widgets/profile_header.dart:12:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/profile/presentation/widgets/profile_logout_button.dart:10:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/features/profile/presentation/widgets/profile_logout_button.dart:36:20 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/profile/presentation/widgets/profile_logout_button.dart:38:27 • prefer_const_constructors
+   info • Parameter 'key' could be a super parameter • lib/features/profile/presentation/widgets/profile_menu_section.dart:17:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/profile/presentation/widgets/profile_stats_row.dart:11:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/profile/presentation/widgets/profile_theme_tile.dart:13:9 • use_super_parameters
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/features/search/presentation/cubit/search_state.dart:1:8 • depend_on_referenced_packages
+   info • Parameter 'key' could be a super parameter • lib/features/search/presentation/view/search_sheet.dart:22:9 • use_super_parameters
+   info • The private field _recentSearches could be 'final' • lib/features/search/presentation/view/search_sheet.dart:59:16 • prefer_final_fields
+   info • Parameter 'key' could be a super parameter • lib/features/search/presentation/widgets/animated_search_hint.dart:12:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/search/presentation/widgets/staggered_chip.dart:10:9 • use_super_parameters
+   info • The imported package 'equatable' isn't a dependency of the importing package • lib/features/settings/presentation/cubit/settings_cubit.dart:4:8 • depend_on_referenced_packages
+warning • Unused import: 'package:easy_localization/easy_localization.dart' • lib/features/settings/presentation/cubit/settings_cubit.dart:6:8 • unused_import
+   info • Parameter 'key' could be a super parameter • lib/features/settings/presentation/widgets/settings_card.dart:7:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/settings/presentation/widgets/settings_header.dart:19:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/settings/presentation/widgets/settings_item.dart:14:9 • use_super_parameters
+   info • Parameter 'key' could be a super parameter • lib/features/settings/presentation/widgets/settings_section.dart:8:9 • use_super_parameters
+   info • The imported package 'bloc' isn't a dependency of the importing package • lib/features/user_data/user_cubit.dart:3:8 • depend_on_referenced_packages
+   info • The imported package 'meta' isn't a dependency of the importing package • lib/features/user_data/user_cubit.dart:5:8 • depend_on_referenced_packages
+   info • Parameter 'key' could be a super parameter • lib/main.dart:83:9 • use_super_parameters
+

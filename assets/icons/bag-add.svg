@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+  <!-- Bag outline as filled shape -->
+  <path d="M12 2a5 5 0 0 0-5 5H5.5A2.5 2.5 0 0 0 3 9.5v10A2.5 2.5 0 0 0 5.5 22h7a.5.5 0 0 0 0-1h-7A1.5 1.5 0 0 1 4 19.5V9.5A1.5 1.5 0 0 1 5.5 8h11A1.5 1.5 0 0 1 18 9.5v5a.5.5 0 0 0 1 0V9.5A2.5 2.5 0 0 0 17.5 7H17a5 5 0 0 0-5-5zm0 1a4 4 0 0 1 4 4H8a4 4 0 0 1 4-4z"/>
+  <!-- Plus icon -->
+  <path d="M19.5 15a.5.5 0 0 0-.5.5v2h-2a.5.5 0 0 0 0 1h2v2a.5.5 0 0 0 1 0v-2h2a.5.5 0 0 0 0-1h-2v-2a.5.5 0 0 0-.5-.5z"/>
+</svg>

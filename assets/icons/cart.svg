@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+  <!-- Shopping bag body (rounded trapezoid) -->
+  <path fill-rule="evenodd" clip-rule="evenodd"
+    d="M8.25 7a3.75 3.75 0 1 1 7.5 0v.25h1.25a2.75 2.75 0 0 1 2.716 2.338l1.023 7.25A2.75 2.75 0 0 1 18.023 20H5.977a2.75 2.75 0 0 1-2.716-3.162l1.023-7.25A2.75 2.75 0 0 1 7 7.25h1.25V7zm1.5 0a2.25 2.25 0 1 1 4.5 0v.25h-4.5V7zm-3 1.75a1.25 1.25 0 0 0-1.234 1.063l-1.023 7.25A1.25 1.25 0 0 0 5.977 18.5h12.046a1.25 1.25 0 0 0 1.234-1.437l-1.023-7.25A1.25 1.25 0 0 0 17 8.75H7z"/>
+</svg>
