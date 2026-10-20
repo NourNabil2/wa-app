@@ -1,4 +1,5 @@
 import 'package:fastway/core/api/model/endpoints.dart';
+import 'package:fastway/core/supabase/supabase_config.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:fastway/core/api/api_error_handler.dart';
@@ -47,8 +48,89 @@ class ProductsRemoteDataSourceImpl implements ProductsRemoteDataSource {
     return _dummyRosaryProducts.map((e) => e.toJson()).toList();
   }
 
+  Future<List<ProductModel>> _fetchProductsFromSupabase() async {
+    try {
+      final response = await SupabaseConfig.client
+          .from('products')
+          .select('*')
+          .eq('is_available', true)
+          .order('created_at', ascending: false);
+
+      final list = (response as List).map((row) {
+        final images = (row['images'] as List?)?.map((e) => e.toString()).toList() ?? [];
+        final firstImage = images.isNotEmpty ? images.first : 'assets/images/rosary_1.jpeg';
+        return ProductModel(
+          id: row['id'].toString(),
+          name: row['name_en'] ?? row['name_ar'] ?? '',
+          nameAr: row['name_ar'],
+          imageUrl: firstImage,
+          price: (row['price'] as num?)?.toDouble() ?? 0.0,
+          originalPrice: (row['original_price'] as num?)?.toDouble(),
+          isAvailable: row['is_available'] as bool? ?? true,
+          categoryId: row['category_id']?.toString() ?? '1',
+          rating: (row['rating'] as num?)?.toDouble() ?? 5.0,
+          reviewCount: (row['review_count'] as num?)?.toInt() ?? 0,
+          isNew: row['is_new'] as bool? ?? true,
+          isFeatured: row['is_featured'] as bool? ?? false,
+        );
+      }).toList();
+
+      return list;
+    } catch (e) {
+      debugPrint('[Supabase] Products error: $e');
+      return _dummyRosaryProducts;
+    }
+  }
+
+  Future<List<CategoryModel>> _fetchCategoriesFromSupabase() async {
+    try {
+      final response = await SupabaseConfig.client
+          .from('categories')
+          .select('*')
+          .order('sort_order', ascending: true);
+
+      return (response as List).map((row) {
+        return CategoryModel(
+          id: row['id'].toString(),
+          name: row['name_en'] ?? row['name_ar'] ?? '',
+          nameAr: row['name_ar'] ?? '',
+          iconUrl: row['image_url'] ?? '',
+        );
+      }).toList();
+    } catch (e) {
+      debugPrint('[Supabase] Categories error: $e');
+      return [];
+    }
+  }
+
+  Future<List<BannerEntity>> _fetchBannersFromSupabase() async {
+    try {
+      final response = await SupabaseConfig.client
+          .from('banners')
+          .select('*')
+          .eq('is_active', true)
+          .order('sort_order', ascending: true);
+
+      return (response as List).map((row) {
+        return BannerEntity(
+          id: row['id'].toString(),
+          title: (row['title_en'] ?? '') as String,
+          titleAr: (row['title_ar'] ?? '') as String,
+          imageUrl: (row['image_url'] ?? '') as String,
+          linkUrl: row['link_url'] as String?,
+        );
+      }).toList();
+    } catch (e) {
+      debugPrint('[Supabase] Banners error: $e');
+      return [];
+    }
+  }
+
   @override
   Future<List<ProductModel>> getProducts({int page = 1, int perPage = 10}) async {
+    if (SupabaseConfig.isConfigured) {
+      return _fetchProductsFromSupabase();
+    }
     try {
       final list = await _processRequest<ProductModel>(
         url: Endpoints.products,
@@ -66,6 +148,11 @@ class ProductsRemoteDataSourceImpl implements ProductsRemoteDataSource {
 
   @override
   Future<List<ProductModel>> getFeatured() async {
+    if (SupabaseConfig.isConfigured) {
+      final all = await _fetchProductsFromSupabase();
+      final featured = all.where((p) => p.isFeatured).toList();
+      return featured.isNotEmpty ? featured : all;
+    }
     try {
       final list = await _processRequest<ProductModel>(
         url: Endpoints.featured,
@@ -81,6 +168,9 @@ class ProductsRemoteDataSourceImpl implements ProductsRemoteDataSource {
 
   @override
   Future<List<ProductModel>> getNewArrivals() async {
+    if (SupabaseConfig.isConfigured) {
+      return _fetchProductsFromSupabase();
+    }
     try {
       final list = await _processRequest<ProductModel>(
         url: Endpoints.newArrivals,
@@ -96,6 +186,10 @@ class ProductsRemoteDataSourceImpl implements ProductsRemoteDataSource {
 
   @override
   Future<List<CategoryModel>> getCategories() async {
+    if (SupabaseConfig.isConfigured) {
+      final supaCats = await _fetchCategoriesFromSupabase();
+      if (supaCats.isNotEmpty) return supaCats;
+    }
     return _processRequest<CategoryModel>(
       url: Endpoints.categories,
       mapper: (json) => CategoryModel.fromJson(json),
@@ -105,6 +199,10 @@ class ProductsRemoteDataSourceImpl implements ProductsRemoteDataSource {
 
   @override
   Future<List<BannerEntity>> getBanners() async {
+    if (SupabaseConfig.isConfigured) {
+      final supaBanners = await _fetchBannersFromSupabase();
+      if (supaBanners.isNotEmpty) return supaBanners;
+    }
     const primaryEndpoint = kIsWeb ? Endpoints.banners : Endpoints.mobileBanners;
     const fallbackEndpoint = kIsWeb ? Endpoints.mobileBanners : Endpoints.banners;
 

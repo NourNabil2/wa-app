@@ -33,6 +33,7 @@ import 'features/settings/presentation/cubit/settings_cubit.dart';
 import 'features/user_data/user_cubit.dart';
 import 'features/user_data/user_repo.dart';
 import 'core/cubit/delivery_location/delivery_location_cubit.dart';
+import 'core/supabase/supabase_config.dart';
 import 'features/profile/presentation/cubit/addresses_cubit.dart';
 import 'features/profile/presentation/cubit/profile_cubit.dart';
 
@@ -58,6 +59,7 @@ void main() async {
   );
 
   await AppInitializer.init();
+  await SupabaseConfig.initialize();
   await _initGuestSession();
   // Fire-and-forget: AppSettingsService loads from SharedPrefs cache instantly;
   // the API call runs in the background so it never blocks the white screen.
@@ -109,7 +111,7 @@ void main() async {
         WebRouteObserver.handlingBrowserBack = true;
 
         final navigator = AppRouter.navigatorKey.currentState;
-        final popped = await navigator?.maybePop() ?? false;
+        await navigator?.maybePop();
 
         // Unconditionally clear the flag. If we only clear it when !popped,
         // or rely on didPop to clear it, popping a Dialog (which returns early from didPop)

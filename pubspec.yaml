@@ -80,6 +80,7 @@ dependencies:
   # Image Picker
   image_picker: ^1.0.7
   equatable: ^2.0.8
+  supabase_flutter: ^2.18.3
 
 
 dev_dependencies:
