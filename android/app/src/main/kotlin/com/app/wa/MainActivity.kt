@@ -1,4 +1,4 @@
-package com.fastway.app
+package com.app.wa
 
 import io.flutter.embedding.android.FlutterFragmentActivity
 

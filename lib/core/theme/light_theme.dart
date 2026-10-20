@@ -69,7 +69,7 @@ class LightTheme {
       elevation: 0,
       centerTitle: true,
       iconTheme: IconThemeData(color: Colors.white),
-      systemOverlayStyle: const SystemUiOverlayStyle(
+      systemOverlayStyle: SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
         statusBarIconBrightness: Brightness.dark,
         statusBarBrightness: Brightness.light,
@@ -102,7 +102,7 @@ class LightTheme {
     ),
 
     // Bottom App Bar Theme
-    bottomAppBarTheme: const BottomAppBarTheme(
+    bottomAppBarTheme: const BottomAppBarThemeData(
       elevation: 0,
       color: Colors.transparent,
       surfaceTintColor: Colors.transparent,

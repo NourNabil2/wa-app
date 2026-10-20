@@ -74,8 +74,12 @@
 	<string>This app requires access to your location to show your position on the map and find nearby services.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>This app requires access to your location to show your position on the map and find nearby services.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This app requires access to your location to show your position on the map and find nearby services.</string>
 	<key>NSFaceIDUsageDescription</key>
 	<string>This app requires Face ID / Touch ID to unlock the application securely.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This app requires microphone access for voice search and communicating with customer support.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>

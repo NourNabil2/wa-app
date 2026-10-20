@@ -14,7 +14,6 @@ import 'package:fastway/features/profile/presentation/cubit/profile_state.dart';
 import 'package:fastway/features/settings/presentation/cubit/settings_cubit.dart';
 import 'package:fastway/core/utils/platform_reload.dart';
 import 'package:fastway/core/layout/web_nav_controller.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class MobileWebDrawer extends StatelessWidget {
   const MobileWebDrawer({super.key});
@@ -337,7 +336,7 @@ class _GuestCtaRow extends StatelessWidget {
 
 // ── Drawer list item ──────────────────────────────────────────────────────────
 class _DrawerItem extends StatefulWidget {
-  final IconData? faIcon;
+  final dynamic faIcon;
   final String? svgIcon;
   final String title;
   final VoidCallback onTap;
@@ -360,9 +359,7 @@ class _DrawerItemState extends State<_DrawerItem> {
 
   @override
   Widget build(BuildContext context) {
-    const primary   = ColorsManager.primaryColor;
-    final baseColor = widget.isDark ? Colors.white70 : Colors.black54;
-    final color     = _hovered ? primary : baseColor;
+    const primary = ColorsManager.primaryColor;
 
     return MouseRegion(
       cursor:  SystemMouseCursors.click,

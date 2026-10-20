@@ -73,6 +73,6 @@ class DefaultFirebaseOptions {
     messagingSenderId: '914160982717',
     projectId: 'fastway-64ae7',
     storageBucket: 'fastway-64ae7.firebasestorage.app',
-    iosBundleId: 'com.fastway.app',
+    iosBundleId: 'com.app.wa',
   );
 }

@@ -71,7 +71,7 @@ class DarkTheme {
       elevation: 0,
       centerTitle: true,
       iconTheme: IconThemeData(color: Colors.white),
-      systemOverlayStyle: const SystemUiOverlayStyle(
+      systemOverlayStyle: SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
         statusBarIconBrightness: Brightness.light,
         statusBarBrightness: Brightness.dark,
@@ -104,7 +104,7 @@ class DarkTheme {
     ),
 
     // Bottom App Bar Theme
-    bottomAppBarTheme: const BottomAppBarTheme(
+    bottomAppBarTheme: const BottomAppBarThemeData(
       elevation: 0,
       color: ColorsManager.secondaryDarkColor,
       surfaceTintColor: ColorsManager.secondaryDarkColor,
@@ -165,16 +165,16 @@ class DarkTheme {
         borderRadius: BorderRadius.circular(8),
         borderSide: BorderSide(color: Colors.grey[700]!, width: 1),
       ),
-      focusedBorder:  OutlineInputBorder(
-        borderRadius: BorderRadius.circular(8),
+      focusedBorder: const OutlineInputBorder(
+        borderRadius: BorderRadius.all(Radius.circular(8)),
         borderSide: BorderSide(color: ColorsManager.primaryColor, width: 2),
       ),
-      errorBorder:  OutlineInputBorder(
-        borderRadius: BorderRadius.circular(8),
+      errorBorder: const OutlineInputBorder(
+        borderRadius: BorderRadius.all(Radius.circular(8)),
         borderSide: BorderSide(color: ColorsManager.errorFill, width: 1),
       ),
-      focusedErrorBorder:  OutlineInputBorder(
-        borderRadius: BorderRadius.circular(8),
+      focusedErrorBorder: const OutlineInputBorder(
+        borderRadius: BorderRadius.all(Radius.circular(8)),
         borderSide: BorderSide(color: ColorsManager.errorFill, width: 2),
       ),
 

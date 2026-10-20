@@ -1,11 +1,8 @@
 // lib/features/home/presentation/widget/categories_row.dart
 // Circular category slider — Instagram Stories style
-import 'package:fastway/core/api/model/endpoints.dart';
 import 'package:fastway/core/theme/colors.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import '../../domain/entities/category_entity.dart';
 
 class CategoriesRow extends StatelessWidget {
@@ -24,7 +21,7 @@ class CategoriesRow extends StatelessWidget {
   Widget build(BuildContext context) {
     // One unified design for all screen sizes — circular image slider
     return SizedBox(
-      height: 105,
+      height: 125,
       // Opt the mouse back in as a drag device: AppScrollBehavior excludes it
       // app-wide so that click-dragging selects text instead of scrolling.
       // A carousel has no selectable text and users expect to drag it.
@@ -77,26 +74,18 @@ class _CategoryCircle extends StatelessWidget {
     }
   }
 
-  String get _fullImageUrl {
-    final rawUrl = category.iconUrl.trim();
-    if (rawUrl.isEmpty) return '';
-    if (rawUrl.startsWith('http')) return rawUrl;
-    final baseDomain = Endpoints.baseUrl.replaceAll(RegExp(r'/api/v1$'), '');
-    return '$baseDomain/storage/categories/$rawUrl.png';
-  }
-
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final locale = Localizations.localeOf(context).languageCode;
     final name = locale == 'ar' ? category.nameAr : category.name;
-    const circleSize = 66.0;
+    const circleSize = 80.0;
 
     return GestureDetector(
       onTap: onTap,
       behavior: HitTestBehavior.opaque,
       child: SizedBox(
-        width: 72,
+        width: 86,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -158,79 +147,12 @@ class _CategoryCircle extends StatelessWidget {
   }
 
   Widget _buildImage(bool isDark) {
-    final imageUrl = _fullImageUrl;
-
-    if (imageUrl.isNotEmpty && !imageUrl.startsWith('assets/')) {
-      return CachedNetworkImage(
-        imageUrl: imageUrl,
-        fit: BoxFit.cover,
-        width: double.infinity,
-        height: double.infinity,
-        memCacheWidth: 132,  // 66px circle * 2x retina
-        memCacheHeight: 132,
-        fadeInDuration: Duration.zero,
-        fadeOutDuration: Duration.zero,
-        placeholder: (_, __) => Center(
-          child: SizedBox(
-            width: 20,
-            height: 20,
-            child: CircularProgressIndicator(
-              strokeWidth: 2,
-              color: _accent.withValues(alpha: 0.5),
-            ),
-          ),
-        ),
-        errorWidget: (_, __, ___) => _FallbackIcon(accent: _accent, isDark: isDark, name: category.name),
-      );
-    }
-
-    final url = category.iconUrl.trim();
-    if (url.startsWith('assets/') && url.endsWith('.svg')) {
-      return Center(
-        child: SvgPicture.asset(
-          url,
-          width: 30,
-          height: 30,
-          colorFilter: ColorFilter.mode(_accent, BlendMode.srcIn),
-        ),
-      );
-    }
-
-    return _FallbackIcon(accent: _accent, isDark: isDark, name: category.name);
-  }
-}
-
-class _FallbackIcon extends StatelessWidget {
-  final Color accent;
-  final bool isDark;
-  final String name;
-
-  const _FallbackIcon({required this.accent, required this.isDark, required this.name});
-
-  @override
-  Widget build(BuildContext context) {
-    const iconMap = {
-      'protein': Icons.fitness_center_rounded,
-      'creatine': Icons.bolt_rounded,
-      'vitamin': Icons.medication_rounded,
-      'bcaa': Icons.science_rounded,
-      'pre-workout': Icons.local_fire_department_rounded,
-      'fat': Icons.monitor_weight_rounded,
-      'mass': Icons.sports_gymnastics_rounded,
-      'omega': Icons.water_drop_rounded,
-      'collagen': Icons.face_retouching_natural_rounded,
-      'amino': Icons.biotech_rounded,
-    };
-
-    final lower = name.toLowerCase();
-    final iconData = iconMap.entries
-        .firstWhere((e) => lower.contains(e.key),
-            orElse: () => const MapEntry('', Icons.category_rounded))
-        .value;
-
-    return Container(
-      color: accent.withValues(alpha: 0.08),
-      child: Center(child: Icon(iconData, size: 26, color: accent)),
+    final assetIndex = (index % 3) + 1;
+    return Image.asset(
+      'assets/images/category_$assetIndex.jpeg',
+      fit: BoxFit.cover,
+      width: double.infinity,
+      height: double.infinity,
     );
   }
 }

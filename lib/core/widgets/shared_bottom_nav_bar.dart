@@ -4,7 +4,6 @@ import 'dart:ui' as ui;
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:fastway/core/theme/colors.dart';
-import 'package:fastway/core/routes/app_routes.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fastway/features/cart/presentation/cubit/cart_cubit.dart';
@@ -101,7 +100,7 @@ class SharedBottomNavBar extends StatelessWidget {
 }
 
 class SharedNavBtn extends StatelessWidget {
-  final IconData? faIcon;
+  final dynamic faIcon;
   final String? svgIcon;
   final bool active;
   final Color activeColor, inactiveColor;

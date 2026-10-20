@@ -24,32 +24,74 @@ class ProductsRemoteDataSourceImpl implements ProductsRemoteDataSource {
 
   ProductsRemoteDataSourceImpl(this._apiServices);
 
+  List<ProductModel> get _dummyRosaryProducts {
+    return List.generate(48, (index) {
+      return ProductModel(
+        id: 'rosary_${index + 1}',
+        name: 'Premium Rosary ${index + 1}',
+        nameAr: 'سبحة فاخرة ${index + 1}',
+        imageUrl: 'assets/images/rosary_${index + 1}.jpeg',
+        price: 99.0,
+        originalPrice: 150.0,
+        isAvailable: true,
+        categoryId: '2',
+        rating: 5.0,
+        reviewCount: 12,
+        isNew: true,
+        isFeatured: true,
+      );
+    });
+  }
+
+  List<Map<String, dynamic>> get _dummyRosaryProductsJson {
+    return _dummyRosaryProducts.map((e) => e.toJson()).toList();
+  }
+
   @override
   Future<List<ProductModel>> getProducts({int page = 1, int perPage = 10}) async {
-    return _processRequest<ProductModel>(
-      url: Endpoints.products,
-      queryParams: {'page': page, 'per_page': perPage},
-      mapper: (json) => ProductModel.fromJson(json),
-      errorLabel: 'PRODUCTS_FETCH_ERROR',
-    );
+    try {
+      final list = await _processRequest<ProductModel>(
+        url: Endpoints.products,
+        queryParams: {'page': page, 'per_page': perPage},
+        mapper: (json) => ProductModel.fromJson(json),
+        errorLabel: 'PRODUCTS_FETCH_ERROR',
+      );
+      if (page == 1) list.insertAll(0, _dummyRosaryProducts);
+      return list;
+    } catch (_) {
+      if (page == 1) return _dummyRosaryProducts;
+      rethrow;
+    }
   }
 
   @override
   Future<List<ProductModel>> getFeatured() async {
-    return _processRequest<ProductModel>(
-      url: Endpoints.featured,
-      mapper: (json) => ProductModel.fromJson(json),
-      errorLabel: 'FEATURED_FETCH_ERROR',
-    );
+    try {
+      final list = await _processRequest<ProductModel>(
+        url: Endpoints.featured,
+        mapper: (json) => ProductModel.fromJson(json),
+        errorLabel: 'FEATURED_FETCH_ERROR',
+      );
+      list.insertAll(0, _dummyRosaryProducts);
+      return list;
+    } catch (_) {
+      return _dummyRosaryProducts;
+    }
   }
 
   @override
   Future<List<ProductModel>> getNewArrivals() async {
-    return _processRequest<ProductModel>(
-      url: Endpoints.newArrivals,
-      mapper: (json) => ProductModel.fromJson(json),
-      errorLabel: 'NEW_ARRIVALS_FETCH_ERROR',
-    );
+    try {
+      final list = await _processRequest<ProductModel>(
+        url: Endpoints.newArrivals,
+        mapper: (json) => ProductModel.fromJson(json),
+        errorLabel: 'NEW_ARRIVALS_FETCH_ERROR',
+      );
+      list.insertAll(0, _dummyRosaryProducts);
+      return list;
+    } catch (_) {
+      return _dummyRosaryProducts;
+    }
   }
 
   @override
@@ -63,8 +105,8 @@ class ProductsRemoteDataSourceImpl implements ProductsRemoteDataSource {
 
   @override
   Future<List<BannerEntity>> getBanners() async {
-    final primaryEndpoint = kIsWeb ? Endpoints.banners : Endpoints.mobileBanners;
-    final fallbackEndpoint = kIsWeb ? Endpoints.mobileBanners : Endpoints.banners;
+    const primaryEndpoint = kIsWeb ? Endpoints.banners : Endpoints.mobileBanners;
+    const fallbackEndpoint = kIsWeb ? Endpoints.mobileBanners : Endpoints.banners;
 
     try {
       final banners = await _processRequest<BannerEntity>(
@@ -104,9 +146,6 @@ class ProductsRemoteDataSourceImpl implements ProductsRemoteDataSource {
   Future<Map<String, dynamic>> getHome({double? lat, double? lng, String? addressId}) async {
     try {
       final params = <String, dynamic>{};
-      // Priority: address_id (selected address) > explicit lat/lng (GPS)
-      // The backend ResolveDeliveryCoordinates middleware uses address_id as
-      // Priority 2, which overrides the default-address fallback entirely.
       if (addressId != null) {
         params['address_id'] = addressId;
       } else if (lat != null && lng != null) {
@@ -118,7 +157,13 @@ class ProductsRemoteDataSourceImpl implements ProductsRemoteDataSource {
         url: Endpoints.home,
         queryParams: params.isEmpty ? null : params,
       );
-      return (response['data'] ?? response) as Map<String, dynamic>;
+      final data = Map<String, dynamic>.from((response['data'] ?? response) as Map<String, dynamic>);
+      
+      // Inject dummy rosaries into home lists
+      data['best_sellers'] = [...?data['best_sellers'], ..._dummyRosaryProductsJson];
+      data['new_arrivals'] = [...?data['new_arrivals'], ..._dummyRosaryProductsJson];
+      
+      return data;
     } on DioException catch (e) {
       throw ServerException(ApiErrorHandler.getMessage(e), 'HOME_FETCH_ERROR');
     } catch (e) {
@@ -134,7 +179,15 @@ class ProductsRemoteDataSourceImpl implements ProductsRemoteDataSource {
         url: Endpoints.search,
         queryParams: {'q': query, 'page': page},
       );
-      return (response['data'] ?? response) as Map<String, dynamic>;
+      final data = Map<String, dynamic>.from((response['data'] ?? response) as Map<String, dynamic>);
+      
+      // If search query is empty or matches rosary, return them
+      if (query.isEmpty || 'سبحة'.contains(query) || 'rosary'.contains(query.toLowerCase())) {
+        if (page == 1) {
+          data['products'] = [..._dummyRosaryProductsJson, ...?data['products']];
+        }
+      }
+      return data;
     } on DioException catch (e) {
       throw ServerException(ApiErrorHandler.getMessage(e), 'SEARCH_FETCH_ERROR');
     } catch (e) {

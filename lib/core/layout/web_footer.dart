@@ -334,7 +334,7 @@ class _DownloadAppColumn extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 GestureDetector(
-                  onTap: () => launchUrl(Uri.parse('https://play.google.com/store/apps/details?id=com.fastway.app')),
+                  onTap: () => launchUrl(Uri.parse('https://play.google.com/store/apps/details?id=com.app.wa')),
                   child: SizedBox(
                     width: badgeWidth,
                     height: 42,

@@ -58,6 +58,7 @@ class ErrorHandler {
       case DioExceptionType.connectionTimeout:
       case DioExceptionType.sendTimeout:
       case DioExceptionType.receiveTimeout:
+      case DioExceptionType.transformTimeout:
         return NetworkFailure('errors.network.timeout'.tr(), ErrorMessages.connectionTimeout);
       case DioExceptionType.badResponse:
         return _handleResponseError(error.response);

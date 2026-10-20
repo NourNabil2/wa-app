@@ -110,9 +110,9 @@ class _PromoBannerState extends State<PromoBanner> {
         // ── Banner title / subtitle ────────────────────────────────────
         if (widget.banners.isNotEmpty)
           Positioned(
-            bottom: isWeb ? 56 : 80.h, // raised to clear categories overlap
-            left: isWeb ? 40 : 20.w,
-            right: isWeb ? 120 : 20.w,
+            bottom: isWeb ? 56 : 30.h,
+            left: isWeb ? 40 : 16.w,
+            right: isWeb ? 120 : 16.w,
             child: AnimatedSwitcher(
               duration: const Duration(milliseconds: 400),
               child: _BannerText(
@@ -125,7 +125,7 @@ class _PromoBannerState extends State<PromoBanner> {
         // ── Progress indicator bar ─────────────────────────────────────
         if (widget.banners.length > 1)
           Positioned(
-            bottom: isWeb ? 20 : 45.h, // raised to clear categories overlap
+            bottom: isWeb ? 20 : 10.h,
             left: 0,
             right: 0,
             child: Center(
@@ -148,7 +148,7 @@ class _PromoBannerState extends State<PromoBanner> {
     if (isWeb) {
       content = AspectRatio(aspectRatio: 13.0 / 5.0, child: content);
     } else {
-      content = SizedBox(height: 360.h, child: content);
+      content = SizedBox(height: 200.h, child: content);
     }
 
     return SafeMouseRegion(
@@ -161,7 +161,7 @@ class _PromoBannerState extends State<PromoBanner> {
         _startAutoPlay();
       },
       child: ClipRRect(
-        borderRadius: BorderRadius.zero,
+        borderRadius: BorderRadius.circular(12),
         child: content,
       ),
     );
@@ -215,25 +215,6 @@ class _BannerPage extends StatelessWidget {
                   )
           else
             _FallbackBanner(title: banner.title),
-          if (!isWeb)
-            Positioned(
-              left: 0,
-              right: 0,
-              bottom: -1, // -1 to prevent thin line gaps
-              height: 60,
-              child: Container(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Theme.of(context).scaffoldBackgroundColor.withValues(alpha: 0.0),
-                      Theme.of(context).scaffoldBackgroundColor,
-                    ],
-                  ),
-                ),
-              ),
-            ),
         ],
       ),
     );
@@ -372,32 +353,6 @@ class _NavArrow extends StatelessWidget {
               ),
             ),
           ),
-        ),
-      ),
-    );
-  }
-}
-
-// ── Slide counter pill ────────────────────────────────────────────────────────
-class _SlideCounter extends StatelessWidget {
-  final int current;
-  final int total;
-  const _SlideCounter({required this.current, required this.total});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-      decoration: BoxDecoration(
-        color: Colors.black.withValues(alpha: 0.45),
-        borderRadius: BorderRadius.zero,
-      ),
-      child: Text(
-        '$current / $total',
-        style: const TextStyle(
-          color: Colors.white,
-          fontSize: 11,
-          fontWeight: FontWeight.w600,
         ),
       ),
     );

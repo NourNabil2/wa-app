@@ -22,11 +22,10 @@ import 'package:fastway/core/widgets/CustomIcon.dart';
 import 'package:fastway/core/widgets/skeletons.dart';
 import 'package:fastway/features/home/presentation/widget/card/product_card.dart';
 import 'package:fastway/features/home/presentation/widget/card/products_row.dart';
-import 'package:fastway/features/home/presentation/widget/mobile_search_bar.dart';
 import 'package:fastway/features/home/presentation/widget/promo_banner.dart';
 import 'package:fastway/features/home/domain/entities/mid_banner_entity.dart';
 import 'package:fastway/features/home/presentation/widget/campaign_categories_row.dart';
-import 'package:fastway/features/home/presentation/widget/categories_grid.dart';
+import 'package:fastway/features/home/presentation/widget/categories_row.dart';
 import 'package:fastway/features/user_data/auth_guard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -38,21 +37,13 @@ import 'package:fastway/features/user_data/user_cubit.dart';
 import '../../../../core/routes/routes.dart';
 import '../cubit/home_cubit.dart';
 import '../cubit/home_state.dart';
-import 'package:fastway/features/profile/presentation/cubit/profile_cubit.dart';
-import 'package:fastway/features/profile/presentation/cubit/profile_state.dart';
 import '../../../../core/cubit/delivery_location/delivery_location_cubit.dart';
 import '../../../../core/cubit/delivery_location/delivery_location_state.dart';
 import '../widget/location_picker_sheet.dart';
-import '../../../wishlist/presentation/cubit/wishlist_cubit.dart';
-import '../../../wishlist/presentation/cubit/wishlist_state.dart';
 import 'package:fastway/core/di/injection_container.dart';
 import 'package:fastway/features/blog/domain/entities/blog_entity.dart';
 import 'package:fastway/features/blog/presentation/cubit/blog_cubit.dart';
 import 'package:fastway/features/blog/presentation/cubit/blog_state.dart';
-import 'package:fastway/features/cart/presentation/cubit/cart_cubit.dart';
-import 'package:fastway/features/cart/presentation/cubit/cart_state.dart';
-import 'package:fastway/features/popup_banner/popup_banner_service.dart';
-import 'package:dio/dio.dart';
 
 class HomeTabScreen extends StatefulWidget {
   final VoidCallback? onSearchTap;
@@ -164,59 +155,53 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                 backgroundColor:
                     isDark ? const Color(0xFF0F0F0F) : const Color(0xFFF5F6FA),
                 endDrawer: kIsWeb ? const MobileWebDrawer() : null,
-                extendBodyBehindAppBar: true,
+                extendBodyBehindAppBar: false,
                 appBar: PreferredSize(
                   preferredSize: Size.fromHeight(130.h),
                   child: _MobileGlassHeader(scrollOffset: _scrollOffset),
                 ),
                 body: MediaQuery.removePadding(
                   context: context,
-                  removeTop: true,
+                  removeTop: false,
                   child: ScrollConfiguration(
                     behavior: ScrollConfiguration.of(context).copyWith(overscroll: false),
                     child: CustomScrollView(
                       controller: _scrollController,
                       physics: const ClampingScrollPhysics(),
                       slivers: [
-                        // Hero Banner at the very top, stretching under the app bar
                         SliverToBoxAdapter(
-                          child: Stack(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.only(bottom: 220.h),
-                                child: PromoBanner(
-                                  banners: state is HomeLoaded ? state.banners : const [],
-                                  onTap: () => AppNavigator.pushNamed(context, Routes.products),
-                                ),
-                              ),
-                              Positioned(
-                                bottom: 0,
-                                left: 0,
-                                right: 0,
-                                child: Builder(
-                                  builder: (context) {
-                                    final List<CategoryEntity> rawCategories = state is HomeLoaded ? state.categories : const [];
-                                    final List<CategoryEntity> flattenedCategories = rawCategories.expand((cat) {
-                                      if (cat.children.isNotEmpty) {
-                                        return cat.children;
-                                      }
-                                      return [cat];
-                                    }).toList();
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(16.w, 16.h, 16.w, 8.h),
+                            child: PromoBanner(
+                              banners: state is HomeLoaded ? state.banners : const [],
+                              onTap: () => AppNavigator.pushNamed(context, Routes.products),
+                            ),
+                          ),
+                        ),
+                        if (state is HomeLoaded && state.categories.isNotEmpty)
+                          _sectionLabel('categories.title'.tr(), isDark: isDark),
+                        SliverToBoxAdapter(
+                          child: Builder(
+                            builder: (context) {
+                              final List<CategoryEntity> rawCategories = state is HomeLoaded ? state.categories : const [];
+                              final List<CategoryEntity> flattenedCategories = rawCategories.expand((cat) {
+                                if (cat.children.isNotEmpty) {
+                                  return cat.children;
+                                }
+                                return [cat];
+                              }).toList();
 
-                                    return CategoriesGrid(
-                                      categories: flattenedCategories,
-                                      onTap: (cat) {
-                                        if (cat.hasChildren) {
-                                          AppNavigator.pushNamed(context, '${Routes.subCategories}/${cat.id}/sub', arguments: cat);
-                                        } else {
-                                          AppNavigator.pushNamed(context, '${Routes.categoryProducts}/${SlugUtils.slugify(cat.name, cat.id)}', arguments: cat);
-                                        }
-                                      },
-                                    );
-                                  },
-                                ),
-                              ),
-                            ],
+                              return CategoriesRow(
+                                categories: flattenedCategories,
+                                onTap: (cat) {
+                                  if (cat.hasChildren) {
+                                    AppNavigator.pushNamed(context, '${Routes.subCategories}/${cat.id}/sub', arguments: cat);
+                                  } else {
+                                    AppNavigator.pushNamed(context, '${Routes.categoryProducts}/${SlugUtils.slugify(cat.name, cat.id)}', arguments: cat);
+                                  }
+                                },
+                              );
+                            },
                           ),
                         ),
                         ..._buildContentSlivers(context, state),
@@ -1627,10 +1612,10 @@ class _BlogSectionState extends State<_BlogSection> {
         // Header row
         Row(
           children: [
-            Expanded(
+            const Expanded(
               child: Text(
                 'fitway',
-                style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w800),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800),
               ),
             ),
             TextButton(

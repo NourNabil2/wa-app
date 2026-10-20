@@ -242,7 +242,7 @@ class _MapAddressPickerScreenState extends State<MapAddressPickerScreen>
             children: [
               TileLayer(
                 urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                userAgentPackageName: 'com.fastway.app',
+                userAgentPackageName: 'com.app.wa',
               ),
             ],
           ),
