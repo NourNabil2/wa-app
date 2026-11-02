@@ -6,16 +6,18 @@ class SupabaseConfig {
   // Found in Supabase Dashboard -> Project Settings -> API
   static const String url = String.fromEnvironment(
     'SUPABASE_URL',
-    defaultValue: 'https://placeholder.supabase.co',
+    defaultValue: 'https://mtoudbilmsrbeqpthehr.supabase.co',
   );
 
   static const String anonKey = String.fromEnvironment(
     'SUPABASE_ANON_KEY',
-    defaultValue: 'placeholder-anon-key',
+    defaultValue:
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im10b3VkYmlsbXNyYmVxcHRoZWhyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTMwMDc1OTgsImV4cCI6MjEwODU4MzU5OH0.BMVtQHdAsC8Aa22rTt7QkVNRyuf6QZovDpE_el_Sk6g',
   );
 
   static bool get isConfigured =>
-      url != 'https://placeholder.supabase.co' && anonKey != 'placeholder-anon-key';
+      url != 'https://placeholder.supabase.co' &&
+      anonKey != 'placeholder-anon-key';
 
   static SupabaseClient get client => Supabase.instance.client;
 
